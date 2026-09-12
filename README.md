@@ -1,27 +1,59 @@
 # Technology Class Slides
 
-Quarto RevealJS slide decks for the 2026-27 school year.
+Quarto RevealJS slides for the 2026-27 school year.
 
 The slides are designed to be used in conjunction with the course notes and resources at https://andrewandrade.ca/commons.
 
-## Student navigation
+## Fast classroom workflow
 
-The published site follows this hierarchy:
+The repository is optimized for last-minute classroom edits.
+
+A normal `quarto render` builds only:
+
+```text
+index.qmd
+current/tej.qmd
+current/tts.qmd
+current/tas.qmd
+```
+
+Finished days are archived as static, self-contained HTML files. Archived presentations keep permanent URLs but are not re-rendered every time you change today's slides.
+
+The root page is the only student navigation page. It uses collapsible sections:
 
 ```text
 /slides/
-  course/
-    week/
-      day
+  TEJ
+    Week 2 - latest
+      Day 8
+      Day 7
+    Week 1
+      Day 4
+      Day 3
+      Day 2
+      Day 1
+  TTS
+    ...
+  TAS
+    ...
 ```
 
-The root `index.qmd` is the slide-site home page. Students can choose a course and week, then open a standalone daily deck.
+Inside each class, the latest week appears first and is expanded. Older weeks stay collapsed below it.
 
-Each course also keeps a cumulative semester deck for teacher use, review, and searching.
-
-Example:
+## Source structure
 
 ```text
+index.qmd
+current/
+  tej.qmd
+  tts.qmd
+  tas.qmd
+archive/
+  2026-27/
+    semester-1/
+      tej/
+      tts/
+      tas/
 2026-27/
   semester-1/
     period-1/
@@ -30,143 +62,111 @@ Example:
           _end-of-class.qmd
         week-01/
           _2026-09-08-day-01.qmd
-      tej/
-        index.qmd
-        semester.qmd
-        week-01/
-          index.qmd
-          day-01.qmd
-      tts/
-        index.qmd
-        semester.qmd
-        week-01/
-          index.qmd
-          day-01.qmd
-      tas/
-        index.qmd
-        semester.qmd
-        week-01/
-          index.qmd
-          day-01.qmd
 ```
 
-## Shared lesson content
+Reusable lesson content can still live under `shared/`. The three current course decks can include the same shared fragment and then add course-specific slides when needed.
 
-Reusable lesson content is written once under `shared/`.
+## Preview before class
 
-Daily fragments are grouped by instructional week and use both the date and instructional day number:
-
-```text
-_YYYY-MM-DD-day-XX.qmd
-```
-
-Examples:
-
-```text
-week-01/_2026-09-08-day-01.qmd
-week-01/_2026-09-09-day-02.qmd
-week-02/_2026-09-14-day-05.qmd
-```
-
-The date makes it easy to find what was taught on a particular calendar day. The instructional day number keeps the lesson sequence stable when holidays, PD days, closures, or schedule changes create gaps.
-
-Files beginning with `_` are source fragments, so Quarto does not render them as standalone pages.
-
-## Daily metadata
-
-Each shared daily fragment starts with a machine-readable HTML comment:
-
-```html
-<!--
-lesson-day: 1
-date: 2026-09-08
-week: 1
--->
-```
-
-This keeps the metadata easy for scripts or ChatGPT to parse without putting YAML front matter inside an included fragment.
-
-## Daily decks
-
-Each course gets a standalone wrapper for each day. For example, TEJ Day 1 is:
-
-```text
-2026-27/semester-1/period-1/tej/week-01/day-01.qmd
-```
-
-It includes the shared daily lesson, allows course-specific slides to be inserted, then includes the reusable end-of-class routine.
-
-Daily decks end with navigation back to the week and course. As additional days are added, include previous and next day links as well:
-
-```text
-← Day 1 | Week 1 | Day 3 →
-```
-
-Do not duplicate the shared lesson content in the course wrappers.
-
-## Weekly pages
-
-Each course has a `week-XX/index.qmd` page listing the daily decks for that week.
-
-This is the normal student entry point for reviewing what happened during a particular week.
-
-## Semester decks
-
-Each course has `semester.qmd`, which grows through the semester by including the same daily fragments used by the standalone daily decks.
-
-The semester deck is secondary navigation. Students normally use Home → Course → Week → Day.
-
-## Add Day 2
-
-For a shared Day 2 on September 9, 2026:
-
-1. Create `shared/week-01/_2026-09-09-day-02.qmd`.
-2. Create `tej/week-01/day-02.qmd`, `tts/week-01/day-02.qmd`, and `tas/week-01/day-02.qmd` wrappers as needed.
-3. Add Day 2 to each course Week 1 page.
-4. Append the Day 2 include and end-of-class routine to each relevant `semester.qmd`.
-5. Add previous/week/next navigation to the daily wrappers.
-
-If a lesson diverges by course, put the course-specific material in that course's daily wrapper or in a course-specific fragment rather than changing the shared lesson for everyone.
-
-## RevealJS navigation
-
-The root `_quarto.yml` uses `navigation-mode: vertical` for slide decks.
-
-- `#` headings are major horizontal lesson parts.
-- `##` headings are supporting slides below that major part.
-- Left/right moves between major parts.
-- Up/down opens supporting/detail slides.
-- Space moves through the full sequence.
-
-Course, week, and site home pages explicitly render as normal HTML pages rather than RevealJS decks.
-
-## Preview locally
-
-Preview the slide-site home page:
+For TEJ:
 
 ```bash
-quarto preview index.qmd
+quarto preview current/tej.qmd
 ```
 
-Preview a daily deck:
+For TTS:
 
 ```bash
-quarto preview 2026-27/semester-1/period-1/tej/week-01/day-01.qmd
+quarto preview current/tts.qmd
 ```
 
-Preview the cumulative TEJ semester deck:
+For TAS:
 
 ```bash
-quarto preview 2026-27/semester-1/period-1/tej/semester.qmd
+quarto preview current/tas.qmd
 ```
 
-Render everything:
+This previews only the deck you are editing.
+
+## Fast build
+
+Render one deck:
+
+```bash
+quarto render current/tej.qmd
+```
+
+Render the student index plus all three current decks:
 
 ```bash
 quarto render
 ```
 
-Rendered output is written to `_site/`. GitHub Actions also runs `quarto render` on pushes and pull requests.
+Because `_quarto.yml` has an explicit `project.render` list, archived source files and older scaffolding are not render targets.
+
+Output is written to `_site/`.
+
+## Archive a finished day
+
+When a day is finished, archive that course deck once:
+
+```bash
+bash scripts/archive-current.sh tej 01 01 2026-09-08
+```
+
+Arguments are:
+
+```text
+course  week-number  day-number  YYYY-MM-DD
+```
+
+The script creates a self-contained file such as:
+
+```text
+archive/2026-27/semester-1/tej/week-01/2026-09-08-day-01.html
+```
+
+Then change that day's link in `index.qmd` from the current URL:
+
+```text
+current/tej.html
+```
+
+to its permanent archive URL:
+
+```text
+archive/2026-27/semester-1/tej/week-01/2026-09-08-day-01.html
+```
+
+After that, replace the contents of `current/tej.qmd` with the next TEJ lesson. Repeat independently for TTS and TAS.
+
+Archived HTML is included in `_site/` as a project resource, but Quarto does not compile it again.
+
+## Adding a new week to the index
+
+Each class is a collapsible `<details>` section in `index.qmd`. Put the newest week first and mark it `open`. Older weeks remain collapsed.
+
+Each day should link directly to the beginning of that day's deck. RevealJS also provides stable hash URLs for individual slides within a deck when you need to link to a specific slide.
+
+## RevealJS navigation
+
+Slide decks use `navigation-mode: vertical`:
+
+- `#` headings are major horizontal lesson parts.
+- `##` headings are supporting vertical slides.
+- Left/right moves between major parts.
+- Up/down opens supporting slides.
+- Space advances through the full sequence.
+
+## CI
+
+GitHub Actions runs:
+
+```bash
+quarto render
+```
+
+Because the project render targets are restricted, CI tests the index and current decks rather than rebuilding the archive.
 
 ## Links
 
