@@ -31,9 +31,7 @@ format:
 
 # 2026-27 Classroom Slides
 
-These classroom slides are designed to be used **in conjunction with the course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons)**.
-
-Each course has three areas: the **Current** classroom deck, **All Published Slides**, and **Work in Progress** for future material under development.
+Choose a course. The latest week opens first, with earlier weeks kept out of the way.
 
 EOF
 
@@ -58,10 +56,6 @@ EOF
       echo '<details class="course-block">'
       echo "<summary><strong>${label}</strong></summary>"
       echo
-      echo '<p class="course-links">'
-      echo "<a href=\"current/${course}.html\"><strong>Current</strong></a> · <a href=\"archive/2026-27/semester-1/${course}/index.html\">All Published Slides</a> · <a href=\"wip/${course}/index.html\">Work in Progress</a>"
-      echo '</p>'
-      echo
     } >> index.qmd
 
     local first_week=1
@@ -76,7 +70,7 @@ EOF
       {
         echo "<details class=\"week-block\"${open_attr}>"
         if [[ $first_week -eq 1 ]]; then
-          echo "<summary><strong>Week ${week_num}</strong> <span class=\"current-label\">Latest week</span></summary>"
+          echo "<summary><strong>Week ${week_num}</strong> <span class=\"current-label\">Latest</span></summary>"
         else
           echo "<summary><strong>Week ${week_num}</strong></summary>"
         fi
@@ -85,7 +79,7 @@ EOF
 
       if [[ "$current_week" == "$week" ]]; then
         local current_day_num=$((10#$current_day))
-        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a> <span class=\"current-label\">Latest day</span></li>" >> index.qmd
+        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a></li>" >> index.qmd
       fi
 
       if [[ -d "$archive_dir" ]]; then
@@ -109,6 +103,10 @@ EOF
         done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort -r)
       fi
 
+      if [[ $first_week -eq 1 ]]; then
+        echo "<li><a href=\"wip/${course}/index.html\">Future slide deck</a></li>" >> index.qmd
+      fi
+
       {
         echo '</ul>'
         echo '</details>'
@@ -125,20 +123,9 @@ EOF
   done
 
   cat >> index.qmd <<'EOF'
-<details class="wip-block">
-<summary><strong>Work in Progress</strong></summary>
-
-Future slides are built from the dedicated `future-slides` branch. They are tentative and may change before class.
-
-- [TEJ future slides](wip/tej/index.html)
-- [TTS future slides](wip/tts/index.html)
-- [TAS future slides](wip/tas/index.html)
-
-</details>
-
 ## Course Notes
 
-The companion notes, references, assignments, and course resources live at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
+Notes, references, assignments, and course resources live at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
 EOF
 }
 
