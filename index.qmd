@@ -3,55 +3,57 @@ title: "Technology Class Slides"
 format:
   html:
     toc: false
+    css: site.css
 ---
 
 # 2026-27 Classroom Slides
 
 These classroom slides are designed to be used **in conjunction with the course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons)**.
 
-Use the selectors below to jump to a course and instructional week.
+Open a class below. The newest instructional week appears first and is expanded inside each class. Older weeks stay collapsed underneath it.
 
-<div class="slide-picker">
-  <p>
-    <label for="course-select"><strong>Course</strong></label><br>
-    <select id="course-select">
-      <option value="">Choose a course</option>
-      <option value="tej">TEJ</option>
-      <option value="tts">TTS</option>
-      <option value="tas">TAS</option>
-    </select>
-  </p>
+<details class="course-block">
+<summary><strong>TEJ</strong></summary>
 
-  <p>
-    <label for="week-select"><strong>Week</strong></label><br>
-    <select id="week-select">
-      <option value="">Choose a week</option>
-      <option value="week-01">Week 1</option>
-    </select>
-  </p>
+<details class="week-block" open>
+<summary><strong>Week 1</strong> <span class="current-label">Latest</span></summary>
 
-  <button type="button" onclick="openSelectedWeek()">Open slides</button>
-</div>
+- [Day 1 · Tuesday, September 8, 2026](current/tej.html)
 
-<script>
-function openSelectedWeek() {
-  const course = document.getElementById('course-select').value;
-  const week = document.getElementById('week-select').value;
+</details>
 
-  if (!course || !week) {
-    return;
-  }
+<!-- Add older TEJ weeks below as collapsed <details> blocks. -->
 
-  window.location.href = `2026-27/semester-1/period-1/${course}/${week}/`;
-}
-</script>
+</details>
 
-## Courses
+<details class="course-block">
+<summary><strong>TTS</strong></summary>
 
-- [TEJ](2026-27/semester-1/period-1/tej/)
-- [TTS](2026-27/semester-1/period-1/tts/)
-- [TAS](2026-27/semester-1/period-1/tas/)
+<details class="week-block" open>
+<summary><strong>Week 1</strong> <span class="current-label">Latest</span></summary>
+
+- [Day 1 · Tuesday, September 8, 2026](current/tts.html)
+
+</details>
+
+<!-- Add older TTS weeks below as collapsed <details> blocks. -->
+
+</details>
+
+<details class="course-block">
+<summary><strong>TAS</strong></summary>
+
+<details class="week-block" open>
+<summary><strong>Week 1</strong> <span class="current-label">Latest</span></summary>
+
+- [Day 1 · Tuesday, September 8, 2026](current/tas.html)
+
+</details>
+
+<!-- Add older TAS weeks below as collapsed <details> blocks. -->
+
+</details>
 
 ## Course Notes
 
-The companion notes, references, and course resources live at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
+The companion notes, references, assignments, and course resources live at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
