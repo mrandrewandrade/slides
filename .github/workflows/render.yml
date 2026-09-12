@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   render:
     runs-on: ubuntu-latest
@@ -15,4 +19,25 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render all decks
-        run: quarto render
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          output="$(quarto render 2>&1)"
+          code=$?
+          printf '%s\n' "$output"
+
+          if [ "$code" -eq 0 ]; then
+            gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+              -f state=success \
+              -f context=quarto-render-diagnostic \
+              -f description="Quarto render passed"
+            exit 0
+          fi
+
+          summary="$(printf '%s\n' "$output" | tail -n 8 | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-120)"
+          gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+            -f state=error \
+            -f context=quarto-render-diagnostic \
+            -f description="$summary"
+          exit "$code"
