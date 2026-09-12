@@ -64,19 +64,31 @@ def refine_daily_files() -> list[tuple[int, int, str, Path]]:
     return days
 
 
+def copy_brand_assets() -> None:
+    shutil.copy2(ROOT / "styles.css", TENTATIVE / "styles.css")
+    shutil.copy2(ROOT / "site.css", TENTATIVE / "site.css")
+    assets = TENTATIVE / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(ROOT / "assets" / "commons-mark.svg", assets / "commons-mark.svg")
+
+
 def write_tentative_project(days: list[tuple[int, int, str, Path]]) -> None:
     if TENTATIVE.exists():
         shutil.rmtree(TENTATIVE)
     TENTATIVE.mkdir(parents=True)
+    copy_brand_assets()
 
     (TENTATIVE / "_quarto.yml").write_text(
         """project:
   type: default
   output-dir: ../_tentative-site
+  resources:
+    - assets/**
 
 format:
   html:
     toc: false
+    css: site.css
 
 execute:
   freeze: auto
@@ -88,6 +100,10 @@ execute:
         "---\n",
         'title: "Upcoming / Tentative Slides"\n',
         "---\n\n",
+        '<div class="slides-brand">\n',
+        '<img src="assets/commons-mark.svg" alt="Technology Commons mark">\n',
+        '<span>Technology Commons · Work in Progress</span>\n',
+        "</div>\n\n",
         "# Semester 2 Tentative Plan\n\n",
         "**Tentative and subject to change.** These drafts are here to help you anticipate what may be coming. "
         "Topics, timing, activities, assessments, and due dates may change based on class progress, school events, and student needs.\n\n",
@@ -118,6 +134,7 @@ subtitle: "Week {week} · {date_text} · Subject to change"
 format:
   revealjs:
     theme: default
+    css: ../styles.css
     slide-number: true
     progress: true
     transition: none
