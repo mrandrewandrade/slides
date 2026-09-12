@@ -34,14 +34,20 @@ NO_CLASS = {
     *{date(2027, 3, d) for d in range(15, 20)},  # Spring Break
 }
 
+# Student-facing school dates that should be announced 3, 2, and 1
+# instructional days ahead. This intentionally excludes board/committee
+# meetings and other items that do not affect students' school day.
 SCHOOL_EVENTS = [
+    (date(2027, 2, 10), "Final Report Card Distribution", "Semester 1 final report cards are distributed."),
     (date(2027, 2, 12), "PL Day", "No school for students."),
     (date(2027, 2, 15), "Family Day", "No school for students."),
+    (date(2027, 2, 22), "Grad Photos", "Grad photos begin February 22 and run through March 5."),
     (date(2027, 3, 12), "Half Day", "11:05 AM dismissal."),
     (date(2027, 3, 15), "Spring Break", "Spring Break begins. No regular classes March 15-19."),
     (date(2027, 3, 26), "Good Friday", "School closed."),
     (date(2027, 3, 29), "Easter Monday", "School closed."),
     (date(2027, 4, 16), "Half Day", "11:05 AM dismissal."),
+    (date(2027, 5, 20), "Spring Concert", "Spring Concert is scheduled for 7:00-9:00 PM."),
     (date(2027, 5, 24), "Victoria Day", "No school for students."),
     (date(2027, 6, 21), "Semester 2 Exams", "Semester 2 exam period begins June 21 and runs through June 25."),
 ]
@@ -57,9 +63,14 @@ RED_DOT = {
     date(2027, 5, 17): ("Red Dot", "Eid-ul-Adha", "Islam", "Date may vary by one day due to the lunar calendar."),
 }
 
+# Events that should also appear on the event date itself because students are
+# still in school that day.
 SAME_DAY_SCHOOL_NOTICE = {
+    date(2027, 2, 10): ("Final Report Card Distribution", "Semester 1 final report cards are distributed today."),
+    date(2027, 2, 22): ("Grad Photos", "Grad photos begin today and continue through March 5."),
     date(2027, 3, 12): ("Half Day", "Dismissal is at 11:05 AM today."),
     date(2027, 4, 16): ("Half Day", "Dismissal is at 11:05 AM today."),
+    date(2027, 5, 20): ("Spring Concert", "Spring Concert is tonight from 7:00-9:00 PM."),
 }
 
 
@@ -240,22 +251,27 @@ The school calendar identifies the turnaround day and exam window, but does not 
 
 - Slide 1 is always the Quote of the Day placeholder.
 - On a Red Dot/Open Red Dot instructional day, that notice is a standalone slide immediately after the quote.
-- School schedule notices follow the quote, or follow the Red Dot/Open Red Dot notice when both occur.
-- Schedule-changing school events are announced 3, 2, and 1 **instructional days** in advance.
-- Half days also get a same-day notice.
+- School notices follow the quote, or follow the Red Dot/Open Red Dot notice when both occur.
+- Student-facing school events are announced 3, 2, and 1 **instructional days** in advance.
+- Student-facing events that occur during a school day also get a same-day notice where useful.
 - Finished lesson content replaces the `Today's Lesson` placeholder as each day is planned.
 
-## School schedule notices included
+## Student-facing school notices included
 
+- February 10: Final Report Card Distribution
 - February 12: PL Day, no school for students
 - February 15: Family Day, no school for students
+- February 22-March 5: Grad Photos
 - March 12: Half Day, 11:05 AM dismissal
 - March 15-19: Spring Break
 - March 26: Good Friday, school closed
 - March 29: Easter Monday, school closed
 - April 16: Half Day, 11:05 AM dismissal
+- May 20: Spring Concert, 7:00-9:00 PM
 - May 24: Victoria Day, no school for students
 - June 21-25: Semester 2 exams
+
+Board/committee meetings and similar non-student-facing calendar items are intentionally not inserted into classroom slides.
 
 ## Red Dot / Open Red Dot regular-class dates included
 
