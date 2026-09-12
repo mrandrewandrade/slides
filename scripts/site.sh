@@ -121,12 +121,40 @@ EOF
   done
 
   cat >> index.qmd <<'EOF'
-<details class="tentative-block">
-<summary><strong>Upcoming / Tentative</strong></summary>
+<details class="wip-block">
+<summary><strong>Work in Progress</strong></summary>
 
-**Tentative and subject to change.** Future slides are shared so students can anticipate possible upcoming topics and school dates. Lesson order, timing, activities, assessments, and due dates may change.
+These are draft, alternate, or cumulative views. They may be incomplete and can change before they are used in class.
 
-[View upcoming tentative slides](tentative/index.html)
+<details class="wip-course-block">
+<summary><strong>TEJ</strong></summary>
+<ul>
+<li><a href="2026-27/semester-1/period-1/tej/semester.html">Full semester deck</a></li>
+<li><a href="2026-27/semester-1/period-1/tej/index.html">Course overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tej/week-01/index.html">Week 1 overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tej/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
+</ul>
+</details>
+
+<details class="wip-course-block">
+<summary><strong>TTS</strong></summary>
+<ul>
+<li><a href="2026-27/semester-1/period-1/tts/semester.html">Full semester deck</a></li>
+<li><a href="2026-27/semester-1/period-1/tts/index.html">Course overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tts/week-01/index.html">Week 1 overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tts/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
+</ul>
+</details>
+
+<details class="wip-course-block">
+<summary><strong>TAS</strong></summary>
+<ul>
+<li><a href="2026-27/semester-1/period-1/tas/semester.html">Full semester deck</a></li>
+<li><a href="2026-27/semester-1/period-1/tas/index.html">Course overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tas/week-01/index.html">Week 1 overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tas/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
+</ul>
+</details>
 
 </details>
 
