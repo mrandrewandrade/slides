@@ -26,14 +26,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Validate pull request
+      - name: Full validation build
         if: github.event_name == 'pull_request'
         run: |
-          bash scripts/site.sh index archive
-          quarto render
+          bash scripts/full-build.sh archive
           bash scripts/site.sh snapshot .archive-test
 
-      - name: Restore published archive and tentative area
+      - name: Restore published archive
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           rm -rf .published-site
@@ -41,7 +40,6 @@ jobs:
           if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
             git fetch origin gh-pages
             git archive origin/gh-pages archive | tar -x -C .published-site || true
-            git archive origin/gh-pages tentative | tar -x -C .published-site || true
           fi
 
       - name: Archive previous main state
@@ -60,22 +58,16 @@ jobs:
             git worktree remove --force .previous-main
           fi
 
-      - name: Build current site and index
+      - name: Full site build
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        run: |
-          bash scripts/site.sh index .published-site/archive
-          quarto render
+        run: bash scripts/full-build.sh .published-site/archive
 
-      - name: Preserve archive, tentative area, and snapshot latest day
+      - name: Preserve archive and snapshot latest day
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           if [[ -d .published-site/archive ]]; then
             mkdir -p _site/archive
             cp -R .published-site/archive/. _site/archive/
-          fi
-          if [[ -d .published-site/tentative ]]; then
-            mkdir -p _site/tentative
-            cp -R .published-site/tentative/. _site/tentative/
           fi
           bash scripts/site.sh snapshot _site/archive
           touch _site/.nojekyll
