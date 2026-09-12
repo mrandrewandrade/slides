@@ -8,9 +8,4 @@ author: "Andrew Andrade"
 
 {{< include ../shared/_end-of-class.qmd >}}
 
-<!--
-Add TEJ-specific slides or future day includes below this line.
-Example:
-{{< include _day-02.qmd >}}
-{{< include ../shared/_end-of-class.qmd >}}
--->
+<!-- Add TEJ-specific slides or future day includes below this line. -->
