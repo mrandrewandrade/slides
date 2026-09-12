@@ -33,7 +33,7 @@ format:
 
 These classroom slides are designed to be used **in conjunction with the course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons)**.
 
-Open a class below. The newest instructional week appears first. Older weeks remain available underneath it.
+Each course has three areas: the **Current** classroom deck, **All Published Slides**, and **Work in Progress** for future material under development.
 
 EOF
 
@@ -57,6 +57,10 @@ EOF
     {
       echo '<details class="course-block">'
       echo "<summary><strong>${label}</strong></summary>"
+      echo
+      echo '<p class="course-links">'
+      echo "<a href=\"current/${course}.html\"><strong>Current</strong></a> · <a href=\"archive/2026-27/semester-1/${course}/index.html\">All Published Slides</a> · <a href=\"wip/${course}/index.html\">Work in Progress</a>"
+      echo '</p>'
       echo
     } >> index.qmd
 
@@ -124,37 +128,11 @@ EOF
 <details class="wip-block">
 <summary><strong>Work in Progress</strong></summary>
 
-These are draft, alternate, or cumulative views. They may be incomplete and can change before they are used in class.
+Future slides are built from the dedicated `future-slides` branch. They are tentative and may change before class.
 
-<details class="wip-course-block">
-<summary><strong>TEJ</strong></summary>
-<ul>
-<li><a href="2026-27/semester-1/period-1/tej/semester.html">Full semester deck</a></li>
-<li><a href="2026-27/semester-1/period-1/tej/index.html">Course overview</a></li>
-<li><a href="2026-27/semester-1/period-1/tej/week-01/index.html">Week 1 overview</a></li>
-<li><a href="2026-27/semester-1/period-1/tej/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
-</ul>
-</details>
-
-<details class="wip-course-block">
-<summary><strong>TTS</strong></summary>
-<ul>
-<li><a href="2026-27/semester-1/period-1/tts/semester.html">Full semester deck</a></li>
-<li><a href="2026-27/semester-1/period-1/tts/index.html">Course overview</a></li>
-<li><a href="2026-27/semester-1/period-1/tts/week-01/index.html">Week 1 overview</a></li>
-<li><a href="2026-27/semester-1/period-1/tts/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
-</ul>
-</details>
-
-<details class="wip-course-block">
-<summary><strong>TAS</strong></summary>
-<ul>
-<li><a href="2026-27/semester-1/period-1/tas/semester.html">Full semester deck</a></li>
-<li><a href="2026-27/semester-1/period-1/tas/index.html">Course overview</a></li>
-<li><a href="2026-27/semester-1/period-1/tas/week-01/index.html">Week 1 overview</a></li>
-<li><a href="2026-27/semester-1/period-1/tas/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
-</ul>
-</details>
+- [TEJ future slides](wip/tej/index.html)
+- [TTS future slides](wip/tts/index.html)
+- [TAS future slides](wip/tas/index.html)
 
 </details>
 
