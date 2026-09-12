@@ -1,0 +1,37 @@
+name: Generate Semester 2 future slides
+
+on:
+  push:
+    branches:
+      - future-slides
+    paths:
+      - scripts/generate_semester2.py
+      - .github/workflows/generate-semester2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out future-slides
+        uses: actions/checkout@v6
+        with:
+          ref: future-slides
+
+      - name: Generate Semester 2 daily drafts
+        run: python scripts/generate_semester2.py
+
+      - name: Commit generated drafts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 2026-27/semester-2
+          if git diff --cached --quiet; then
+            echo "Generated drafts are already current."
+            exit 0
+          fi
+          git commit -m "Generate Semester 2 future slide drafts"
+          git push origin future-slides
