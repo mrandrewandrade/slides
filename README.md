@@ -31,7 +31,7 @@ Day 1 exists once at:
 2026-27/semester-1/period-1/shared/_day-01.qmd
 ```
 
-Each course deck includes that same file with Quarto's `include` shortcode. Immediately after it, the course deck includes the reusable `_end-of-class.qmd` routine. Keeping both includes in the course `index.qmd` avoids nested include-path problems and makes the assembly order obvious.
+Each course deck includes that same Day 1 file, then includes the reusable `_end-of-class.qmd` routine. A course can insert its own Day 1 slides between those two includes without changing the shared source.
 
 ## Add Day 2
 
@@ -41,14 +41,15 @@ If Day 2 is shared by all courses, create:
 2026-27/semester-1/period-1/shared/_day-02.qmd
 ```
 
-Then add this after the Day 1 include in each course `index.qmd`:
+Then append these includes below the existing Day 1 material in each course `index.qmd`:
 
 ```qmd
 {{< include ../shared/_day-02.qmd >}}
+
 {{< include ../shared/_end-of-class.qmd >}}
 ```
 
-If Day 2 differs by course, put `_day-02.qmd` inside each course folder, include `_day-02.qmd` instead, then include `../shared/_end-of-class.qmd` after it.
+If Day 2 differs by course, put `_day-02.qmd` inside the course folder, include it from that course deck, then include the shared end-of-class routine after it.
 
 ## Add Semester 2
 
@@ -97,6 +98,8 @@ quarto render
 ```
 
 Rendered output is written to `_site/`.
+
+GitHub Actions also runs `quarto render` on pushes and pull requests.
 
 ## Links
 

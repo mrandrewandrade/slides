@@ -6,6 +6,8 @@ author: "Andrew Andrade"
 
 {{< include ../shared/_day-01.qmd >}}
 
+<!-- Course-specific Day 1 slides may be inserted here. -->
+
 {{< include ../shared/_end-of-class.qmd >}}
 
-<!-- Add TEJ-specific slides or future day includes below this line. -->
+<!-- Future days belong below this line. -->

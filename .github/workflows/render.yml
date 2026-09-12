@@ -4,10 +4,6 @@ on:
   push:
   pull_request:
 
-permissions:
-  contents: read
-  statuses: write
-
 jobs:
   render:
     runs-on: ubuntu-latest
@@ -19,37 +15,4 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render all decks
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set +e
-          output="$(quarto render 2>&1)"
-          code=$?
-          printf '%s\n' "$output"
-
-          if [ "$code" -eq 0 ]; then
-            gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
-              -f state=success \
-              -f context=quarto-render-diagnostic \
-              -f description="Quarto render passed"
-            exit 0
-          fi
-
-          clean="$(printf '%s\n' "$output" | sed -E 's/\x1B\[[0-9;]*[mK]//g')"
-          n=0
-          while IFS= read -r line; do
-            [ -z "$line" ] && continue
-            n=$((n + 1))
-            description="$(printf '%s' "$line" | tr '\t' ' ' | cut -c1-130)"
-            context="quarto-diag-$(printf '%02d' "$n")"
-            gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
-              -f state=error \
-              -f context="$context" \
-              -f description="$description" >/dev/null
-          done < <(printf '%s\n' "$clean" | tail -n 30)
-
-          gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
-            -f state=error \
-            -f context=quarto-render-diagnostic \
-            -f description="Quarto render failed; see quarto-diag statuses" >/dev/null
-          exit "$code"
+        run: quarto render
