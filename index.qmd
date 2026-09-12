@@ -10,39 +10,79 @@ format:
 
 These classroom slides are designed to be used **in conjunction with the course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons)**.
 
-Open a class below. The newest instructional week appears first and is expanded inside each class. Older weeks stay collapsed underneath it.
+Open a class below. The newest instructional week appears first. Older weeks remain available underneath it.
 
 <details class="course-block">
 <summary><strong>TEJ</strong></summary>
+
 <details class="week-block" open>
 <summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tej.html">Day 1 · Tuesday, September 8, 2026</a> <span class="current-label">Current deck</span></li>
+<li><a href="current/tej.html">Day 1 · 2026-09-08</a> <span class="current-label">Latest day</span></li>
 </ul>
 </details>
-<!-- Add older TEJ weeks below as collapsed <details> blocks. -->
+
 </details>
 
 <details class="course-block">
 <summary><strong>TTS</strong></summary>
+
 <details class="week-block" open>
 <summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tts.html">Day 1 · Tuesday, September 8, 2026</a> <span class="current-label">Current deck</span></li>
+<li><a href="current/tts.html">Day 1 · 2026-09-08</a> <span class="current-label">Latest day</span></li>
 </ul>
 </details>
-<!-- Add older TTS weeks below as collapsed <details> blocks. -->
+
 </details>
 
 <details class="course-block">
 <summary><strong>TAS</strong></summary>
+
 <details class="week-block" open>
 <summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tas.html">Day 1 · Tuesday, September 8, 2026</a> <span class="current-label">Current deck</span></li>
+<li><a href="current/tas.html">Day 1 · 2026-09-08</a> <span class="current-label">Latest day</span></li>
 </ul>
 </details>
-<!-- Add older TAS weeks below as collapsed <details> blocks. -->
+
+</details>
+
+<details class="wip-block">
+<summary><strong>Work in Progress</strong></summary>
+
+These are draft, alternate, or cumulative views. They may be incomplete and can change before they are used in class.
+
+<details class="wip-course-block">
+<summary><strong>TEJ</strong></summary>
+<ul>
+<li><a href="2026-27/semester-1/period-1/tej/semester.html">Full semester deck</a></li>
+<li><a href="2026-27/semester-1/period-1/tej/index.html">Course overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tej/week-01/index.html">Week 1 overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tej/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
+</ul>
+</details>
+
+<details class="wip-course-block">
+<summary><strong>TTS</strong></summary>
+<ul>
+<li><a href="2026-27/semester-1/period-1/tts/semester.html">Full semester deck</a></li>
+<li><a href="2026-27/semester-1/period-1/tts/index.html">Course overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tts/week-01/index.html">Week 1 overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tts/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
+</ul>
+</details>
+
+<details class="wip-course-block">
+<summary><strong>TAS</strong></summary>
+<ul>
+<li><a href="2026-27/semester-1/period-1/tas/semester.html">Full semester deck</a></li>
+<li><a href="2026-27/semester-1/period-1/tas/index.html">Course overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tas/week-01/index.html">Week 1 overview</a></li>
+<li><a href="2026-27/semester-1/period-1/tas/week-01/day-01.html">Week 1 · Day 1 alternate deck</a></li>
+</ul>
+</details>
+
 </details>
 
 ## Course Notes
