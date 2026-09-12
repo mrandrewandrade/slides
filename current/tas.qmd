@@ -1,0 +1,15 @@
+---
+title: "TAS · Day 1"
+subtitle: "2026-27 · Semester 1 · Period 1"
+author: "Andrew Andrade"
+---
+
+{{< include ../2026-27/semester-1/period-1/shared/week-01/_2026-09-08-day-01.qmd >}}
+
+<!-- Insert TAS-specific slides for the current day here. -->
+
+{{< include ../2026-27/semester-1/period-1/shared/routines/_end-of-class.qmd >}}
+
+# Navigation
+
+[Slides home](../index.html)
