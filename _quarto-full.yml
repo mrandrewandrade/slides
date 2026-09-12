@@ -1,0 +1,18 @@
+project:
+  render:
+    - index.qmd
+    - current/tej.qmd
+    - current/tts.qmd
+    - current/tas.qmd
+    - 2026-27/semester-1/period-1/tej/index.qmd
+    - 2026-27/semester-1/period-1/tej/semester.qmd
+    - 2026-27/semester-1/period-1/tej/week-01/index.qmd
+    - 2026-27/semester-1/period-1/tej/week-01/day-01.qmd
+    - 2026-27/semester-1/period-1/tts/index.qmd
+    - 2026-27/semester-1/period-1/tts/semester.qmd
+    - 2026-27/semester-1/period-1/tts/week-01/index.qmd
+    - 2026-27/semester-1/period-1/tts/week-01/day-01.qmd
+    - 2026-27/semester-1/period-1/tas/index.qmd
+    - 2026-27/semester-1/period-1/tas/semester.qmd
+    - 2026-27/semester-1/period-1/tas/week-01/index.qmd
+    - 2026-27/semester-1/period-1/tas/week-01/day-01.qmd
