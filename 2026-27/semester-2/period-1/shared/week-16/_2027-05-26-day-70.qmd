@@ -1,0 +1,23 @@
+<!--
+lesson-day: 70
+date: 2027-05-26
+week: 16
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 70 · Wednesday, May 26, 2027 · Week 16**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

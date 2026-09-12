@@ -1,0 +1,30 @@
+<!--
+lesson-day: 67
+date: 2027-05-20
+week: 15
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 67 · Thursday, May 20, 2027 · Week 15**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Coming Up
+
+**2 instructional days: Victoria Day**  
+Monday, May 24  
+No school for students.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

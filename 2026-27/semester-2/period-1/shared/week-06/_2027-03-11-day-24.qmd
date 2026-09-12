@@ -1,0 +1,34 @@
+<!--
+lesson-day: 24
+date: 2027-03-11
+week: 6
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 24 · Thursday, March 11, 2027 · Week 6**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Coming Up
+
+**1 instructional day: Half Day**  
+Friday, March 12  
+11:05 AM dismissal.
+
+**2 instructional days: Spring Break**  
+Monday, March 15  
+Spring Break begins. No regular classes March 15-19.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

@@ -1,0 +1,39 @@
+<!--
+lesson-day: 41
+date: 2027-04-14
+week: 10
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 41 · Wednesday, April 14, 2027 · Week 10**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Red Dot
+
+**Vaisakhi · Sikhism**
+
+Today is identified by the Peel District School Board as a **Red Dot** day.
+
+- Do not schedule school events on this day.
+- Be mindful that students observing may be unavailable for school activities or assessments.
+
+# Coming Up
+
+**2 instructional days: Half Day**  
+Friday, April 16  
+11:05 AM dismissal.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

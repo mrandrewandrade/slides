@@ -1,0 +1,34 @@
+<!--
+lesson-day: 6
+date: 2027-02-11
+week: 2
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 6 · Thursday, February 11, 2027 · Week 2**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Coming Up
+
+**1 instructional day: PL Day**  
+Friday, February 12  
+No school for students.
+
+**1 instructional day: Family Day**  
+Monday, February 15  
+No school for students.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

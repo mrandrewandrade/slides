@@ -1,0 +1,27 @@
+<!--
+lesson-day: 43
+date: 2027-04-16
+week: 10
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 43 · Friday, April 16, 2027 · Week 10**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Today: Half Day
+
+**Dismissal is at 11:05 AM today.**
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

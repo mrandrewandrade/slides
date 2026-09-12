@@ -1,0 +1,39 @@
+<!--
+lesson-day: 40
+date: 2027-04-13
+week: 10
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 40 · Tuesday, April 13, 2027 · Week 10**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Red Dot
+
+**Theravada New Year · Buddhism**
+
+Today is identified by the Peel District School Board as a **Red Dot** day.
+
+- Do not schedule school events on this day.
+- Be mindful that students observing may be unavailable for school activities or assessments.
+
+# Coming Up
+
+**3 instructional days: Half Day**  
+Friday, April 16  
+11:05 AM dismissal.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

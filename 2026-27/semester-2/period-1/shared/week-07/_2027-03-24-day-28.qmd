@@ -1,0 +1,34 @@
+<!--
+lesson-day: 28
+date: 2027-03-24
+week: 7
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 28 · Wednesday, March 24, 2027 · Week 7**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Coming Up
+
+**2 instructional days: Good Friday**  
+Friday, March 26  
+School closed.
+
+**2 instructional days: Easter Monday**  
+Monday, March 29  
+School closed.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

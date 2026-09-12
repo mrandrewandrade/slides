@@ -1,0 +1,45 @@
+<!--
+lesson-day: 23
+date: 2027-03-10
+week: 6
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 23 · Wednesday, March 10, 2027 · Week 6**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Red Dot
+
+**Eid-ul-Fitr · Islam**
+
+Today is identified by the Peel District School Board as a **Red Dot** day.
+
+- Do not schedule school events on this day.
+- Be mindful that students observing may be unavailable for school activities or assessments.
+
+*Date may vary by one day due to the lunar calendar.*
+
+# Coming Up
+
+**2 instructional days: Half Day**  
+Friday, March 12  
+11:05 AM dismissal.
+
+**3 instructional days: Spring Break**  
+Monday, March 15  
+Spring Break begins. No regular classes March 15-19.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

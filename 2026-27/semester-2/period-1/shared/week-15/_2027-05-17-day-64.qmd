@@ -1,0 +1,34 @@
+<!--
+lesson-day: 64
+date: 2027-05-17
+week: 15
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 64 · Monday, May 17, 2027 · Week 15**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Red Dot
+
+**Eid-ul-Adha · Islam**
+
+Today is identified by the Peel District School Board as a **Red Dot** day.
+
+- Do not schedule school events on this day.
+- Be mindful that students observing may be unavailable for school activities or assessments.
+
+*Date may vary by one day due to the lunar calendar.*
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

@@ -1,0 +1,34 @@
+<!--
+lesson-day: 46
+date: 2027-04-21
+week: 11
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 46 · Wednesday, April 21, 2027 · Week 11**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Red Dot + Open Red Dot
+
+**First day of Ridvan · Bahá'í**
+
+Today is identified by the Peel District School Board as a **Red Dot + Open Red Dot** day.
+
+- **Red Dot:** do not schedule school events during the day.
+- **Open Red Dot:** do not schedule school events on the evening prior.
+
+*Bahá'í observances begin at sunset on the evening prior.*
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::

@@ -1,0 +1,30 @@
+<!--
+lesson-day: 85
+date: 2027-06-16
+week: 19
+semester: 2
+-->
+
+# Quote of the Day
+
+::: {.small-note}
+**Semester 2 · Day 85 · Wednesday, June 16, 2027 · Week 19**
+:::
+
+> **PLACEHOLDER QUOTE**  
+> Replace this with a quote connected to today's lesson.
+
+# Coming Up
+
+**3 instructional days: Semester 2 Exams**  
+Monday, June 21  
+Semester 2 exam period begins June 21 and runs through June 25.
+
+
+# Today's Lesson
+
+::: {.big-prompt}
+**DRAFT PLACEHOLDER**
+
+Replace this section with the lesson content for this class and day.
+:::
