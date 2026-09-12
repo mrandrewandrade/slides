@@ -1,9 +1,11 @@
 project:
   type: default
   output-dir: _site
+  # Keep classroom builds fast: only the student index and current decks render.
   render:
     - index.qmd
     - current/*.qmd
+  # Finished self-contained decks are copied, not recompiled.
   resources:
     - archive/**
 
