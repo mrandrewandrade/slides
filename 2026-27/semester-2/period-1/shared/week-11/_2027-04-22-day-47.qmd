@@ -14,6 +14,12 @@ semester: 2
 > **PLACEHOLDER QUOTE**  
 > Replace this with a quote connected to today's lesson.
 
+# Recognition
+
+**Earth Day**  
+Today. Earth Day is observed today.
+
+
 # Today's Lesson
 
 ::: {.big-prompt}

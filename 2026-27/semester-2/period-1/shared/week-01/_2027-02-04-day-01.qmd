@@ -14,6 +14,12 @@ semester: 2
 > **PLACEHOLDER QUOTE**  
 > Replace this with a quote connected to today's lesson.
 
+# Recognition
+
+**Black History Month**  
+This month. February is Black History Month.
+
+
 # Today's Lesson
 
 ::: {.big-prompt}
