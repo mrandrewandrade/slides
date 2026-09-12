@@ -8,34 +8,39 @@ The classroom slides are designed to be used in conjunction with the course note
 
 There are only two commands you should normally need.
 
-### Run the slides locally
+### Run one class quickly
 
 ```bash
-bash run.sh
+bash run.sh tej
 ```
 
-This starts Quarto preview for the current slide site. Open the class from the main index page and leave it running while you make small edits. Quarto watches the current files and refreshes the preview.
+Use `tej`, `tts`, or `tas`.
 
-### Publish changes
+If you run `bash run.sh` with no argument, it gives you a simple 1/2/3 class menu.
+
+This previews only the latest deck for that class, so it is the fastest path for last-minute classroom edits.
+
+### Publish
 
 ```bash
 bash publish.sh
 ```
 
-This:
+This only handles Git locally: it safely pulls, commits any small edits, and pushes.
 
-1. pulls current Git changes while preserving small local edits
-2. runs the fast Quarto build
-3. commits changed slide/source files if needed
-4. pushes the current branch to GitHub
+The heavier work happens in GitHub Actions after a push to `main`:
 
-Once the normal working branch is `main`, the push automatically triggers GitHub Pages deployment.
+1. restore the previously published slide archive from `gh-pages`
+2. rebuild the index from the archive plus the current decks
+3. render only the current site
+4. snapshot the latest TEJ, TTS, and TAS decks into permanent dated archive URLs
+5. publish the complete site back to the `gh-pages` branch
 
-If you are on another branch, the script pushes that branch for review but does not deploy it publicly until the changes reach `main`.
+Publishing during the same day simply replaces that day's archive snapshot with the newest version. When the current deck advances to the next day, the previous day's published snapshot remains in the archive automatically.
 
-## What gets built
+## What stays fast
 
-The active Quarto project intentionally renders only:
+The active Quarto project renders only:
 
 ```text
 index.qmd
@@ -44,21 +49,29 @@ current/tts.qmd
 current/tas.qmd
 ```
 
-Older finished presentations live as static archived HTML, so historical slides do not make the normal build slower as the semester grows.
+Historical decks are already-built HTML on the `gh-pages` branch. They are copied forward during deployment, not recompiled.
+
+The most important classroom path is therefore:
+
+```bash
+bash run.sh tej
+```
+
+That watches only `current/tej.qmd` and the files it includes.
 
 ## Student navigation
 
 There is one student-facing `/slides/` index page.
 
-Each class is collapsible. The newest week appears first, with older weeks underneath it. Each day links directly to that day's RevealJS presentation.
+Each class is collapsible. The latest week appears first and expanded. Older weeks remain underneath it. The latest day links to the current deck; previous days link to their permanent archived presentations.
 
 Conceptually:
 
 ```text
 /slides/
   TEJ
-    Week 2
-      Day 8
+    Week 2 - latest
+      Day 8 - latest
       Day 7
     Week 1
       Day 6
@@ -72,7 +85,7 @@ Conceptually:
 
 ## Editing
 
-The current class decks are:
+The live class decks are:
 
 ```text
 current/tej.qmd
@@ -86,7 +99,7 @@ Shared lesson material and reusable routines remain under:
 2026-27/semester-1/period-1/shared/
 ```
 
-In normal use, Andrew only needs to make small edits to the current material. Larger changes such as advancing to a new instructional day, changing weeks, archiving completed slides, or restructuring navigation can be handled through ChatGPT/GitHub rather than through local scripts.
+Andrew can make small local edits to the current files. Larger operations such as advancing the instructional day or week are intended to be handled through ChatGPT/GitHub, not additional user-facing scripts.
 
 ## RevealJS navigation
 
@@ -100,11 +113,11 @@ Slide decks use `navigation-mode: vertical`:
 
 ## GitHub Pages
 
-The GitHub Actions workflow validates pull requests with `quarto render`.
+Pull requests run a fast Quarto validation build.
 
-On pushes to `main`, it also uploads `_site/` and deploys it using GitHub Pages.
+Pushes to `main` publish the complete site to the `gh-pages` branch while preserving the historical HTML archive.
 
-GitHub Pages must be enabled once under **Repository Settings > Pages > Source > GitHub Actions**.
+GitHub Pages must be configured once under **Repository Settings > Pages** to deploy from the **`gh-pages` branch, root (`/`)**.
 
 ## Links
 
