@@ -4,10 +4,13 @@ subtitle: "2026-27 · Semester 1 · Period 1"
 author: "Andrew Andrade"
 ---
 
-{{< include /2026-27/semester-1/period-1/shared/_day-01.qmd >}}
+{{< include ../shared/_day-01.qmd >}}
+
+{{< include ../shared/_end-of-class.qmd >}}
 
 <!--
 Add TTS-specific slides or future day includes below this line.
 Example:
-{{< include /2026-27/semester-1/period-1/tts/_day-02.qmd >}}
+{{< include _day-02.qmd >}}
+{{< include ../shared/_end-of-class.qmd >}}
 -->

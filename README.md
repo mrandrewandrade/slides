@@ -31,9 +31,7 @@ Day 1 exists once at:
 2026-27/semester-1/period-1/shared/_day-01.qmd
 ```
 
-Each course deck includes that same file with Quarto's `include` shortcode. The end-of-class routine is a second reusable fragment included by Day 1.
-
-Quarto resolves paths inside included files from the main document, so shared includes use project-root paths beginning with `/`.
+Each course deck includes that same file with Quarto's `include` shortcode. Immediately after it, the course deck includes the reusable `_end-of-class.qmd` routine. Keeping both includes in the course `index.qmd` avoids nested include-path problems and makes the assembly order obvious.
 
 ## Add Day 2
 
@@ -46,10 +44,11 @@ If Day 2 is shared by all courses, create:
 Then add this after the Day 1 include in each course `index.qmd`:
 
 ```qmd
-{{< include /2026-27/semester-1/period-1/shared/_day-02.qmd >}}
+{{< include ../shared/_day-02.qmd >}}
+{{< include ../shared/_end-of-class.qmd >}}
 ```
 
-If Day 2 differs by course, put `_day-02.qmd` inside each course folder and include the course-specific file instead.
+If Day 2 differs by course, put `_day-02.qmd` inside each course folder, include `_day-02.qmd` instead, then include `../shared/_end-of-class.qmd` after it.
 
 ## Add Semester 2
 

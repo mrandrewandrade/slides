@@ -94,5 +94,3 @@ Most presentations will happen **Day 2**.
 If time allows, students who are ready may begin today.
 
 **Presentation order may be selected randomly.**
-
-{{< include /2026-27/semester-1/period-1/shared/_end-of-class.qmd >}}
