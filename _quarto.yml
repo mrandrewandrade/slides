@@ -5,9 +5,6 @@ project:
   render:
     - index.qmd
     - current/*.qmd
-  # Finished self-contained decks are copied, not recompiled.
-  resources:
-    - archive/**
 
 format:
   revealjs:
