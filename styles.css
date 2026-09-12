@@ -5,87 +5,66 @@
  */
 
 :root {
-  --commons-black: #171717;
-  --commons-charcoal: #23272B;
-  --commons-slate: #3C454D;
-  --commons-grey: #66717B;
-  --commons-mist: #DDE2E6;
-  --commons-white: #F5F6F7;
-  --commons-navy: #1D2347;
-  --commons-scitech: #19226D;
-  --commons-harbour: #2B398E;
-  --commons-blue: #0072B2;
-  --commons-sky: #DDE9F7;
-  --commons-green: #4F6B46;
-  --commons-mint: #DCEBE3;
-  --commons-gold: #FCD937;
-  --commons-amber: #E6A11A;
-  --commons-orange: #D96A1D;
-  --commons-purple: #6A4FB3;
-  --commons-red: #B23939;
+  --ink: #171717;
+  --charcoal: #2f3439;
+  --grey: #777777;
+  --light-grey: #d9dddf;
+  --paper: #f7f7f5;
+  --white: #ffffff;
+  --navy: #1d2347;
+  --blue: #0072b2;
+  --red: #b23939;
 }
 
 .reveal-viewport {
-  background: var(--commons-white);
+  background: var(--paper);
 }
 
 .reveal {
-  --r-background-color: var(--commons-white);
+  --r-background-color: var(--paper);
   --r-main-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
-  --r-main-color: var(--commons-charcoal);
+  --r-main-color: var(--charcoal);
   --r-heading-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
-  --r-heading-color: var(--commons-navy);
+  --r-heading-color: var(--ink);
   --r-heading-font-weight: 650;
-  --r-link-color: var(--commons-blue);
-  --r-link-color-hover: var(--commons-harbour);
-  --r-selection-background-color: var(--commons-gold);
-  --r-selection-color: var(--commons-black);
+  --r-link-color: var(--navy);
+  --r-link-color-hover: var(--blue);
+  --r-selection-background-color: #ece8c8;
+  --r-selection-color: var(--ink);
   font-size: 42px;
-}
-
-.reveal::before {
-  content: "";
-  position: fixed;
-  top: 18px;
-  right: 22px;
-  width: 38px;
-  height: 38px;
-  background: url("assets/commons-mark.svg") center / contain no-repeat;
-  opacity: 0.84;
-  pointer-events: none;
-  z-index: 20;
 }
 
 .reveal .slides {
   text-align: left;
 }
 
+/* Brand only the opening slide, not every slide. */
+.reveal .slides > section:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0.35em;
+  bottom: 0.2em;
+  width: 1.05em;
+  height: 1.05em;
+  background: url("assets/commons-mark.svg") center / contain no-repeat;
+  opacity: 0.28;
+}
+
 .reveal h1,
 .reveal h2 {
-  line-height: 1.05;
-  margin-bottom: 0.55em;
+  color: var(--ink);
+  line-height: 1.04;
+  margin-bottom: 0.52em;
   text-transform: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .reveal h1 {
-  color: var(--commons-navy);
-  font-size: 2.05em;
-}
-
-.reveal h1::after {
-  content: "";
-  display: block;
-  width: 2.3em;
-  height: 0.08em;
-  margin-top: 0.22em;
-  border-radius: 999px;
-  background: var(--commons-gold);
+  font-size: 2em;
 }
 
 .reveal h2 {
-  color: var(--commons-harbour);
-  font-size: 1.55em;
+  font-size: 1.48em;
 }
 
 .reveal p,
@@ -99,75 +78,103 @@
 }
 
 .reveal strong {
-  color: var(--commons-navy);
+  color: inherit;
+  font-weight: 700;
 }
 
 .reveal a {
-  color: var(--commons-blue);
-  text-decoration-thickness: 0.06em;
+  color: var(--navy);
+  text-decoration-thickness: 0.045em;
   text-underline-offset: 0.12em;
 }
 
 .reveal blockquote {
-  width: 88%;
-  margin: 0.7em auto;
-  padding: 0.5em 0.75em;
-  color: var(--commons-navy);
-  background: var(--commons-sky);
-  border-left: 0.16em solid var(--commons-blue);
-  border-radius: 0.12em;
+  width: 84%;
+  margin: 0.9em 0;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
   box-shadow: none;
-  font-size: 1.12em;
+  font-size: 1.16em;
+  line-height: 1.3;
+}
+
+.reveal .quote-slide blockquote {
+  width: 88%;
+  margin-top: 1.3em;
+  font-size: 1.45em;
+  line-height: 1.18;
+}
+
+.reveal .quote-slide p:last-child {
+  color: var(--grey);
+  font-size: 0.58em;
+  margin-top: 1.4em;
 }
 
 .reveal code:not(pre code) {
-  padding: 0.05em 0.22em;
-  color: var(--commons-navy);
-  background: var(--commons-sky);
-  border-radius: 0.12em;
+  padding: 0.04em 0.18em;
+  color: var(--ink);
+  background: #eceeed;
+  border-radius: 0.08em;
 }
 
 .reveal .footer {
-  color: var(--commons-grey);
-  border-top: 1px solid var(--commons-mist);
-  font-size: 0.34em;
+  color: #8a8a8a;
+  border-top: 0;
+  font-size: 0.27em;
+  opacity: 0.82;
 }
 
 .reveal .footer a {
-  color: var(--commons-blue);
+  color: inherit;
 }
 
-.reveal .controls {
-  color: var(--commons-blue);
+.reveal .controls,
+.reveal .progress,
+.reveal .slide-number {
+  color: #8a8a8a;
 }
 
 .reveal .progress {
-  color: var(--commons-gold);
+  height: 2px;
 }
 
 .reveal .slide-number {
-  color: var(--commons-grey);
   background: transparent;
+  opacity: 0.8;
 }
 
 .reveal .small-note {
-  color: var(--commons-grey);
-  font-size: 0.62em;
-  opacity: 1;
+  color: var(--grey);
+  font-size: 0.58em;
 }
 
 .reveal .big-prompt {
-  padding: 0.65em 0.8em;
-  color: var(--commons-navy);
-  background: var(--commons-sky);
-  border-left: 0.16em solid var(--commons-gold);
-  border-radius: 0.12em;
-  font-size: 1.18em;
+  max-width: 88%;
+  padding: 0.15em 0 0.15em 0.65em;
+  color: var(--ink);
+  background: transparent;
+  border-left: 0.08em solid var(--navy);
+  font-size: 1.14em;
   font-weight: 650;
   line-height: 1.25;
 }
 
 .reveal .callout-important,
 .reveal .important {
-  border-color: var(--commons-red);
+  border-color: var(--red);
+}
+
+/* Optional high-contrast treatment for occasional emphasis slides. */
+.reveal section.dark {
+  color: var(--white);
+}
+
+.reveal section.dark h1,
+.reveal section.dark h2,
+.reveal section.dark strong,
+.reveal section.dark blockquote {
+  color: var(--white);
 }
