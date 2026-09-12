@@ -15,9 +15,9 @@ Open a class below. The newest instructional week appears first and is expanded 
 <details class="course-block">
 <summary><strong>TEJ</strong></summary>
 <details class="week-block" open>
-<summary><strong>Week 1</strong> <span class="current-label">Latest</span></summary>
+<summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tej.html">Day 1 · Tuesday, September 8, 2026</a></li>
+<li><a href="current/tej.html">Day 1 · Tuesday, September 8, 2026</a> <span class="current-label">Current deck</span></li>
 </ul>
 </details>
 <!-- Add older TEJ weeks below as collapsed <details> blocks. -->
@@ -26,9 +26,9 @@ Open a class below. The newest instructional week appears first and is expanded 
 <details class="course-block">
 <summary><strong>TTS</strong></summary>
 <details class="week-block" open>
-<summary><strong>Week 1</strong> <span class="current-label">Latest</span></summary>
+<summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tts.html">Day 1 · Tuesday, September 8, 2026</a></li>
+<li><a href="current/tts.html">Day 1 · Tuesday, September 8, 2026</a> <span class="current-label">Current deck</span></li>
 </ul>
 </details>
 <!-- Add older TTS weeks below as collapsed <details> blocks. -->
@@ -37,9 +37,9 @@ Open a class below. The newest instructional week appears first and is expanded 
 <details class="course-block">
 <summary><strong>TAS</strong></summary>
 <details class="week-block" open>
-<summary><strong>Week 1</strong> <span class="current-label">Latest</span></summary>
+<summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tas.html">Day 1 · Tuesday, September 8, 2026</a></li>
+<li><a href="current/tas.html">Day 1 · Tuesday, September 8, 2026</a> <span class="current-label">Current deck</span></li>
 </ul>
 </details>
 <!-- Add older TAS weeks below as collapsed <details> blocks. -->
