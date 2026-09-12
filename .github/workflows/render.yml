@@ -1,4 +1,4 @@
-name: Build and deploy slides
+name: Build and publish slides
 
 on:
   push:
@@ -8,12 +8,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: slides-publish
   cancel-in-progress: true
 
 jobs:
@@ -22,31 +20,53 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Build current slide site
+      - name: Validate pull request
+        if: github.event_name == 'pull_request'
         run: quarto render
 
-      - name: Configure GitHub Pages
+      - name: Restore published archive
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        uses: actions/configure-pages@v5
+        run: |
+          rm -rf .published-site
+          mkdir -p .published-site
+          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
+            git fetch origin gh-pages
+            git archive origin/gh-pages archive | tar -x -C .published-site || true
+          fi
 
-      - name: Upload GitHub Pages artifact
+      - name: Build current site and index
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: _site
+        run: |
+          bash scripts/site.sh index .published-site/archive
+          quarto render
 
-  deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Preserve old archive and snapshot latest day
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          if [[ -d .published-site/archive ]]; then
+            mkdir -p _site/archive
+            cp -R .published-site/archive/. _site/archive/
+          fi
+          bash scripts/site.sh snapshot _site/archive
+          touch _site/.nojekyll
+
+      - name: Publish gh-pages branch
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd _site
+          git init
+          git checkout -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish slides ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin gh-pages
