@@ -5,6 +5,8 @@ project:
   render:
     - index.qmd
     - current/*.qmd
+  resources:
+    - assets/**
 
 format:
   revealjs:
