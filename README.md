@@ -148,6 +148,8 @@ Each class is a collapsible `<details>` section in `index.qmd`. Put the newest w
 
 Each day should link directly to the beginning of that day's deck. RevealJS also provides hash URLs for individual slides within a deck, so a specific slide can be linked directly when useful.
 
+There are no separate student course pages, weekly landing pages, or cumulative semester decks in the active workflow. The root index is the navigation system.
+
 ## RevealJS navigation
 
 Slide decks use `navigation-mode: vertical`:
