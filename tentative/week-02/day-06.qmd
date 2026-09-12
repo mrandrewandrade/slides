@@ -1,0 +1,23 @@
+---
+title: "Tentative Semester 2 - Day 6"
+subtitle: "Week 2 · 2027-02-11 · Subject to change"
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    progress: true
+    transition: none
+    navigation-mode: vertical
+---
+
+# Tentative Plan
+
+**This is a draft and is subject to change.**
+
+Use it to anticipate what may be coming, not as a final assessment or due-date commitment.
+
+{{< include ../../2026-27/semester-2/period-1/shared/week-02/_2027-02-11-day-06.qmd >}}
+
+# Back to Tentative Plan
+
+[← Upcoming / Tentative Slides](../index.html)

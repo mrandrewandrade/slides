@@ -1,0 +1,23 @@
+---
+title: "Tentative Semester 2 - Day 87"
+subtitle: "Week 19 · 2027-06-18 · Subject to change"
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    progress: true
+    transition: none
+    navigation-mode: vertical
+---
+
+# Tentative Plan
+
+**This is a draft and is subject to change.**
+
+Use it to anticipate what may be coming, not as a final assessment or due-date commitment.
+
+{{< include ../../2026-27/semester-2/period-1/shared/week-19/_2027-06-18-day-87.qmd >}}
+
+# Back to Tentative Plan
+
+[← Upcoming / Tentative Slides](../index.html)

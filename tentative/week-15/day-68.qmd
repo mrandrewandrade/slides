@@ -1,0 +1,23 @@
+---
+title: "Tentative Semester 2 - Day 68"
+subtitle: "Week 15 · 2027-05-21 · Subject to change"
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    progress: true
+    transition: none
+    navigation-mode: vertical
+---
+
+# Tentative Plan
+
+**This is a draft and is subject to change.**
+
+Use it to anticipate what may be coming, not as a final assessment or due-date commitment.
+
+{{< include ../../2026-27/semester-2/period-1/shared/week-15/_2027-05-21-day-68.qmd >}}
+
+# Back to Tentative Plan
+
+[← Upcoming / Tentative Slides](../index.html)
