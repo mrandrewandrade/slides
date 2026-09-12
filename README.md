@@ -9,8 +9,10 @@ Quarto RevealJS slide decks for the 2026-27 school year.
   semester-1/
     period-1/
       shared/
-        _day-01.qmd
-        _end-of-class.qmd
+        routines/
+          _end-of-class.qmd
+        week-01/
+          _2026-09-08-day-01.qmd
       tej/
         index.qmd
       tts/
@@ -19,37 +21,77 @@ Quarto RevealJS slide decks for the 2026-27 school year.
         index.qmd
 ```
 
-The hierarchy is always **school year / semester / period / course**. Each course has its own growing semester deck, while reusable material lives in `shared/`.
+The hierarchy is always **school year / semester / period / course**. Each course has its own growing semester deck, while reusable lesson material lives in `shared/`.
+
+Within `shared/`, daily lesson fragments are grouped by instructional week. Each daily filename contains both the calendar date and instructional day number:
+
+```text
+_YYYY-MM-DD-day-XX.qmd
+```
+
+For example:
+
+```text
+week-01/_2026-09-08-day-01.qmd
+week-01/_2026-09-09-day-02.qmd
+week-02/_2026-09-14-day-05.qmd
+```
+
+The date makes it easy to find what was taught on a particular day. The instructional day number preserves the lesson sequence when holidays, PD days, closures, or schedule changes interrupt the calendar.
 
 Files beginning with `_` are source fragments. Quarto ignores them as standalone render targets.
+
+## Daily metadata
+
+Each shared daily fragment begins with a small machine-readable HTML comment:
+
+```html
+<!--
+lesson-day: 1
+date: 2026-09-08
+week: 1
+-->
+```
+
+This keeps the metadata easy for ChatGPT or scripts to parse without placing YAML front matter inside an included document fragment.
+
+Day 1 also displays its date on the opening slide.
 
 ## Shared daily slides
 
 Day 1 exists once at:
 
 ```text
-2026-27/semester-1/period-1/shared/_day-01.qmd
+2026-27/semester-1/period-1/shared/week-01/_2026-09-08-day-01.qmd
 ```
 
-Each course deck includes that same Day 1 file, then includes the reusable `_end-of-class.qmd` routine. A course can insert its own Day 1 slides between those two includes without changing the shared source.
+Each course deck includes that same Day 1 file, then includes the reusable end-of-class routine from:
+
+```text
+2026-27/semester-1/period-1/shared/routines/_end-of-class.qmd
+```
+
+A course can insert its own slides between those two includes without changing the shared source.
 
 ## Add Day 2
 
-If Day 2 is shared by all courses, create:
+For a shared Day 2 on September 9, 2026, create:
 
 ```text
-2026-27/semester-1/period-1/shared/_day-02.qmd
+2026-27/semester-1/period-1/shared/week-01/_2026-09-09-day-02.qmd
 ```
 
-Then append these includes below the existing Day 1 material in each course `index.qmd`:
+Then append these includes below Day 1 in each course `index.qmd`:
 
 ```qmd
-{{< include ../shared/_day-02.qmd >}}
+{{< include ../shared/week-01/_2026-09-09-day-02.qmd >}}
 
-{{< include ../shared/_end-of-class.qmd >}}
+{{< include ../shared/routines/_end-of-class.qmd >}}
 ```
 
-If Day 2 differs by course, put `_day-02.qmd` inside the course folder, include it from that course deck, then include the shared end-of-class routine after it.
+When a new instructional week begins, create the next `week-XX/` folder and continue the instructional day numbering.
+
+If a lesson differs by course, place the dated `_YYYY-MM-DD-day-XX.qmd` file inside that course folder, or a week subfolder within it, and include it only from that course deck.
 
 ## Add Semester 2
 
@@ -59,7 +101,7 @@ Create a sibling folder:
 2026-27/semester-2/period-1/
 ```
 
-Reuse the same `shared/` plus per-course pattern. No existing paths need to move.
+Reuse the same `shared/`, `routines/`, weekly folders, and per-course pattern. No existing paths need to move.
 
 ## Add another period
 
