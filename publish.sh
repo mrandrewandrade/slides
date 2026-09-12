@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Keep the local checkout current without losing small local edits.
+# Keep the checkout current without losing a small last-minute edit.
 git pull --rebase --autostash
 
-# Fast validation build. Archived slides are not re-rendered.
-quarto render
-
-# Commit and push any slide/source changes. GitHub Actions deploys main to Pages.
 git add -A
 
 if ! git diff --cached --quiet; then
@@ -18,7 +14,7 @@ git push
 
 branch="$(git branch --show-current)"
 if [[ "$branch" == "main" ]]; then
-  echo "Published source changes. GitHub Actions will deploy the site to Pages."
+  echo "Pushed. GitHub will build the latest decks, archive today's published versions, refresh the index, and publish gh-pages."
 else
-  echo "Pushed branch '$branch'. Pages deployment occurs when the changes reach main."
+  echo "Pushed branch '$branch'. It will be tested, but the live site publishes from main."
 fi
