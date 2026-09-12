@@ -121,6 +121,15 @@ EOF
   done
 
   cat >> index.qmd <<'EOF'
+<details class="tentative-block">
+<summary><strong>Upcoming / Tentative</strong></summary>
+
+**Tentative and subject to change.** Future slides are shared so students can anticipate possible upcoming topics and school dates. Lesson order, timing, activities, assessments, and due dates may change.
+
+[View upcoming tentative slides](tentative/index.html)
+
+</details>
+
 ## Course Notes
 
 The companion notes, references, assignments, and course resources live at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
