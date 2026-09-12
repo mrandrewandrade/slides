@@ -33,7 +33,7 @@ jobs:
           quarto render
           bash scripts/site.sh snapshot .archive-test
 
-      - name: Restore published archive
+      - name: Restore published archive and tentative area
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           rm -rf .published-site
@@ -41,6 +41,7 @@ jobs:
           if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
             git fetch origin gh-pages
             git archive origin/gh-pages archive | tar -x -C .published-site || true
+            git archive origin/gh-pages tentative | tar -x -C .published-site || true
           fi
 
       - name: Archive previous main state
@@ -65,12 +66,16 @@ jobs:
           bash scripts/site.sh index .published-site/archive
           quarto render
 
-      - name: Preserve archive and snapshot latest day
+      - name: Preserve archive, tentative area, and snapshot latest day
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           if [[ -d .published-site/archive ]]; then
             mkdir -p _site/archive
             cp -R .published-site/archive/. _site/archive/
+          fi
+          if [[ -d .published-site/tentative ]]; then
+            mkdir -p _site/tentative
+            cp -R .published-site/tentative/. _site/tentative/
           fi
           bash scripts/site.sh snapshot _site/archive
           touch _site/.nojekyll
