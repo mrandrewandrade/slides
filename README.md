@@ -2,128 +2,40 @@
 
 Quarto RevealJS slides for the 2026-27 school year.
 
-The slides are designed to be used in conjunction with the course notes and resources at https://andrewandrade.ca/commons.
+The classroom slides are designed to be used in conjunction with the course notes and resources at https://andrewandrade.ca/commons.
 
-## The normal commands
+## Normal use
 
-You should only need these four scripts during normal use.
+There are only two commands you should normally need.
 
-### 1. Preview one class while editing
-
-```bash
-bash scripts/preview.sh tej
-```
-
-Use `tej`, `tts`, or `tas`.
-
-This is the normal before-class workflow. It previews only that current deck and refreshes as you edit.
-
-### 2. Build
-
-Build one class:
+### Run the slides locally
 
 ```bash
-bash scripts/build.sh tej
+bash run.sh
 ```
 
-Build the student index and all three current decks:
+This starts Quarto preview for the current slide site. Open the class from the main index page and leave it running while you make small edits. Quarto watches the current files and refreshes the preview.
+
+### Publish changes
 
 ```bash
-bash scripts/build.sh
+bash publish.sh
 ```
 
-The full current-site build does not rebuild historical archived slides.
+This:
 
-### 3. Archive the finished day
+1. pulls current Git changes while preserving small local edits
+2. runs the fast Quarto build
+3. commits changed slide/source files if needed
+4. pushes the current branch to GitHub
 
-```bash
-bash scripts/archive.sh
-```
+Once the normal working branch is `main`, the push automatically triggers GitHub Pages deployment.
 
-This archives the current TEJ, TTS, and TAS decks as self-contained HTML files with permanent URLs. It automatically reads the week, instructional day, and date from the current decks and refreshes `index.qmd`.
+If you are on another branch, the script pushes that branch for review but does not deploy it publicly until the changes reach `main`.
 
-Example archive path:
+## What gets built
 
-```text
-archive/2026-27/semester-1/tej/week-01/2026-09-08-day-01.html
-```
-
-Archived decks are copied into the published site but are not recompiled during normal builds.
-
-### 4. Start the next day
-
-After archiving the current day:
-
-```bash
-bash scripts/new-day.sh 2 2026-09-09 1
-```
-
-Arguments are:
-
-```text
-day-number  YYYY-MM-DD  week-number
-```
-
-The script:
-
-- checks that the current decks were archived first
-- creates the next shared lesson file
-- points TEJ, TTS, and TAS at the new lesson
-- leaves a place for course-specific slides
-- refreshes the collapsible student index
-
-Then edit the new shared lesson file printed by the script.
-
-## Typical daily workflow
-
-```bash
-# Before class
-bash scripts/preview.sh tej
-
-# Optional final check
-bash scripts/build.sh tej
-
-# At the end of the instructional day
-bash scripts/archive.sh
-
-# Prepare tomorrow
-bash scripts/new-day.sh 2 2026-09-09 1
-```
-
-If the three courses later diverge, the current course wrappers can still contain course-specific slides while sharing common material where appropriate.
-
-## Student navigation
-
-There is one student-facing `index.qmd` page. Each class is collapsible. Within each class, the latest week appears first and expanded, while older weeks remain collapsed underneath it.
-
-The index is generated from the current decks and files under `archive/`, so archived days automatically remain available.
-
-Conceptually:
-
-```text
-/slides/
-  TEJ
-    Week 2 - latest
-      Day 8 - current
-      Day 7
-      Day 6
-    Week 1
-      Day 5
-      Day 4
-      Day 3
-      Day 2
-      Day 1
-  TTS
-    ...
-  TAS
-    ...
-```
-
-Each day links directly to the beginning of that day's RevealJS deck.
-
-## Fast render model
-
-A normal full build renders only:
+The active Quarto project intentionally renders only:
 
 ```text
 index.qmd
@@ -132,40 +44,49 @@ current/tts.qmd
 current/tas.qmd
 ```
 
-The historical archive is static HTML, so the build should stay roughly the same size as the semester grows.
+Older finished presentations live as static archived HTML, so historical slides do not make the normal build slower as the semester grows.
 
-## Source structure
+## Student navigation
+
+There is one student-facing `/slides/` index page.
+
+Each class is collapsible. The newest week appears first, with older weeks underneath it. Each day links directly to that day's RevealJS presentation.
+
+Conceptually:
 
 ```text
-index.qmd
-current/
-  tej.qmd
-  tts.qmd
-  tas.qmd
-archive/
-  2026-27/
-    semester-1/
-      tej/
-      tts/
-      tas/
-2026-27/
-  semester-1/
-    period-1/
-      shared/
-        routines/
-          _end-of-class.qmd
-        week-01/
-          _2026-09-08-day-01.qmd
-scripts/
-  preview.sh
-  build.sh
-  archive.sh
-  new-day.sh
-  slides.sh
-  archive-current.sh
+/slides/
+  TEJ
+    Week 2
+      Day 8
+      Day 7
+    Week 1
+      Day 6
+      Day 5
+      ...
+  TTS
+    ...
+  TAS
+    ...
 ```
 
-`slides.sh` and `archive-current.sh` contain the underlying logic. In normal use, use the four short wrapper scripts above.
+## Editing
+
+The current class decks are:
+
+```text
+current/tej.qmd
+current/tts.qmd
+current/tas.qmd
+```
+
+Shared lesson material and reusable routines remain under:
+
+```text
+2026-27/semester-1/period-1/shared/
+```
+
+In normal use, Andrew only needs to make small edits to the current material. Larger changes such as advancing to a new instructional day, changing weeks, archiving completed slides, or restructuring navigation can be handled through ChatGPT/GitHub rather than through local scripts.
 
 ## RevealJS navigation
 
@@ -177,9 +98,13 @@ Slide decks use `navigation-mode: vertical`:
 - Up/down opens supporting slides.
 - Space advances through the full sequence.
 
-## CI
+## GitHub Pages
 
-GitHub Actions tests the same fast current-site build instead of recompiling the historical archive.
+The GitHub Actions workflow validates pull requests with `quarto render`.
+
+On pushes to `main`, it also uploads `_site/` and deploys it using GitHub Pages.
+
+GitHub Pages must be enabled once under **Repository Settings > Pages > Source > GitHub Actions**.
 
 ## Links
 
