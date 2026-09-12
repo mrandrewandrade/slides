@@ -1,13 +1,26 @@
 ---
-title: "TTS"
+title: "TTS Slides"
 subtitle: "2026-27 · Semester 1 · Period 1"
-author: "Andrew Andrade"
+format:
+  html:
+    toc: false
 ---
 
-{{< include ../shared/week-01/_2026-09-08-day-01.qmd >}}
+[← All slides](../../../../index.html)
 
-<!-- Course-specific Day 1 slides may be inserted here. -->
+# TTS
 
-{{< include ../shared/routines/_end-of-class.qmd >}}
+Use the weekly pages for day-to-day class slides. The full semester deck is also available for review and teacher use.
 
-<!-- Future days belong below this line, grouped by week and dated filename. -->
+## Week 1
+
+- [Week 1 overview](week-01/)
+- [Day 1 · Tuesday, September 8, 2026](week-01/day-01.html)
+
+## Semester
+
+- [Full semester deck](semester.html)
+
+## Course Notes
+
+These slides are used in conjunction with the course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
