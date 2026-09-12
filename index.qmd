@@ -1,10 +1,15 @@
 ---
-title: "Technology Class Slides"
+title: "Technology Commons Classroom Slides"
 format:
   html:
     toc: false
     css: site.css
 ---
+
+<div class="slides-brand">
+<img src="assets/commons-mark.svg" alt="Technology Commons mark">
+<span>Technology Commons · Classroom Slides</span>
+</div>
 
 # 2026-27 Classroom Slides
 
