@@ -36,12 +36,20 @@ jobs:
           fi
 
           clean="$(printf '%s\n' "$output" | sed -E 's/\x1B\[[0-9;]*[mK]//g')"
-          summary="$(printf '%s\n' "$clean" | grep -Ei 'error|include|not found|does not exist|failed' | head -n 3 | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-130)"
-          if [ -z "$summary" ]; then
-            summary="$(printf '%s\n' "$clean" | tail -n 6 | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-130)"
-          fi
+          n=0
+          while IFS= read -r line; do
+            [ -z "$line" ] && continue
+            n=$((n + 1))
+            description="$(printf '%s' "$line" | tr '\t' ' ' | cut -c1-130)"
+            context="quarto-diag-$(printf '%02d' "$n")"
+            gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+              -f state=error \
+              -f context="$context" \
+              -f description="$description" >/dev/null
+          done < <(printf '%s\n' "$clean" | tail -n 30)
+
           gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
             -f state=error \
             -f context=quarto-render-diagnostic \
-            -f description="$summary"
+            -f description="Quarto render failed; see quarto-diag statuses" >/dev/null
           exit "$code"
