@@ -14,5 +14,5 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render index and current decks
-        run: quarto render
+      - name: Build current slide site
+        run: bash scripts/build.sh
