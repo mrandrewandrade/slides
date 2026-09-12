@@ -30,7 +30,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           bash scripts/full-build.sh archive
-          bash scripts/site.sh snapshot .archive-test
+          bash scripts/site.sh snapshot _site/archive
+          bash scripts/build-published-extras.sh _site
 
       - name: Restore published archive
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -70,6 +71,7 @@ jobs:
             cp -R .published-site/archive/. _site/archive/
           fi
           bash scripts/site.sh snapshot _site/archive
+          bash scripts/build-published-extras.sh _site
           touch _site/.nojekyll
 
       - name: Publish gh-pages branch
