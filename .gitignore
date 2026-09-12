@@ -1,3 +1,9 @@
 /_site/
 /.quarto/
 /.archive-build/
+/.future-slides-build/
+/.wip-output/
+/index.html
+/index_files/
+/current/*.html
+/current/*_files/
