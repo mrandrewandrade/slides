@@ -1,0 +1,21 @@
+---
+title: "TAS · Week 1"
+subtitle: "September 8-11, 2026"
+format:
+  html:
+    toc: false
+---
+
+[← TAS home](../)
+
+# Week 1
+
+## Day 1 · Tuesday, September 8
+
+[Open Day 1 slides](day-01.html)
+
+Introductions, name-and-action game, Name Tag Version 1, introduction presentation work time, and the end-of-class routine.
+
+## Course Notes
+
+Use these slides with the companion course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
