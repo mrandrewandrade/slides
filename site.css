@@ -27,6 +27,11 @@ body {
   font-size: 1.35rem;
 }
 
+.course-links {
+  margin: 0.2rem 0 0.9rem;
+  font-size: 0.95rem;
+}
+
 .week-block,
 .wip-course-block {
   margin-left: 0.6rem;
