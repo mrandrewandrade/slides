@@ -14,9 +14,17 @@ There are only two commands you should normally need.
 bash run.sh tej
 ```
 
-Use exactly one course code: `tej`, `tts`, or `tas`.
+Use `tej`, `tts`, or `tas`.
 
-`run.sh` previews only that course's current deck, so last-minute classroom edits do not trigger a project-wide rebuild.
+This previews only that course's latest deck, so last-minute classroom edits stay fast.
+
+To inspect the complete site, including Work in Progress views:
+
+```bash
+bash run.sh all
+```
+
+That intentionally performs a full render and is slower. It is for checking the whole slide system, not normal classroom use.
 
 ### Publish changes
 
@@ -34,27 +42,11 @@ Upcoming lessons are staged on the dedicated branch:
 future-slides
 ```
 
-Future lessons use their final canonical paths, for example:
+Future lessons use their final canonical paths and are not active classroom render targets. When a planned day is ready, ChatGPT can promote it to `main` and update the three `current/*.qmd` wrappers. There is no local promotion command to remember.
 
-```text
-2026-27/semester-1/period-1/shared/week-01/_2026-09-09-day-02.qmd
-```
+## Fast classroom build
 
-They are not active render targets, so planning ahead does not slow classroom preview or normal builds.
-
-When a planned day is ready, ChatGPT promotes it to `main` by bringing over that lesson source and updating:
-
-```text
-current/tej.qmd
-current/tts.qmd
-current/tas.qmd
-```
-
-There is no local promotion script to remember.
-
-## What gets built
-
-The active Quarto project renders only:
+The normal Quarto project renders only:
 
 ```text
 index.qmd
@@ -63,15 +55,25 @@ current/tts.qmd
 current/tas.qmd
 ```
 
-Old lesson source and future lesson source do not increase normal render time.
+Old lesson source and future lesson source do not increase normal classroom preview time.
+
+## Full background build
+
+The full build uses `_quarto-full.yml` and includes the current decks plus the alternate course, week, day, and semester views listed under **Work in Progress** on the first page.
+
+The full build runs in GitHub Actions for validation and publication. It can also be viewed locally with:
+
+```bash
+bash run.sh all
+```
 
 ## Background publish and archive
 
-When `main` is pushed, GitHub Actions does the slower housekeeping:
+When `main` is pushed, GitHub Actions:
 
 1. restores the previously published archive from `gh-pages`
 2. rebuilds the student index
-3. renders the three current course decks
+3. performs the full site build
 4. makes a self-contained dated snapshot of each current deck
 5. preserves every older snapshot
 6. publishes the complete site to `gh-pages`
@@ -84,23 +86,7 @@ There is one student-facing `/slides/` index page.
 
 Each class is collapsible. The newest week appears first, with older weeks underneath it. The current day links to the current deck; previous days link to their dated archive URLs.
 
-Conceptually:
-
-```text
-/slides/
-  TEJ
-    Week 2
-      Day 8 - current
-      Day 7
-    Week 1
-      Day 6
-      Day 5
-      ...
-  TTS
-    ...
-  TAS
-    ...
-```
+A separate collapsed **Work in Progress** section links directly to the alternate and cumulative slide views. Those links are clearly marked as draft material and may change before class.
 
 ## RevealJS navigation
 
