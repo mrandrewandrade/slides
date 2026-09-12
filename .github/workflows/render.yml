@@ -28,7 +28,10 @@ jobs:
 
       - name: Validate pull request
         if: github.event_name == 'pull_request'
-        run: quarto render
+        run: |
+          bash scripts/site.sh index archive
+          quarto render
+          bash scripts/site.sh snapshot .archive-test
 
       - name: Restore published archive
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
