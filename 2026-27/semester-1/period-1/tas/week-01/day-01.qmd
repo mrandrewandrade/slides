@@ -1,0 +1,15 @@
+---
+title: "TAS · Day 1"
+subtitle: "Tuesday, September 8, 2026 · Week 1"
+author: "Andrew Andrade"
+---
+
+{{< include ../../shared/week-01/_2026-09-08-day-01.qmd >}}
+
+<!-- TAS-specific Day 1 slides may be inserted here. -->
+
+{{< include ../../shared/routines/_end-of-class.qmd >}}
+
+# Navigation
+
+[Week 1](./) · [TAS home](../) · [Course notes](https://andrewandrade.ca/commons)
