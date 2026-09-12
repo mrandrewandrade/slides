@@ -1,11 +1,59 @@
 /*
- * Classroom RevealJS base styles.
+ * Technology Commons classroom RevealJS styles.
  * Code/configuration: GPL-3.0-or-later.
  * Slide/content material: CC BY 4.0.
  */
 
+:root {
+  --commons-black: #171717;
+  --commons-charcoal: #23272B;
+  --commons-slate: #3C454D;
+  --commons-grey: #66717B;
+  --commons-mist: #DDE2E6;
+  --commons-white: #F5F6F7;
+  --commons-navy: #1D2347;
+  --commons-scitech: #19226D;
+  --commons-harbour: #2B398E;
+  --commons-blue: #0072B2;
+  --commons-sky: #DDE9F7;
+  --commons-green: #4F6B46;
+  --commons-mint: #DCEBE3;
+  --commons-gold: #FCD937;
+  --commons-amber: #E6A11A;
+  --commons-orange: #D96A1D;
+  --commons-purple: #6A4FB3;
+  --commons-red: #B23939;
+}
+
+.reveal-viewport {
+  background: var(--commons-white);
+}
+
 .reveal {
+  --r-background-color: var(--commons-white);
+  --r-main-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --r-main-color: var(--commons-charcoal);
+  --r-heading-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --r-heading-color: var(--commons-navy);
+  --r-heading-font-weight: 650;
+  --r-link-color: var(--commons-blue);
+  --r-link-color-hover: var(--commons-harbour);
+  --r-selection-background-color: var(--commons-gold);
+  --r-selection-color: var(--commons-black);
   font-size: 42px;
+}
+
+.reveal::before {
+  content: "";
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  width: 38px;
+  height: 38px;
+  background: url("assets/commons-mark.svg") center / contain no-repeat;
+  opacity: 0.84;
+  pointer-events: none;
+  z-index: 20;
 }
 
 .reveal .slides {
@@ -16,13 +64,27 @@
 .reveal h2 {
   line-height: 1.05;
   margin-bottom: 0.55em;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
 .reveal h1 {
+  color: var(--commons-navy);
   font-size: 2.05em;
 }
 
+.reveal h1::after {
+  content: "";
+  display: block;
+  width: 2.3em;
+  height: 0.08em;
+  margin-top: 0.22em;
+  border-radius: 999px;
+  background: var(--commons-gold);
+}
+
 .reveal h2 {
+  color: var(--commons-harbour);
   font-size: 1.55em;
 }
 
@@ -36,26 +98,76 @@
   margin-top: 0.35em;
 }
 
+.reveal strong {
+  color: var(--commons-navy);
+}
+
+.reveal a {
+  color: var(--commons-blue);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.12em;
+}
+
 .reveal blockquote {
   width: 88%;
   margin: 0.7em auto;
-  padding: 0.35em 0.7em;
-  font-size: 1.12em;
-  border-left: 0.16em solid currentColor;
+  padding: 0.5em 0.75em;
+  color: var(--commons-navy);
+  background: var(--commons-sky);
+  border-left: 0.16em solid var(--commons-blue);
+  border-radius: 0.12em;
   box-shadow: none;
+  font-size: 1.12em;
+}
+
+.reveal code:not(pre code) {
+  padding: 0.05em 0.22em;
+  color: var(--commons-navy);
+  background: var(--commons-sky);
+  border-radius: 0.12em;
 }
 
 .reveal .footer {
+  color: var(--commons-grey);
+  border-top: 1px solid var(--commons-mist);
   font-size: 0.34em;
 }
 
+.reveal .footer a {
+  color: var(--commons-blue);
+}
+
+.reveal .controls {
+  color: var(--commons-blue);
+}
+
+.reveal .progress {
+  color: var(--commons-gold);
+}
+
+.reveal .slide-number {
+  color: var(--commons-grey);
+  background: transparent;
+}
+
 .reveal .small-note {
+  color: var(--commons-grey);
   font-size: 0.62em;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .reveal .big-prompt {
+  padding: 0.65em 0.8em;
+  color: var(--commons-navy);
+  background: var(--commons-sky);
+  border-left: 0.16em solid var(--commons-gold);
+  border-radius: 0.12em;
   font-size: 1.18em;
   font-weight: 650;
   line-height: 1.25;
+}
+
+.reveal .callout-important,
+.reveal .important {
+  border-color: var(--commons-red);
 }
