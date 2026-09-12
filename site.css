@@ -1,18 +1,85 @@
-/* Slides landing page styles. Code/configuration: GPL-3.0-or-later. */
+/* Technology Commons slide landing page styles. Code/configuration: GPL-3.0-or-later. */
+
+:root {
+  --commons-black: #171717;
+  --commons-charcoal: #23272B;
+  --commons-slate: #3C454D;
+  --commons-grey: #66717B;
+  --commons-mist: #DDE2E6;
+  --commons-white: #F5F6F7;
+  --commons-navy: #1D2347;
+  --commons-harbour: #2B398E;
+  --commons-blue: #0072B2;
+  --commons-sky: #DDE9F7;
+  --commons-green: #4F6B46;
+  --commons-gold: #FCD937;
+  --commons-brass: #B18A2F;
+}
+
+html {
+  background: var(--commons-white);
+}
 
 body {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 1.5rem 1.1rem 3rem;
+  color: var(--commons-charcoal);
+  background: var(--commons-white);
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--commons-navy);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+}
+
+a {
+  color: var(--commons-blue);
+  text-underline-offset: 0.14em;
+}
+
+a:hover {
+  color: var(--commons-harbour);
+}
+
+.slides-brand {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin: 0 0 0.7rem;
+  color: var(--commons-navy);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.slides-brand img {
+  width: 38px;
+  height: 38px;
 }
 
 .course-block,
 .week-block,
 .wip-block,
 .wip-course-block {
-  border: 1px solid #d9d9d9;
-  border-radius: 0.5rem;
+  border: 1px solid var(--commons-mist);
+  border-radius: 0.55rem;
   margin: 0.8rem 0;
-  padding: 0.15rem 0.9rem 0.7rem;
+  padding: 0.15rem 0.95rem 0.7rem;
+  background: #FFFFFF;
+}
+
+.course-block {
+  box-shadow: 0 8px 26px rgb(29 35 71 / 0.055);
 }
 
 .course-block > summary,
@@ -20,6 +87,7 @@ body {
 .wip-block > summary,
 .wip-course-block > summary {
   cursor: pointer;
+  color: var(--commons-navy);
   padding: 0.8rem 0;
 }
 
@@ -27,31 +95,69 @@ body {
   font-size: 1.35rem;
 }
 
+.course-block[open] > summary {
+  border-bottom: 3px solid var(--commons-gold);
+}
+
 .course-links {
-  margin: 0.2rem 0 0.9rem;
+  margin: 0.65rem 0 0.9rem;
   font-size: 0.95rem;
+}
+
+.course-links a {
+  display: inline-block;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  padding: 0.26rem 0.48rem;
+  border: 1px solid var(--commons-mist);
+  border-radius: 0.35rem;
+  background: var(--commons-white);
+  text-decoration: none;
+}
+
+.course-links a:first-child {
+  color: #FFFFFF;
+  background: var(--commons-navy);
+  border-color: var(--commons-navy);
 }
 
 .week-block,
 .wip-course-block {
   margin-left: 0.6rem;
+  background: var(--commons-white);
 }
 
 .wip-block {
   margin-top: 1.5rem;
-  opacity: 0.9;
+  border-color: var(--commons-brass);
+  border-style: dashed;
+  background: color-mix(in srgb, var(--commons-sky) 55%, #FFFFFF);
 }
 
 .current-label {
-  font-size: 0.75em;
-  font-weight: 600;
+  display: inline-block;
   margin-left: 0.45rem;
-  opacity: 0.65;
-  text-transform: uppercase;
+  padding: 0.12em 0.38em;
+  color: var(--commons-navy);
+  background: var(--commons-gold);
+  border-radius: 999px;
+  font-size: 0.7em;
+  font-weight: 750;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .week-block li,
 .wip-course-block li {
   margin: 0.45rem 0;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.8rem 2rem;
+  }
+
+  .week-block,
+  .wip-course-block {
+    margin-left: 0;
+  }
 }
