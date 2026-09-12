@@ -17,7 +17,7 @@ format:
     transition: none
     navigation-mode: vertical
     controls: auto
-    footer: "[Slides](https://github.com/mrandrewandrade/slides) · [GitHub](https://github.com/mrandrewandrade) · [Commons](https://andrewandrade.ca/commons) · Content: CC BY 4.0"
+    footer: "[Commons](https://andrewandrade.ca/commons) · CC BY 4.0"
 
 execute:
   freeze: auto
