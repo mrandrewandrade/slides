@@ -35,7 +35,11 @@ jobs:
             exit 0
           fi
 
-          summary="$(printf '%s\n' "$output" | tail -n 8 | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-120)"
+          clean="$(printf '%s\n' "$output" | sed -E 's/\x1B\[[0-9;]*[mK]//g')"
+          summary="$(printf '%s\n' "$clean" | grep -Ei 'error|include|not found|does not exist|failed' | head -n 3 | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-130)"
+          if [ -z "$summary" ]; then
+            summary="$(printf '%s\n' "$clean" | tail -n 6 | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-130)"
+          fi
           gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
             -f state=error \
             -f context=quarto-render-diagnostic \
