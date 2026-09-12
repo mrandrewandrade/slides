@@ -1,0 +1,57 @@
+---
+title: "Technology Class Slides"
+format:
+  html:
+    toc: false
+---
+
+# 2026-27 Classroom Slides
+
+These classroom slides are designed to be used **in conjunction with the course notes and resources at [andrewandrade.ca/commons](https://andrewandrade.ca/commons)**.
+
+Use the selectors below to jump to a course and instructional week.
+
+<div class="slide-picker">
+  <p>
+    <label for="course-select"><strong>Course</strong></label><br>
+    <select id="course-select">
+      <option value="">Choose a course</option>
+      <option value="tej">TEJ</option>
+      <option value="tts">TTS</option>
+      <option value="tas">TAS</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="week-select"><strong>Week</strong></label><br>
+    <select id="week-select">
+      <option value="">Choose a week</option>
+      <option value="week-01">Week 1</option>
+    </select>
+  </p>
+
+  <button type="button" onclick="openSelectedWeek()">Open slides</button>
+</div>
+
+<script>
+function openSelectedWeek() {
+  const course = document.getElementById('course-select').value;
+  const week = document.getElementById('week-select').value;
+
+  if (!course || !week) {
+    return;
+  }
+
+  window.location.href = `2026-27/semester-1/period-1/${course}/${week}/`;
+}
+</script>
+
+## Courses
+
+- [TEJ](2026-27/semester-1/period-1/tej/)
+- [TTS](2026-27/semester-1/period-1/tts/)
+- [TAS](2026-27/semester-1/period-1/tas/)
+
+## Course Notes
+
+The companion notes, references, and course resources live at [andrewandrade.ca/commons](https://andrewandrade.ca/commons).
