@@ -4,30 +4,111 @@ Quarto RevealJS slides for the 2026-27 school year.
 
 The slides are designed to be used in conjunction with the course notes and resources at https://andrewandrade.ca/commons.
 
-## Fast classroom workflow
+## The normal commands
 
-The repository is optimized for last-minute classroom edits.
+You should only need these four scripts during normal use.
 
-A normal `quarto render` builds only:
+### 1. Preview one class while editing
 
-```text
-index.qmd
-current/tej.qmd
-current/tts.qmd
-current/tas.qmd
+```bash
+bash scripts/preview.sh tej
 ```
 
-Finished days are archived as static, self-contained HTML files. Archived presentations keep permanent URLs but are not re-rendered every time you change today's slides.
+Use `tej`, `tts`, or `tas`.
 
-The root page is the only student navigation page. It uses collapsible sections:
+This is the normal before-class workflow. It previews only that current deck and refreshes as you edit.
+
+### 2. Build
+
+Build one class:
+
+```bash
+bash scripts/build.sh tej
+```
+
+Build the student index and all three current decks:
+
+```bash
+bash scripts/build.sh
+```
+
+The full current-site build does not rebuild historical archived slides.
+
+### 3. Archive the finished day
+
+```bash
+bash scripts/archive.sh
+```
+
+This archives the current TEJ, TTS, and TAS decks as self-contained HTML files with permanent URLs. It automatically reads the week, instructional day, and date from the current decks and refreshes `index.qmd`.
+
+Example archive path:
+
+```text
+archive/2026-27/semester-1/tej/week-01/2026-09-08-day-01.html
+```
+
+Archived decks are copied into the published site but are not recompiled during normal builds.
+
+### 4. Start the next day
+
+After archiving the current day:
+
+```bash
+bash scripts/new-day.sh 2 2026-09-09 1
+```
+
+Arguments are:
+
+```text
+day-number  YYYY-MM-DD  week-number
+```
+
+The script:
+
+- checks that the current decks were archived first
+- creates the next shared lesson file
+- points TEJ, TTS, and TAS at the new lesson
+- leaves a place for course-specific slides
+- refreshes the collapsible student index
+
+Then edit the new shared lesson file printed by the script.
+
+## Typical daily workflow
+
+```bash
+# Before class
+bash scripts/preview.sh tej
+
+# Optional final check
+bash scripts/build.sh tej
+
+# At the end of the instructional day
+bash scripts/archive.sh
+
+# Prepare tomorrow
+bash scripts/new-day.sh 2 2026-09-09 1
+```
+
+If the three courses later diverge, the current course wrappers can still contain course-specific slides while sharing common material where appropriate.
+
+## Student navigation
+
+There is one student-facing `index.qmd` page. Each class is collapsible. Within each class, the latest week appears first and expanded, while older weeks remain collapsed underneath it.
+
+The index is generated from the current decks and files under `archive/`, so archived days automatically remain available.
+
+Conceptually:
 
 ```text
 /slides/
   TEJ
     Week 2 - latest
-      Day 8
+      Day 8 - current
       Day 7
+      Day 6
     Week 1
+      Day 5
       Day 4
       Day 3
       Day 2
@@ -38,7 +119,20 @@ The root page is the only student navigation page. It uses collapsible sections:
     ...
 ```
 
-Inside each class, the latest week appears first and is expanded. Older weeks stay collapsed below it.
+Each day links directly to the beginning of that day's RevealJS deck.
+
+## Fast render model
+
+A normal full build renders only:
+
+```text
+index.qmd
+current/tej.qmd
+current/tts.qmd
+current/tas.qmd
+```
+
+The historical archive is static HTML, so the build should stay roughly the same size as the semester grows.
 
 ## Source structure
 
@@ -62,93 +156,16 @@ archive/
           _end-of-class.qmd
         week-01/
           _2026-09-08-day-01.qmd
+scripts/
+  preview.sh
+  build.sh
+  archive.sh
+  new-day.sh
+  slides.sh
+  archive-current.sh
 ```
 
-Reusable lesson content can still live under `shared/`. The three current course decks can include the same shared fragment and then add course-specific slides when needed.
-
-## Preview before class
-
-For TEJ:
-
-```bash
-quarto preview current/tej.qmd
-```
-
-For TTS:
-
-```bash
-quarto preview current/tts.qmd
-```
-
-For TAS:
-
-```bash
-quarto preview current/tas.qmd
-```
-
-This previews only the deck you are editing.
-
-## Fast build
-
-Render one deck:
-
-```bash
-quarto render current/tej.qmd
-```
-
-Render the student index plus all three current decks:
-
-```bash
-quarto render
-```
-
-Because `_quarto.yml` has an explicit `project.render` list, archived source files and older scaffolding are not render targets.
-
-Output is written to `_site/`.
-
-## Archive a finished day
-
-When a day is finished, archive that course deck once:
-
-```bash
-bash scripts/archive-current.sh tej 01 01 2026-09-08
-```
-
-Arguments are:
-
-```text
-course  week-number  day-number  YYYY-MM-DD
-```
-
-The script creates a self-contained file such as:
-
-```text
-archive/2026-27/semester-1/tej/week-01/2026-09-08-day-01.html
-```
-
-Then change that day's link in `index.qmd` from the current URL:
-
-```text
-current/tej.html
-```
-
-to its permanent archive URL:
-
-```text
-archive/2026-27/semester-1/tej/week-01/2026-09-08-day-01.html
-```
-
-After that, replace the contents of `current/tej.qmd` with the next TEJ lesson. Repeat independently for TTS and TAS.
-
-Archived HTML is included in `_site/` as a project resource, but Quarto does not compile it again.
-
-## Adding a new week to the index
-
-Each class is a collapsible `<details>` section in `index.qmd`. Put the newest week first and mark it `open`. Older weeks remain collapsed.
-
-Each day should link directly to the beginning of that day's deck. RevealJS also provides hash URLs for individual slides within a deck, so a specific slide can be linked directly when useful.
-
-There are no separate student course pages, weekly landing pages, or cumulative semester decks in the active workflow. The root index is the navigation system.
+`slides.sh` and `archive-current.sh` contain the underlying logic. In normal use, use the four short wrapper scripts above.
 
 ## RevealJS navigation
 
@@ -162,13 +179,7 @@ Slide decks use `navigation-mode: vertical`:
 
 ## CI
 
-GitHub Actions runs:
-
-```bash
-quarto render
-```
-
-Because the project render targets are restricted, CI tests the index and current decks rather than rebuilding the archive.
+GitHub Actions tests the same fast current-site build instead of recompiling the historical archive.
 
 ## Links
 
