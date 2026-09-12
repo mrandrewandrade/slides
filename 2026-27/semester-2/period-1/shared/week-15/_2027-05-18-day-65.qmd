@@ -14,6 +14,13 @@ semester: 2
 > **PLACEHOLDER QUOTE**  
 > Replace this with a quote connected to today's lesson.
 
+# Coming Up
+
+**2 instructional days: Spring Concert**  
+Thursday, May 20  
+Spring Concert is scheduled for 7:00-9:00 PM.
+
+
 # Today's Lesson
 
 ::: {.big-prompt}

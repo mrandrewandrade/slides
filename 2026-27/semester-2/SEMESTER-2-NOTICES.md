@@ -8,22 +8,27 @@ The school calendar identifies the turnaround day and exam window, but does not 
 
 - Slide 1 is always the Quote of the Day placeholder.
 - On a Red Dot/Open Red Dot instructional day, that notice is a standalone slide immediately after the quote.
-- School schedule notices follow the quote, or follow the Red Dot/Open Red Dot notice when both occur.
-- Schedule-changing school events are announced 3, 2, and 1 **instructional days** in advance.
-- Half days also get a same-day notice.
+- School notices follow the quote, or follow the Red Dot/Open Red Dot notice when both occur.
+- Student-facing school events are announced 3, 2, and 1 **instructional days** in advance.
+- Student-facing events that occur during a school day also get a same-day notice where useful.
 - Finished lesson content replaces the `Today's Lesson` placeholder as each day is planned.
 
-## School schedule notices included
+## Student-facing school notices included
 
+- February 10: Final Report Card Distribution
 - February 12: PL Day, no school for students
 - February 15: Family Day, no school for students
+- February 22-March 5: Grad Photos
 - March 12: Half Day, 11:05 AM dismissal
 - March 15-19: Spring Break
 - March 26: Good Friday, school closed
 - March 29: Easter Monday, school closed
 - April 16: Half Day, 11:05 AM dismissal
+- May 20: Spring Concert, 7:00-9:00 PM
 - May 24: Victoria Day, no school for students
 - June 21-25: Semester 2 exams
+
+Board/committee meetings and similar non-student-facing calendar items are intentionally not inserted into classroom slides.
 
 ## Red Dot / Open Red Dot regular-class dates included
 

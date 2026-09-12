@@ -14,6 +14,13 @@ semester: 2
 > **PLACEHOLDER QUOTE**  
 > Replace this with a quote connected to today's lesson.
 
+# Coming Up
+
+**2 instructional days: Final Report Card Distribution**  
+Wednesday, February 10  
+Semester 1 final report cards are distributed.
+
+
 # Today's Lesson
 
 ::: {.big-prompt}

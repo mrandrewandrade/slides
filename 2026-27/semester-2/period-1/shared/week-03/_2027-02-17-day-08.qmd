@@ -14,6 +14,13 @@ semester: 2
 > **PLACEHOLDER QUOTE**  
 > Replace this with a quote connected to today's lesson.
 
+# Coming Up
+
+**3 instructional days: Grad Photos**  
+Monday, February 22  
+Grad photos begin February 22 and run through March 5.
+
+
 # Today's Lesson
 
 ::: {.big-prompt}
