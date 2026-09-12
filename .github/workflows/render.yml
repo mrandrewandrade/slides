@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: slides-publish
+  group: ${{ github.event_name == 'pull_request' && format('slides-pr-{0}', github.event.pull_request.number) || 'slides-pages-publish' }}
   cancel-in-progress: true
 
 jobs:
