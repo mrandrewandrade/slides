@@ -8,37 +8,51 @@ The classroom slides are designed to be used in conjunction with the course note
 
 There are only two commands you should normally need.
 
-### Run one class quickly
+### Run one class locally
 
 ```bash
 bash run.sh tej
 ```
 
-Use `tej`, `tts`, or `tas`.
+Use exactly one course code: `tej`, `tts`, or `tas`.
 
-If you run `bash run.sh` with no argument, it gives you a simple 1/2/3 class menu.
+`run.sh` previews only that course's current deck, so last-minute classroom edits do not trigger a project-wide rebuild.
 
-This previews only the latest deck for that class, so it is the fastest path for last-minute classroom edits.
-
-### Publish
+### Publish changes
 
 ```bash
 bash publish.sh
 ```
 
-This only handles Git locally: it safely pulls, commits any small edits, and pushes.
+This safely pulls, commits local changes if needed, and pushes them to GitHub. On `main`, GitHub Actions handles the heavier publishing work in the background.
 
-The heavier work happens in GitHub Actions after a push to `main`:
+## Future slide planning
 
-1. restore the previously published slide archive from `gh-pages`
-2. rebuild the index from the archive plus the current decks
-3. render only the current site
-4. snapshot the latest TEJ, TTS, and TAS decks into permanent dated archive URLs
-5. publish the complete site back to the `gh-pages` branch
+Upcoming lessons are staged on the dedicated branch:
 
-Publishing during the same day simply replaces that day's archive snapshot with the newest version. When the current deck advances to the next day, the previous day's published snapshot remains in the archive automatically.
+```text
+future-slides
+```
 
-## What stays fast
+Future lessons use their final canonical paths, for example:
+
+```text
+2026-27/semester-1/period-1/shared/week-01/_2026-09-09-day-02.qmd
+```
+
+They are not active render targets, so planning ahead does not slow classroom preview or normal builds.
+
+When a planned day is ready, ChatGPT promotes it to `main` by bringing over that lesson source and updating:
+
+```text
+current/tej.qmd
+current/tts.qmd
+current/tas.qmd
+```
+
+There is no local promotion script to remember.
+
+## What gets built
 
 The active Quarto project renders only:
 
@@ -49,29 +63,34 @@ current/tts.qmd
 current/tas.qmd
 ```
 
-Historical decks are already-built HTML on the `gh-pages` branch. They are copied forward during deployment, not recompiled.
+Old lesson source and future lesson source do not increase normal render time.
 
-The most important classroom path is therefore:
+## Background publish and archive
 
-```bash
-bash run.sh tej
-```
+When `main` is pushed, GitHub Actions does the slower housekeeping:
 
-That watches only `current/tej.qmd` and the files it includes.
+1. restores the previously published archive from `gh-pages`
+2. rebuilds the student index
+3. renders the three current course decks
+4. makes a self-contained dated snapshot of each current deck
+5. preserves every older snapshot
+6. publishes the complete site to `gh-pages`
+
+Publishing the same instructional day again replaces that day's snapshot with the newest version. When a new day is promoted to `main`, the previous day's published snapshot remains as the permanent historical copy.
 
 ## Student navigation
 
 There is one student-facing `/slides/` index page.
 
-Each class is collapsible. The latest week appears first and expanded. Older weeks remain underneath it. The latest day links to the current deck; previous days link to their permanent archived presentations.
+Each class is collapsible. The newest week appears first, with older weeks underneath it. The current day links to the current deck; previous days link to their dated archive URLs.
 
 Conceptually:
 
 ```text
 /slides/
   TEJ
-    Week 2 - latest
-      Day 8 - latest
+    Week 2
+      Day 8 - current
       Day 7
     Week 1
       Day 6
@@ -82,24 +101,6 @@ Conceptually:
   TAS
     ...
 ```
-
-## Editing
-
-The live class decks are:
-
-```text
-current/tej.qmd
-current/tts.qmd
-current/tas.qmd
-```
-
-Shared lesson material and reusable routines remain under:
-
-```text
-2026-27/semester-1/period-1/shared/
-```
-
-Andrew can make small local edits to the current files. Larger operations such as advancing the instructional day or week are intended to be handled through ChatGPT/GitHub, not additional user-facing scripts.
 
 ## RevealJS navigation
 
@@ -113,11 +114,7 @@ Slide decks use `navigation-mode: vertical`:
 
 ## GitHub Pages
 
-Pull requests run a fast Quarto validation build.
-
-Pushes to `main` publish the complete site to the `gh-pages` branch while preserving the historical HTML archive.
-
-GitHub Pages must be configured once under **Repository Settings > Pages** to deploy from the **`gh-pages` branch, root (`/`)**.
+After the setup PR is merged, configure **Repository Settings > Pages** to deploy from the `gh-pages` branch at `/ (root)`.
 
 ## Links
 
