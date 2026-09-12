@@ -146,7 +146,7 @@ Archived HTML is included in `_site/` as a project resource, but Quarto does not
 
 Each class is a collapsible `<details>` section in `index.qmd`. Put the newest week first and mark it `open`. Older weeks remain collapsed.
 
-Each day should link directly to the beginning of that day's deck. RevealJS also provides stable hash URLs for individual slides within a deck when you need to link to a specific slide.
+Each day should link directly to the beginning of that day's deck. RevealJS also provides hash URLs for individual slides within a deck, so a specific slide can be linked directly when useful.
 
 ## RevealJS navigation
 
