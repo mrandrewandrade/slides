@@ -1,0 +1,29 @@
+# Licensing
+
+Copyright (c) Andrew Andrade.
+
+This repository is dual-licensed by material type.
+
+## Code and configuration
+
+Code, configuration, scripts, stylesheets, and other software material are licensed under the **GNU General Public License version 3 or later (GPL-3.0-or-later)**.
+
+See `LICENSES/GPL-3.0-or-later.txt`.
+
+## Educational content
+
+Slide text, lesson content, documentation, diagrams created for the lessons, and other educational material are licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+See `LICENSES/CC-BY-4.0.txt`.
+
+When reusing CC BY 4.0 material, provide appropriate credit, identify the license, link to the license, and indicate whether changes were made.
+
+Suggested attribution:
+
+> Technology class slide content by Andrew Andrade, licensed under CC BY 4.0. Source: https://github.com/mrandrewandrade/slides
+
+Project links:
+
+- https://github.com/mrandrewandrade/slides
+- https://github.com/mrandrewandrade
+- https://andrewandrade.ca/commons

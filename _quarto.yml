@@ -1,0 +1,17 @@
+project:
+  type: default
+  output-dir: _site
+
+format:
+  revealjs:
+    theme: default
+    css: styles.css
+    slide-number: true
+    progress: true
+    transition: none
+    navigation-mode: vertical
+    controls: auto
+    footer: "[Slides](https://github.com/mrandrewandrade/slides) · [GitHub](https://github.com/mrandrewandrade) · [Commons](https://andrewandrade.ca/commons) · Content: CC BY 4.0"
+
+execute:
+  freeze: auto
