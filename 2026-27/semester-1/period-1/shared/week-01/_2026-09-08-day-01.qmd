@@ -4,18 +4,19 @@ date: 2026-09-08
 week: 1
 -->
 
-# Quote of the Day
+# Quote of the Day {.quote-slide}
 
-::: {.small-note}
-**Day 1 · Tuesday, September 8, 2026 · Week 1**
-:::
+> "All that we are is story..."
 
-> **PLACEHOLDER QUOTE**  
-> A first version gives us something we can improve.
+*Medicine Walk*  
+Richard Wagamese, Ojibway author
 
-::: {.small-note}
-Replace this quote when the final Day 1 quote is selected.
-:::
+## Quote of the Day {.quote-slide}
+
+> "All that we are is story... It is what we arrive with. It is all we leave behind."
+
+*Medicine Walk*  
+Richard Wagamese, Ojibway author
 
 # Arrival
 
