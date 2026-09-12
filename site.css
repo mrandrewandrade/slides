@@ -1,0 +1,41 @@
+/* Slides landing page styles. Code/configuration: GPL-3.0-or-later. */
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.course-block,
+.week-block {
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  margin: 0.8rem 0;
+  padding: 0.15rem 0.9rem 0.7rem;
+}
+
+.course-block > summary,
+.week-block > summary {
+  cursor: pointer;
+  padding: 0.8rem 0;
+}
+
+.course-block > summary {
+  font-size: 1.35rem;
+}
+
+.week-block {
+  margin-left: 0.6rem;
+}
+
+.current-label {
+  font-size: 0.75em;
+  font-weight: 600;
+  margin-left: 0.45rem;
+  opacity: 0.65;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.week-block li {
+  margin: 0.45rem 0;
+}
