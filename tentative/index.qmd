@@ -2,6 +2,11 @@
 title: "Upcoming / Tentative Slides"
 ---
 
+<div class="slides-brand">
+<img src="assets/commons-mark.svg" alt="Technology Commons mark">
+<span>Technology Commons · Work in Progress</span>
+</div>
+
 # Semester 2 Tentative Plan
 
 **Tentative and subject to change.** These drafts are here to help you anticipate what may be coming. Topics, timing, activities, assessments, and due dates may change based on class progress, school events, and student needs.

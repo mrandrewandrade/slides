@@ -4,6 +4,7 @@ subtitle: "Week 13 · 2027-05-05 · Subject to change"
 format:
   revealjs:
     theme: default
+    css: ../styles.css
     slide-number: true
     progress: true
     transition: none
