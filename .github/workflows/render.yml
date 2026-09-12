@@ -1,4 +1,4 @@
-name: Render Quarto slides
+name: Render current Quarto slides
 
 on:
   push:
@@ -14,5 +14,5 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render all decks
+      - name: Render index and current decks
         run: quarto render
