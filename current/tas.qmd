@@ -1,7 +1,7 @@
 ---
-title: "TAS · Day 1"
-subtitle: "2026-27 · Semester 1 · Period 1"
-author: "Andrew Andrade"
+course: "TAS"
+day: 1
+class-date: "Tuesday, September 8, 2026"
 ---
 
 {{< include ../2026-27/semester-1/period-1/shared/week-01/_2026-09-08-day-01.qmd >}}
