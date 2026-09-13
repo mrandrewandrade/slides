@@ -2,6 +2,8 @@
 
 Use the same two-slide quote structure every day.
 
+The quote hook itself is the slide heading. Do not use a generic heading such as `# Quote`.
+
 Keep the opening hook short enough to sit comfortably on one or two large lines. As a rule, aim for about 3-7 words, then add an ellipsis. Put the rest of the quote on the second slide. Quotes should stay roughly within the length of the Day 1 and Day 2 examples; if a quote needs substantially more text, choose a shorter excerpt instead of creating a special layout.
 
 Attribution is always stacked in the same order:
@@ -10,22 +12,14 @@ Attribution is always stacked in the same order:
 2. Who they are - optional.
 3. Book, article, speech, website, resource, or other source - optional.
 
-If line 2 or 3 is not useful, simply omit that span. Do not replace it with a blank line or separator.
+If line 2 or 3 is not useful, omit that span. Do not add blank placeholders or separators.
 
 Copy this block to the top of the day's `.qmd` file and replace only the bracketed text:
 
 ```qmd
-# Quote {.quote-hero-slide background-color="#171717"}
+# [SHORT OPENING HOOK]... {.quote-hero-slide background-color="#171717"}
 
-::: {.quote-hero-text}
-[SHORT OPENING HOOK]...
-:::
-
-# Quote {.quote-detail-slide background-color="#171717"}
-
-::: {.quote-hero-text}
-[SHORT OPENING HOOK]...
-:::
+# [SHORT OPENING HOOK]... {.quote-detail-slide background-color="#171717"}
 
 ::: {.quote-continuation}
 [REST OF QUOTE]
