@@ -103,7 +103,7 @@
 /* Keep the repeated hero fixed, then place the added text clearly below it. */
 .reveal .quote-continuation {
   position: absolute;
-  top: 57%;
+  top: 62%;
   left: 6%;
   width: 84%;
   margin: 0;
@@ -114,7 +114,7 @@
 
 .reveal .quote-attribution {
   position: absolute;
-  top: 76%;
+  top: 80%;
   left: 6%;
   width: 88%;
   margin: 0;
