@@ -17,16 +17,17 @@ It is all we leave behind.
 
 Monday, September 14, 2026
 
-# Arrive
+# Arrive Every Day
 
-Take about **60 seconds**.
+- Sit down and relax.
+- Take a look at the quote.
+- Phones are okay until attendance is finished.
+- No talking while attendance is being taken.
+- When your name is called, say **"here"** or something else loud enough for me to hear.
 
-- Sit comfortably.
-- Notice your breathing.
-- Notice a few sounds.
-- Notice one physical sensation.
-- You do not need to change anything.
-- Bring your attention back to the room.
+::: {.big-prompt}
+If I do not hear you **and** see you, I cannot mark you present.
+:::
 
 # Why do this?
 
@@ -34,37 +35,60 @@ Take about **60 seconds**.
 Why do you think we start class this way?
 :::
 
-Pause and take a few answers.
-
-# Why?
-
-- Shift attention into the room.
-- Notice before reacting.
-- Practise focusing on what is happening now.
+# Attendance & Participation
 
 ::: {.big-prompt}
-These are useful skills when you are learning, designing, troubleshooting, working with tools, or listening to someone else.
+**Physically present:** required.  
+**Mentally present:** your choice, but it affects your participation and learning.
+:::
+
+- Attendance and participation are part of your course grade.
+- Participation includes **in-class** and **online** participation. More on online participation later.
+- Lateness, repeated or extended time out of class, and avoiding participation all count.
+- Making it harder for someone else to be present and learn also counts.
+
+**Participation is a significant part of the grade.**
+
+# Essential Expectations
+
+- Respect **transition times and timers**.
+- Respect **no-phone** moments.
+- Respect **no-talking** moments.
+- Do not prevent other people from learning.
+
+::: {.big-prompt}
+Otherwise, I am very flexible. This class should be a lot of fun.
+:::
+
+# Very Difficult to Fail
+
+::: {.big-prompt}
+If you submit your work, it is very difficult to fail my class.
+:::
+
+- The main way to fail is to submit **little or nothing**.
+- More importantly: do not prevent other people from learning.
+
+# Any Questions?
+
+::: {.big-prompt}
+Ask now. Ask later. Ask when you need help.
 :::
 
 # Announcements {.announcements-slide}
 
-- Welcome to the course.
-- Today is about names, expectations, and getting set up.
-- Bring your physical name tag back **usable** next class.
-
-# Essential Expectations
-
-- No phones while **Mr. Andrade is talking**.
-- Washroom: **one person at a time**, about **5 minutes**. Tell me if you expect to be longer.
-- Respect the timers and protect the learning environment.
+- Welcome to the course!
 
 # Today's Route
 
-::: {.big-prompt}
-Meet the crew -> Names -> Name Tag V1 -> Google Classroom -> Submit photo
-:::
+- **10-15 min:** Entering flow state - name game
+- Build something and document it.
+- Submit a **PDF** on Google Classroom.
+- **Final 15 min:** quiet reflection and daily log.
 
-# Name-and-Action Game
+# Entering Flow: Name Game
+
+**10-15 minutes**
 
 1. Say your **preferred name**.
 2. Add one simple **action or gesture**.
@@ -72,35 +96,31 @@ Meet the crew -> Names -> Name Tag V1 -> Google Classroom -> Submit photo
 4. Help each other if someone gets stuck.
 
 ::: {.big-prompt}
-Learn names, move around, and make names easier to remember.
+Learn names, move around, and get comfortable working together.
 :::
 
 # Name Tag V1
 
 ::: {.big-prompt}
-Make a name tag that helps me learn your name.
+Make a clear, useful name tag that helps me learn your name.
 :::
 
-Give yourself about **5 minutes**.
+**5-10 minutes**
 
-**This is Version 1, not a masterpiece.**
+# Document + Submit
 
-**Materials:** paper/card stock and markers
-
-# When Finished
-
-1. Take a **clear photo**.
-2. Make sure your **name is readable**.
-3. Open/join **Google Classroom**.
-4. Submit the photo to **Name Tag V1 - Photo Submission**.
-5. Take the physical name tag home.
-6. Bring it back **usable**.
+1. Take a **clear, well-lit photo** of your name tag.
+2. Put the photo in a Google Doc or other software that can create a PDF.
+3. Crop and resize it so the name tag is easy to read.
+4. Add: **Submitted by: your-student-number**
+5. Export as a **PDF**, open it, and check it.
+6. Submit the PDF to **Google Classroom**.
 
 # Mission Complete
 
-- Name tag made
-- Clear photo taken
-- Google Classroom joined
-- Photo uploaded
-- Assignment turned in
-- Physical tag goes home and comes back usable
+- Name tag is clear and easy to read.
+- Photo is clear and well-lit.
+- PDF includes **Submitted by: your-student-number**.
+- PDF opens and looks correct.
+- PDF is submitted to Google Classroom.
+- Physical name tag goes home and comes back usable.
