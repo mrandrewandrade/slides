@@ -279,13 +279,34 @@ def advance(courses: list[str]) -> None:
         )
 
 
+def future_header(course: str) -> list[str]:
+    """Build standalone Reveal front matter matching the classroom project."""
+    current_header, _ = split_frontmatter(current_path(course).read_text(encoding="utf-8"))
+    footer = next((line.strip() for line in current_header if line.strip().startswith("footer:")), None)
+
+    header = [
+        f'course: "{course.upper()}"',
+        "format:",
+        "  revealjs:",
+        "    theme: default",
+        "    css: styles.css",
+        "    slide-number: true",
+        "    progress: true",
+        "    transition: none",
+        "    navigation-mode: vertical",
+        "    controls: auto",
+    ]
+    if footer:
+        header.append(f"    {footer}")
+    return header
+
+
 def future_document(course: str) -> str | None:
     days = future_days(course)
     if not days:
         return None
 
-    header, _ = split_frontmatter(current_path(course).read_text(encoding="utf-8"))
-    header = header_without_day(header)
+    header = future_header(course)
     pieces = ["---\n", "\n".join(header), "\n---\n\n"]
     current = current_day(course)
     pieces.append("# Future Slide Deck {.course-day-slide}\n\n")
