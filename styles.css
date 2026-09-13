@@ -72,11 +72,16 @@
   text-underline-offset: 0.13em;
 }
 
-/* Opening quotes use one consistent two-slide layout every day. */
+/*
+ * Opening quotes use one consistent two-slide layout every day.
+ * Reveal's print layout can give percentage-positioned children an unreliable
+ * containing height. These fixed coordinates are in the 1050 x 700 Reveal
+ * slide coordinate system, so screen and print views keep the same spacing.
+ */
 .reveal .quote-hero-slide,
 .reveal .quote-detail-slide {
   position: relative;
-  min-height: 100%;
+  min-height: 700px;
   background: var(--ink) !important;
   color: var(--white);
   text-align: left;
@@ -86,9 +91,9 @@
 .reveal .quote-hero-slide > h1,
 .reveal .quote-detail-slide > h1 {
   position: absolute;
-  top: 24%;
-  left: 6%;
-  width: 88%;
+  top: 168px;
+  left: 63px;
+  width: 924px;
   margin: 0;
   color: var(--white) !important;
   font-size: 2.35em;
@@ -99,9 +104,9 @@
 
 .reveal .quote-continuation {
   position: absolute;
-  top: 62%;
-  left: 6%;
-  width: 84%;
+  top: 430px;
+  left: 63px;
+  width: 882px;
   margin: 0;
   color: #e7e7e4 !important;
   font-size: 1.22em;
@@ -110,9 +115,9 @@
 
 .reveal .quote-attribution {
   position: absolute;
-  top: 81%;
-  left: 6%;
-  width: 88%;
+  top: 565px;
+  left: 63px;
+  width: 924px;
   margin: 0;
   font-size: 0.72em;
   line-height: 1.18;
