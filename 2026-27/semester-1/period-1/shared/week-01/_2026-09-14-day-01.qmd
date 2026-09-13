@@ -126,11 +126,9 @@ Has anyone heard of **flow state**?
 
 # Name Game
 
-- Fully participate.
-- Say your name.
-- Add a simple gesture.
-- Everyone else listens and remembers the name + gesture.
-- We go around the circle.
+- Go **one at a time** around the circle.
+- Say your name and add a simple gesture.
+- The **next person** repeats your name and/or gesture, then adds their own.
 - Help each other.
 
 # Any Questions?
@@ -155,17 +153,13 @@ Make a clear, useful name tag that helps me learn your name.
 
 # Why So Specific?
 
-::: {.big-prompt}
-**In engineering and consulting, the deliverable has to work for the person receiving it. It must be professional and confidential.**
-:::
+- The deliverable has to work for the person receiving it.
+- It must be **professional and confidential**.
 
 # Why PDF?
 
-- PDFs are **stable snapshots** of finished work.
-- They open consistently across devices and software.
-- Editable files are working files and have hidden details.
-- A PDF is the **deliverable**.
-- Clear presentation makes good work easier to understand and trust.
+- It looks the **same for everyone**.
+- Editable files are working files and can have hidden details. A PDF is the **deliverable**.
 
 # Example PDF
 
