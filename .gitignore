@@ -7,3 +7,5 @@
 /index_files/
 /current/*.html
 /current/*_files/
+
+**/*.quarto_ipynb
