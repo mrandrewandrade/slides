@@ -48,6 +48,31 @@ a:hover {
   color: var(--blue);
 }
 
+.print-help {
+  margin: 1rem 0 0.25rem;
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid var(--line);
+  color: var(--grey);
+  font-size: 0.92rem;
+}
+
+.print-link {
+  display: inline-block;
+  margin-left: 0.55rem;
+  color: var(--grey);
+  font-size: 0.78em;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.print-link::before {
+  content: "↗ ";
+}
+
+.print-link:hover {
+  color: var(--navy);
+}
+
 .slides-brand {
   display: flex;
   gap: 0.65rem;
@@ -124,5 +149,9 @@ a:hover {
 
   .week-block {
     margin-left: 0.4rem;
+  }
+
+  .print-link {
+    margin-left: 0.35rem;
   }
 }
