@@ -53,23 +53,23 @@ EOF
   } > "$course_root/index.html"
 done
 
-echo "Building WIP landing pages..."
+echo "Building future slide deck landing pages..."
 
 cat > "$site_root/wip/index.html" <<'EOF'
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Work in Progress Slides</title>
+<title>Future Slide Decks</title>
 <style>body{font-family:system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#2f3439}a{color:#234a73}.muted{color:#777}</style>
 </head>
 <body>
-<h1>Work in Progress</h1>
-<p class="muted">Semester 1 planning lives on this branch and is being expanded through the exam period.</p>
+<h1>Future Slide Decks</h1>
+<p class="muted">Staged slide material for the rest of Semester 1.</p>
 <ul>
-<li><a href="tej/index.html">TEJ future slides</a></li>
-<li><a href="tts/index.html">TTS future slides</a></li>
-<li><a href="tas/index.html">TAS future slides</a></li>
+<li><a href="tej/index.html">TEJ future slide deck</a></li>
+<li><a href="tts/index.html">TTS future slide deck</a></li>
+<li><a href="tas/index.html">TAS future slide deck</a></li>
 </ul>
 <p><a href="../index.html">Back to Slides Home</a></p>
 </body>
@@ -84,16 +84,16 @@ for course in tej tts tas; do
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>${label} Work in Progress</title>
+<title>${label} Future Slide Deck</title>
 <style>body{font-family:system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#2f3439}a{color:#234a73}.muted{color:#777}</style>
 </head>
 <body>
-<h1>${label} Work in Progress</h1>
-<p class="muted">Future Semester 1 material is being built directly on this branch.</p>
+<h1>${label} Future Slide Deck</h1>
+<p class="muted">Staged slides for the rest of Semester 1 live here before they become the current classroom deck.</p>
 <p><a href="../../index.html">Back to Slides Home</a></p>
 </body>
 </html>
 EOF
 done
 
-echo "Archive and WIP pages ready."
+echo "Archive and future slide deck pages ready."
