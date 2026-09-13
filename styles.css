@@ -74,9 +74,8 @@
 
 /*
  * Opening quotes use one consistent two-slide layout every day.
- * Reveal's print layout can give percentage-positioned children an unreliable
- * containing height. These fixed coordinates are in the 1050 x 700 Reveal
- * slide coordinate system, so screen and print views keep the same spacing.
+ * The first slide is a large hook. The second uses normal document flow in a
+ * fixed Reveal-sized grid so longer text cannot collide with the attribution.
  */
 .reveal .quote-hero-slide,
 .reveal .quote-detail-slide {
@@ -102,38 +101,46 @@
 }
 
 /*
- * Second quote slide: the hook becomes a smaller lead-in so the complete
- * quotation reads as one composition instead of two competing headlines.
+ * Second quote slide: three vertical zones - hook, continuation, attribution.
+ * Grid flow is intentionally used instead of absolute coordinates so the
+ * continuation can wrap without ever running into the author/source block.
  */
+.reveal .quote-detail-slide {
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  row-gap: 0.8em;
+  box-sizing: border-box;
+  height: 700px;
+  padding: 82px 63px 54px;
+}
+
 .reveal .quote-detail-slide > h1 {
-  position: absolute;
-  top: 96px;
-  left: 63px;
-  width: 924px;
+  position: static;
+  align-self: start;
+  width: auto;
   margin: 0;
   color: var(--white) !important;
-  font-size: 1.55em;
+  font-size: 1.42em;
   font-weight: 680;
-  line-height: 1.06;
+  line-height: 1.05;
   letter-spacing: -0.04em;
 }
 
 .reveal .quote-continuation {
-  position: absolute;
-  top: 285px;
-  left: 63px;
-  width: 882px;
+  position: static;
+  align-self: start;
+  width: auto;
+  max-width: 900px;
   margin: 0;
   color: #e7e7e4 !important;
-  font-size: 1.2em;
-  line-height: 1.32;
+  font-size: 0.94em;
+  line-height: 1.24;
 }
 
 .reveal .quote-attribution {
-  position: absolute;
-  top: 505px;
-  left: 63px;
-  width: 924px;
+  position: static;
+  align-self: end;
+  width: auto;
   margin: 0;
   font-size: 0.72em;
   line-height: 1.18;
