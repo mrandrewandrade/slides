@@ -5,6 +5,19 @@ site_root="${1:-_site}"
 archive_root="$site_root/archive/2026-27/semester-1"
 mkdir -p "$archive_root" "$site_root/wip"
 
+python_flow() {
+  if command -v py >/dev/null 2>&1; then
+    py -3 scripts/semester_flow.py "$@"
+  elif command -v python3 >/dev/null 2>&1; then
+    python3 scripts/semester_flow.py "$@"
+  elif command -v python >/dev/null 2>&1; then
+    python scripts/semester_flow.py "$@"
+  else
+    echo "Python was not found." >&2
+    exit 1
+  fi
+}
+
 echo "Building archive indexes..."
 
 for course in tej tts tas; do
@@ -53,7 +66,7 @@ EOF
   } > "$course_root/index.html"
 done
 
-echo "Building future slide deck landing pages..."
+echo "Building future slide decks from staged days..."
 
 cat > "$site_root/wip/index.html" <<'EOF'
 <!doctype html>
@@ -65,7 +78,7 @@ cat > "$site_root/wip/index.html" <<'EOF'
 </head>
 <body>
 <h1>Future Slide Decks</h1>
-<p class="muted">Staged slide material for the rest of Semester 1.</p>
+<p class="muted">Staged slide material after each course's current classroom day.</p>
 <ul>
 <li><a href="tej/index.html">TEJ future slide deck</a></li>
 <li><a href="tts/index.html">TTS future slide deck</a></li>
@@ -78,22 +91,7 @@ EOF
 
 for course in tej tts tas; do
   mkdir -p "$site_root/wip/$course"
-  label="${course^^}"
-  cat > "$site_root/wip/$course/index.html" <<EOF
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>${label} Future Slide Deck</title>
-<style>body{font-family:system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#2f3439}a{color:#234a73}.muted{color:#777}</style>
-</head>
-<body>
-<h1>${label} Future Slide Deck</h1>
-<p class="muted">Staged slides for the rest of Semester 1 live here before they become the current classroom deck.</p>
-<p><a href="../../index.html">Back to Slides Home</a></p>
-</body>
-</html>
-EOF
+  python_flow render-future "$course" "$site_root/wip/$course"
 done
 
 echo "Archive and future slide deck pages ready."
