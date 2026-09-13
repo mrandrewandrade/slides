@@ -9,10 +9,4 @@ format:
 
 {{< include ../2026-27/semester-1/period-1/shared/week-01/_2026-09-08-day-01.qmd >}}
 
-<!-- Insert TEJ-specific slides for the current day here. -->
-
 {{< include ../2026-27/semester-1/period-1/shared/routines/_end-of-class.qmd >}}
-
-# Navigation
-
-[Slides home](../index.html)
