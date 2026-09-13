@@ -56,6 +56,8 @@ EOF
       echo '<details class="course-block">'
       echo "<summary><strong>${label}</strong></summary>"
       echo
+      echo "<p><a href=\"2026-27/semester-1/period-1/${course}/semester.html\">Semester deck / template</a></p>"
+      echo
     } >> index.qmd
 
     local first_week=1
