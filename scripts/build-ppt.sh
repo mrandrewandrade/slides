@@ -33,17 +33,27 @@ render_pptx() {
   local source_dir
   source_dir="$(dirname "$source")"
 
-  rm -f "$source_dir/$output_name" "$output_name" "_site/pptx/${course}-${kind}.pptx"
+  rm -f \
+    "$source_dir/$output_name" \
+    "$output_name" \
+    "_site/$output_name" \
+    "_site/pptx/${course}-${kind}.pptx"
 
   echo "Rendering ${course^^} ${kind} PPTX..."
   quarto render "$source" --to pptx --output "$output_name"
 
-  local rendered="$source_dir/$output_name"
-  if [[ ! -f "$rendered" && -f "$output_name" ]]; then
-    rendered="$output_name"
-  fi
+  local rendered=""
+  for candidate in \
+    "_site/$output_name" \
+    "$source_dir/$output_name" \
+    "$output_name"; do
+    if [[ -f "$candidate" ]]; then
+      rendered="$candidate"
+      break
+    fi
+  done
 
-  if [[ ! -f "$rendered" ]]; then
+  if [[ -z "$rendered" ]]; then
     echo "Could not find rendered PPTX for $source" >&2
     exit 1
   fi
