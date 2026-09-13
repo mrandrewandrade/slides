@@ -24,6 +24,19 @@ case "$command" in
 
     exec bash scripts/python.sh -m http.server 4200 --directory _site
     ;;
+  review)
+    target="${2:-tej}"
+    target="${target,,}"
+    case "$target" in
+      tej|tts|tas)
+        exec bash scripts/review.sh "$target"
+        ;;
+      *)
+        echo "Use: bash run.sh review [tej|tts|tas]" >&2
+        exit 1
+        ;;
+    esac
+    ;;
   pdf)
     target="${2:-tej}"
     target="${target,,}"
@@ -81,6 +94,7 @@ case "$command" in
   *)
     echo "Use: bash run.sh <tej|tts|tas|all>" >&2
     echo "     bash run.sh all" >&2
+    echo "     bash run.sh review [tej|tts|tas]" >&2
     echo "     bash run.sh pdf [tej|tts|tas|all]" >&2
     echo "     bash run.sh status [tej|tts|tas|all]" >&2
     echo "     bash run.sh advance <tej|tts|tas|all>" >&2
