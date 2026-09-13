@@ -4,38 +4,23 @@ date: 2026-09-08
 week: 1
 -->
 
-# Quote {.quote-slide .dark background-color="#171717"}
+# All that we are is story... {.quote-hero-slide background-color="#171717"}
 
-::: {.quote-frame}
-::: {.hero-quote}
-All that we are is story...
-:::
-:::
+# All that we are is story... {.quote-detail-slide background-color="#171717"}
 
-# Quote {.quote-slide .dark background-color="#171717"}
-
-::: {.quote-frame}
-::: {.hero-quote}
-All that we are is story...
-:::
-
-::: {.quote-continuation}
 It is what we arrive with. It is all we leave behind.
-:::
 
-::: {.quote-source}
+::: {.quote-attribution}
 Richard Wagamese · Ojibway writer · *Medicine Walk*
 :::
-:::
 
-# {{< meta course >}} · Day {{< meta day >}} {.course-start}
+# {{< meta course >}} · Day {{< meta day >}} {.course-day-slide}
 
-::: {.course-date}
 {{< meta class-date >}}
-:::
 
-::: {.course-start-main}
-::: {.announcement-heading}
+# Announcements {.announcements-slide}
+
+::: {.announcement-title-row}
 ![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
 
 ## Announcements
@@ -46,7 +31,6 @@ Richard Wagamese · Ojibway writer · *Medicine Walk*
 - Welcome to the course.
 - Introduction presentation due by **7:00 PM**.
 - Presentations begin **Day 2**.
-:::
 
 # Arrival
 
