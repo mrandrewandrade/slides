@@ -4,7 +4,7 @@
 Teachings come from everywhere when you open yourself to them.
 :::
 
-# Quote {.quote-detail-slide background-color="#171717"}
+# Quote {.quote-detail-slide .quote-long-slide background-color="#171717"}
 
 ::: {.quote-hero-text}
 Teachings come from everywhere when you open yourself to them.
@@ -35,6 +35,9 @@ Take about **60 seconds** to notice what is here without trying to change it.
 - Notice your breathing.
 - Notice a few sounds around you.
 - Notice one physical sensation.
+
+# Observe · Listen
+
 - Let each observation come and go without judging it.
 - Bring your attention back to the room.
 
