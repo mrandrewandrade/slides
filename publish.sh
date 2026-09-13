@@ -13,8 +13,8 @@ fi
 git push
 
 branch="$(git branch --show-current)"
-if [[ "$branch" == "main" ]]; then
-  echo "Pushed. GitHub will build the latest decks, archive today's published versions, refresh the index, and publish gh-pages."
+if [[ "$branch" == "master" ]]; then
+  echo "Pushed. GitHub will build the latest decks, archive today's published versions, refresh the index, and publish GitHub Pages."
 else
-  echo "Pushed branch '$branch'. It will be tested, but the live site publishes from main."
+  echo "Pushed branch '$branch'. The live site publishes only from master."
 fi
