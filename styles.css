@@ -113,31 +113,34 @@
 
 .reveal .quote-attribution {
   position: absolute;
-  top: 83%;
+  top: 81%;
   left: 6%;
   width: 88%;
   margin: 0;
-  font-size: 0.8em;
-  line-height: 1.25;
+  font-size: 0.72em;
+  line-height: 1.18;
   letter-spacing: 0.005em;
+}
+
+.reveal .quote-attribution span {
+  display: block;
 }
 
 .reveal .quote-author {
   color: var(--white);
   font-weight: 650;
+  font-size: 1.08em;
 }
 
 .reveal .quote-role {
+  margin-top: 0.12em;
   color: var(--copper);
 }
 
 .reveal .quote-work {
+  margin-top: 0.08em;
   color: var(--copper-light);
   font-style: italic;
-}
-
-.reveal .quote-sep {
-  color: #8f8f8b;
 }
 
 .reveal:has(.quote-hero-slide.present) .footer,
