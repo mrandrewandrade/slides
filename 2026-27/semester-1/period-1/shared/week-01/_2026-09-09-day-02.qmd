@@ -5,16 +5,18 @@ week: 1
 status: planned
 -->
 
-# Quote {.quote-slide .quote-primary .dark background-color="#171717"}
+# Quote {.quote-slide .dark background-color="#171717"}
 
-::: {.quote-hero}
+::: {.quote-frame}
+::: {.hero-quote}
 Teachings come from everywhere when you open yourself to them.
 :::
+:::
 
-# Quote {.quote-slide .quote-secondary background-color="#f7f7f5"}
+# Quote {.quote-slide .dark background-color="#171717"}
 
-::: {.quote-stage}
-::: {.quote-hero}
+::: {.quote-frame}
+::: {.hero-quote}
 Teachings come from everywhere when you open yourself to them.
 :::
 
@@ -33,17 +35,19 @@ Richard Wagamese · Ojibway writer · *Embers: One Ojibway's Meditations*
 {{< meta class-date >}}
 :::
 
-::: {.announcement-row}
-<img class="announcement-crest" src="../assets/commons-emblem.svg" alt="Technology Commons crest">
+::: {.course-start-main}
+::: {.announcement-heading}
+![Technology Commons crest](../assets/commons-emblem.svg){.announcement-crest}
 
 ## Announcements
 
-<img class="announcement-crest" src="../assets/commons-emblem.svg" alt="Technology Commons crest">
+![Technology Commons crest](../assets/commons-emblem.svg){.announcement-crest}
 :::
 
 - Presentations are today.
-- Be ready to present when your name is called.
+- Be ready when your name is called.
 - Complete the listening sheet while classmates present.
+:::
 
 # Observe
 
