@@ -4,11 +4,21 @@ date: 2026-09-08
 week: 1
 -->
 
-# All that we are is story... {.quote-hero-slide background-color="#171717"}
+# Quote {.quote-hero-slide background-color="#171717"}
 
-# All that we are is story... {.quote-detail-slide background-color="#171717"}
+::: {.quote-hero-text}
+All that we are is story...
+:::
 
+# Quote {.quote-detail-slide background-color="#171717"}
+
+::: {.quote-hero-text}
+All that we are is story...
+:::
+
+::: {.quote-continuation}
 It is what we arrive with. It is all we leave behind.
+:::
 
 ::: {.quote-attribution}
 Richard Wagamese · Ojibway writer · *Medicine Walk*
