@@ -5,11 +5,21 @@ week: 1
 status: planned
 -->
 
-# Teachings come from everywhere when you open yourself to them. {.quote-hero-slide background-color="#171717"}
+# Quote {.quote-hero-slide background-color="#171717"}
 
-# Teachings come from everywhere when you open yourself to them. {.quote-detail-slide background-color="#171717"}
+::: {.quote-hero-text}
+Teachings come from everywhere when you open yourself to them.
+:::
 
+# Quote {.quote-detail-slide background-color="#171717"}
+
+::: {.quote-hero-text}
+Teachings come from everywhere when you open yourself to them.
+:::
+
+::: {.quote-continuation}
 That's the trick of it really, to open yourself to everything and everything opens itself to you.
+:::
 
 ::: {.quote-attribution}
 Richard Wagamese · Ojibway writer · *Embers: One Ojibway's Meditations*
