@@ -20,7 +20,6 @@ import re
 import shutil
 import subprocess
 import sys
-import tempfile
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -56,7 +55,7 @@ def pretty_date(iso_date: str) -> str:
 def atomic_write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(text, encoding="utf-8", newline="\n")
+    tmp.write_text(text, encoding="utf-8")
     os.replace(tmp, path)
 
 
@@ -218,6 +217,33 @@ def find_quarto() -> str:
     return quarto
 
 
+def render_self_contained(source: Path) -> Path:
+    """Render one project document to its normal _site location as standalone HTML."""
+    quarto = find_quarto()
+    source = source.resolve()
+    try:
+        relative = source.relative_to(ROOT)
+    except ValueError as exc:
+        raise RuntimeError(f"Render source must be inside the repository: {source}") from exc
+
+    subprocess.run(
+        [
+            quarto,
+            "render",
+            relative.as_posix(),
+            "-M",
+            "embed-resources:true",
+        ],
+        cwd=ROOT,
+        check=True,
+    )
+
+    rendered = ROOT / "_site" / relative.with_suffix(".html")
+    if not rendered.exists():
+        raise RuntimeError(f"Quarto rendered without producing {rendered.relative_to(ROOT)}")
+    return rendered
+
+
 def archive_current(course: str) -> Path:
     day = current_day(course)
     destination = archive_path(course, day)
@@ -225,30 +251,10 @@ def archive_current(course: str) -> Path:
         print(f"Archive already exists: {destination.relative_to(ROOT)}")
         return destination
 
-    quarto = find_quarto()
-    destination.parent.mkdir(parents=True, exist_ok=True)
-
-    with tempfile.TemporaryDirectory(prefix=f"slides-{course}-archive-") as tmp_name:
-        tmp = Path(tmp_name)
-        subprocess.run(
-            [
-                quarto,
-                "render",
-                str(current_path(course)),
-                "--output-dir",
-                str(tmp),
-                "-M",
-                "embed-resources:true",
-            ],
-            cwd=ROOT,
-            check=True,
-        )
-        rendered = next(tmp.rglob(f"{course}.html"), None)
-        if rendered is None:
-            raise RuntimeError(f"Quarto rendered without producing {course}.html")
-        html = rendered.read_text(encoding="utf-8")
-        html = html.replace('href="../index.html"', 'href="../../../../../index.html"')
-        atomic_write(destination, html)
+    rendered = render_self_contained(current_path(course))
+    html = rendered.read_text(encoding="utf-8")
+    html = html.replace('href="../index.html"', 'href="../../../../../index.html"')
+    atomic_write(destination, html)
 
     print(f"Archived {course.upper()} Day {day.day}: {destination.relative_to(ROOT)}")
     return destination
@@ -293,6 +299,8 @@ def future_document(course: str) -> str | None:
 
 
 def render_future(course: str, output_dir: Path) -> None:
+    if not output_dir.is_absolute():
+        output_dir = ROOT / output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
     document = future_document(course)
     output = output_dir / "index.html"
@@ -312,31 +320,16 @@ def render_future(course: str, output_dir: Path) -> None:
         )
         return
 
-    quarto = find_quarto()
     temp_qmd = ROOT / f"future-{course}.generated.qmd"
+    rendered: Path | None = None
     try:
         atomic_write(temp_qmd, document)
-        with tempfile.TemporaryDirectory(prefix=f"slides-{course}-future-") as tmp_name:
-            tmp = Path(tmp_name)
-            subprocess.run(
-                [
-                    quarto,
-                    "render",
-                    str(temp_qmd),
-                    "--output-dir",
-                    str(tmp),
-                    "-M",
-                    "embed-resources:true",
-                ],
-                cwd=ROOT,
-                check=True,
-            )
-            rendered = next(tmp.rglob(f"{temp_qmd.stem}.html"), None)
-            if rendered is None:
-                raise RuntimeError(f"Could not find rendered future deck for {course.upper()}")
-            shutil.copy2(rendered, output)
+        rendered = render_self_contained(temp_qmd)
+        shutil.copy2(rendered, output)
     finally:
         temp_qmd.unlink(missing_ok=True)
+        if rendered is not None:
+            rendered.unlink(missing_ok=True)
 
 
 def print_status(course: str) -> None:
