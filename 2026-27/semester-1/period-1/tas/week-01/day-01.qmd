@@ -1,15 +1,12 @@
 ---
-title: "TAS · Day 1"
-subtitle: "Tuesday, September 8, 2026 · Week 1"
-author: "Andrew Andrade"
+course: "TAS"
+day: 1
+class-date: "Tuesday, September 8, 2026"
+format:
+  revealjs:
+    footer: "These [slides](https://andrewandrade.ca/slides) and the [course website](https://andrewandrade.ca/commons/tas2) are open-sourced by [Mr. Andrew Andrade on GitHub](https://github.com/mrandrewandrade) under the CC BY 4.0 copyright licence. You may copy, share, and adapt them for educational, personal, or commercial purposes, but you must attribute the source to [mrandrewandrade](https://github.com/mrandrewandrade)."
 ---
 
 {{< include ../../shared/week-01/_2026-09-08-day-01.qmd >}}
 
-<!-- TAS-specific Day 1 slides may be inserted here. -->
-
 {{< include ../../shared/routines/_end-of-class.qmd >}}
-
-# Navigation
-
-[Week 1](./) · [TAS home](../) · [Course notes](https://andrewandrade.ca/commons)
