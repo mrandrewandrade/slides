@@ -29,9 +29,8 @@ jobs:
       - name: Full site build
         run: bash scripts/full-build.sh archive
 
-      - name: Add latest snapshot and generated indexes
+      - name: Build generated indexes and staged decks
         run: |
-          bash scripts/site.sh snapshot _site/archive
           bash scripts/build-published-extras.sh _site
           touch _site/.nojekyll
 
