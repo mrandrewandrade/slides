@@ -214,7 +214,7 @@
   width: 1.05em;
   height: 1.05em;
   flex: 0 0 1.05em;
-  background: url("/assets/commons-emblem.svg") center / contain no-repeat;
+  background: url("assets/commons-emblem.svg") center / contain no-repeat;
 }
 
 .reveal .announcements-slide > ul {
