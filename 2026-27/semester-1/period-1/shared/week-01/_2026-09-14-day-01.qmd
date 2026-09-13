@@ -17,7 +17,17 @@ It is all we leave behind.
 
 Monday, September 14, 2026
 
-# Arrive Every Day
+# Arrive Every Day On Time
+
+::: {.big-prompt}
+**Be Present**
+:::
+
+# Arrive Every Day On Time
+
+::: {.big-prompt}
+If you can't be on time, be ahead of time.
+:::
 
 - Sit down. Relax.
 - Look at the quote.
@@ -40,6 +50,14 @@ When called, say **"here"** loudly enough for me to hear.
 
 **If I do not hear you and see you, I cannot mark you present.**
 
+# Attendance
+
+::: {.big-prompt}
+Mentally, spiritually, and emotionally present: **optional, but encouraged.**
+:::
+
+We are here to support you no matter what you are going through.
+
 # Participation
 
 - Participation includes **in class** and **online**.
@@ -47,10 +65,10 @@ When called, say **"here"** loudly enough for me to hear.
 - Preventing someone else from learning also counts.
 
 ::: {.big-prompt}
-**Participation is a significant part of the grade.**
+**New Ministry rules:** participation is a significant part of the grade.
 :::
 
-# Essential Expectations
+# Essential Expectations From You
 
 - Respect the **timers and transitions**.
 - Respect **no-phone** moments.
@@ -60,6 +78,14 @@ When called, say **"here"** loudly enough for me to hear.
 ::: {.big-prompt}
 Otherwise, I am very flexible. This class should be a lot of fun.
 :::
+
+# Exceeding Expectations
+
+::: {.big-prompt}
+To get a **Level 4 or above**, make this class better.
+:::
+
+Teach me something new.
 
 # Very Difficult to Fail
 
@@ -87,19 +113,47 @@ We want to **grow together**.
 # Today's Route
 
 - **10-15 min:** Name game
-- **5-10 min:** Build a name tag
+- Build a name tag
 - Document the work
 - Submit **one PDF with your student number**
 - **Final 15 min:** reflection + reset
 
-# Entering Flow: Name Game
+# Entering Flow
 
-**10-15 minutes**
+::: {.big-prompt}
+**In the zone. In flow. In the groove. On a roll. Stuck in. Locked in.**
+:::
 
-1. Say your **preferred name**.
-2. Add one simple **action or gesture**.
-3. Repeat a few names/actions before adding your own.
-4. Help each other.
+Has anyone heard of **flow state**?
+
+# Other Ways We Say It
+
+**Momentum + success**
+
+- **In the groove:** moving smoothly.
+- **Jamming:** everything is clicking.
+- **On a roll:** success keeps building.
+- **On fire:** performing at a very high level.
+- **Killing it:** executing extremely well.
+
+**Focus**
+
+- **Locked in:** completely focused and unshakeable.
+- **In my element:** working where you thrive.
+- **Head down:** immersed without distraction.
+
+# Name Game
+
+- Fully participate.
+- Say your name.
+- Add a simple gesture.
+- Everyone else listens and remembers the name + gesture.
+- We go around the circle.
+- Help each other.
+
+::: {.big-prompt}
+**Any questions? Let's go outside.**
+:::
 
 # Name Tag V1
 
@@ -107,19 +161,7 @@ We want to **grow together**.
 Make a clear, useful name tag that helps me learn your name.
 :::
 
-**5-10 minutes**
-
-# How I Am Marking It
-
-- **Photo quality** · /2
-- **Crop + layout** · /2
-- **Student number** · /2
-- **PDF skill** · /2
-- **Following instructions** · /2
-
-::: {.big-prompt}
-**/10** · Communication and process, not artistic talent.
-:::
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/8thPJbbaKqM" title="Name tag video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # One PDF
 
@@ -137,7 +179,8 @@ Make a clear, useful name tag that helps me learn your name.
 
 - PDFs are **stable snapshots** of finished work.
 - They open consistently across devices and software.
-- Editable files are working files and have hidden details. A PDF is the **deliverable**.
+- Editable files are working files and have hidden details.
+- A PDF is the **deliverable**.
 - Clear presentation makes good work easier to understand and trust.
 
 # Example PDF
@@ -146,9 +189,21 @@ Make a clear, useful name tag that helps me learn your name.
 One page. Clear photo. Student number.
 :::
 
-<img src="https://raw.githubusercontent.com/mrandrewandrade/slides/master/assets/examples/name-tag-example.png" alt="Example name tag PDF preview" style="display:block; max-height:44vh; max-width:90%; margin:0 auto 0.5rem auto; object-fit:contain;" onerror="this.style.display='none';">
+<iframe src="https://mrandrewandrade.github.io/slides/assets/examples/name-tag-example.pdf.pdf#view=FitH" title="Example name tag PDF" style="width:100%; height:58vh; border:0;"></iframe>
 
-[**Open the example PDF**](https://github.com/mrandrewandrade/slides/blob/master/assets/examples/name-tag-example.pdf.pdf){target="_blank"}
+[**Open the example PDF**](https://mrandrewandrade.github.io/slides/assets/examples/name-tag-example.pdf.pdf){target="_blank"}
+
+# How I Am Marking It
+
+- **Photo quality** · /2
+- **Crop + layout** · /2
+- **Student number** · /2
+- **PDF skill** · /2
+- **Following instructions** · /2
+
+::: {.big-prompt}
+**/10** · Communication and process, not artistic talent.
+:::
 
 # Document + Submit
 
