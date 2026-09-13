@@ -21,14 +21,6 @@ Richard Wagamese · Ojibway writer · *Embers: One Ojibway's Meditations*
 
 # Announcements {.announcements-slide}
 
-::: {.announcement-title-row}
-![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
-
-## Announcements
-
-![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
-:::
-
 - Presentations are today.
 - Be ready when your name is called.
 - Complete the listening sheet while classmates present.
