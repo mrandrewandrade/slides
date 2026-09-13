@@ -1,0 +1,157 @@
+/* Technology Commons slide landing page styles. Code/configuration: GPL-3.0-or-later. */
+
+:root {
+  --ink: #171717;
+  --charcoal: #2f3439;
+  --grey: #777777;
+  --line: #d9dddf;
+  --paper: #f7f7f5;
+  --white: #ffffff;
+  --navy: #1d2347;
+  --blue: #0072b2;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.4rem 1.25rem 4rem;
+  color: var(--charcoal);
+  background: var(--paper);
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  font-weight: 650;
+}
+
+h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+a {
+  color: var(--navy);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+.print-help {
+  margin: 1rem 0 0.25rem;
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid var(--line);
+  color: var(--grey);
+  font-size: 0.92rem;
+}
+
+.print-link {
+  display: inline-block;
+  margin-left: 0.55rem;
+  color: var(--grey);
+  font-size: 0.78em;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.print-link::before {
+  content: "↗ ";
+}
+
+.print-link:hover {
+  color: var(--navy);
+}
+
+.slides-brand {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  margin: 0 0 2rem;
+  color: var(--grey);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.slides-brand img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.72;
+}
+
+.course-block {
+  margin: 1.7rem 0 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+}
+
+.course-block:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+
+.course-block > summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  color: var(--ink);
+  font-size: 1.35rem;
+  list-style-position: outside;
+}
+
+.week-block {
+  margin: 0 0 1rem 1.15rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.week-block > summary {
+  cursor: pointer;
+  padding: 0.3rem 0 0.5rem;
+  color: var(--charcoal);
+}
+
+.current-label {
+  margin-left: 0.4rem;
+  color: var(--grey);
+  font-size: 0.72em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.week-block ul {
+  margin: 0.25rem 0 0.7rem;
+  padding-left: 1.25rem;
+}
+
+.week-block li {
+  margin: 0.42rem 0;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1.4rem 0.9rem 2.5rem;
+  }
+
+  .week-block {
+    margin-left: 0.4rem;
+  }
+
+  .print-link {
+    margin-left: 0.35rem;
+  }
+}
