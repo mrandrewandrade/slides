@@ -89,7 +89,7 @@
 
 .reveal .quote-hero-text {
   position: absolute;
-  top: 27%;
+  top: 24%;
   left: 6%;
   width: 88%;
   margin: 0;
@@ -103,24 +103,42 @@
 /* Keep the repeated hero fixed, then place the added text clearly below it. */
 .reveal .quote-continuation {
   position: absolute;
-  top: 62%;
+  top: 57%;
   left: 6%;
   width: 84%;
   margin: 0;
   color: #e7e7e4 !important;
   font-size: 1.22em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .reveal .quote-attribution {
   position: absolute;
-  top: 80%;
+  top: 76%;
   left: 6%;
-  width: 84%;
+  width: 88%;
   margin: 0;
-  color: #bdbdb8 !important;
-  font-size: 0.78em;
+  font-size: 0.8em;
   line-height: 1.25;
+  letter-spacing: 0.005em;
+}
+
+.reveal .quote-author {
+  color: var(--white);
+  font-weight: 650;
+}
+
+.reveal .quote-role {
+  color: var(--copper);
+}
+
+.reveal .quote-work {
+  color: var(--copper-light);
+  font-style: italic;
+}
+
+.reveal .quote-sep {
+  color: #8f8f8b;
 }
 
 .reveal:has(.quote-hero-slide.present) .footer,
@@ -150,15 +168,15 @@
   font-size: 0.95em;
 }
 
-/* Announcements: simple heading, with the canonical crest generated in CSS. */
+/* Announcements start high to preserve vertical space for longer lists. */
 .reveal .announcements-slide h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.42em;
-  margin-top: 0.55em;
-  margin-bottom: 0.75em;
-  font-size: 1.75em;
+  gap: 0.4em;
+  margin-top: 0.05em;
+  margin-bottom: 0.42em;
+  font-size: 1.7em;
   line-height: 1;
 }
 
@@ -166,15 +184,15 @@
 .reveal .announcements-slide h1::after {
   content: "";
   display: block;
-  width: 1.2em;
-  height: 1.2em;
-  flex: 0 0 1.2em;
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 1.05em;
   background: url("/assets/commons-emblem.svg") center / contain no-repeat;
 }
 
 .reveal .announcements-slide > ul {
-  width: 76%;
-  margin: 0.1em auto 0;
+  width: 82%;
+  margin: 0 auto;
   font-size: 0.95em;
 }
 
