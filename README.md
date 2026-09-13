@@ -50,6 +50,30 @@ http://localhost:4200/
 
 The local site includes Current, archived days, Full slides, and Future slides.
 
+### Publish the site
+
+Publishing is local-first. From `master`, run:
+
+```bash
+bash publish.sh
+```
+
+This does the following:
+
+1. pulls the latest `master`
+2. builds the complete site locally into `_site`
+3. commits any source or regenerated cumulative deck changes
+4. pushes `master`
+5. copies the exact local `_site` build to the `gh-pages` branch and pushes it
+
+GitHub Actions builds `master` as a verification check, but it does not publish the site. The `gh-pages` branch is generated output.
+
+For GitHub Pages, configure the repository once with:
+
+- source: **Deploy from a branch**
+- branch: **gh-pages**
+- folder: **/(root)**
+
 ### Move to the next class day
 
 When the next staged day is ready:
