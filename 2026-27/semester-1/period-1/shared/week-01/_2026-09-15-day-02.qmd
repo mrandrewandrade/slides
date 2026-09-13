@@ -46,6 +46,16 @@ Pause and take a few answers.
 Listen to people as though you are learning about them for the first time.
 :::
 
+# Why We Start This Way
+
+- Shift attention into the room.
+- Notice before reacting.
+- Practise focusing on what is happening now.
+
+::: {.big-prompt}
+These are useful skills when you are learning, designing, troubleshooting, working with tools, or listening to someone else.
+:::
+
 # Announcements {.announcements-slide}
 
 - About Me is due **tonight at 7:00 PM**.
