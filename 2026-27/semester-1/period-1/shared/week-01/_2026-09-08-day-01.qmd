@@ -4,39 +4,49 @@ date: 2026-09-08
 week: 1
 -->
 
-# Quote {.quote-slide .quote-primary .dark background-color="#171717"}
+# Quote {.quote-slide .dark background-color="#171717"}
 
-<div class="quote-hero">“All that we are is story...”</div>
+::: {.quote-frame}
+::: {.hero-quote}
+All that we are is story...
+:::
+:::
 
-## Quote {.quote-slide .quote-secondary background-color="#f7f7f5"}
+# Quote {.quote-slide .dark background-color="#171717"}
 
-<div class="quote-hero">“All that we are is story... It is what we arrive with. It is all we leave behind.”</div>
+::: {.quote-frame}
+::: {.hero-quote}
+All that we are is story...
+:::
 
-<div class="quote-source">Richard Wagamese, <em>Medicine Walk</em></div>
+::: {.quote-continuation}
+It is what we arrive with. It is all we leave behind.
+:::
+
+::: {.quote-source}
+Richard Wagamese · Ojibway writer · *Medicine Walk*
+:::
+:::
 
 # {{< meta course >}} · Day {{< meta day >}} {.course-start}
 
-<div class="course-date">{{< meta class-date >}}</div>
+::: {.course-date}
+{{< meta class-date >}}
+:::
 
-<div class="course-start-grid">
-<div class="course-start-crest">
-<img src="../assets/commons-emblem.svg" alt="Technology Commons crest">
-</div>
-
-<div class="course-start-main">
+::: {.course-start-main}
+::: {.announcement-heading}
+![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
 
 ## Announcements
+
+![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
+:::
 
 - Welcome to the course.
 - Introduction presentation due by **7:00 PM**.
 - Presentations begin **Day 2**.
-
-</div>
-
-<div class="course-start-crest">
-<img src="../assets/commons-emblem.svg" alt="Technology Commons crest">
-</div>
-</div>
+:::
 
 # Arrival
 
