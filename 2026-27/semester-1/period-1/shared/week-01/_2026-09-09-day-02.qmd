@@ -1,0 +1,102 @@
+<!--
+lesson-day: 2
+date: 2026-09-09
+week: 1
+status: planned
+-->
+
+# Quote {.quote-slide .quote-primary .dark background-color="#171717"}
+
+::: {.quote-hero}
+Teachings come from everywhere when you open yourself to them.
+:::
+
+# Quote {.quote-slide .quote-secondary background-color="#f7f7f5"}
+
+::: {.quote-stage}
+::: {.quote-hero}
+Teachings come from everywhere when you open yourself to them.
+:::
+
+::: {.quote-continuation}
+That's the trick of it really, to open yourself to everything and everything opens itself to you.
+:::
+
+::: {.quote-source}
+Richard Wagamese · Ojibway writer · *Embers: One Ojibway's Meditations*
+:::
+:::
+
+# {{< meta course >}} · Day {{< meta day >}} {.course-start}
+
+::: {.course-date}
+{{< meta class-date >}}
+:::
+
+::: {.announcement-row}
+<img class="announcement-crest" src="../assets/commons-emblem.svg" alt="Technology Commons crest">
+
+## Announcements
+
+<img class="announcement-crest" src="../assets/commons-emblem.svg" alt="Technology Commons crest">
+:::
+
+- Presentations are today.
+- Be ready to present when your name is called.
+- Complete the listening sheet while classmates present.
+
+# Observe
+
+Take about **60 seconds** to notice what is here without trying to change it.
+
+- Notice your breathing.
+- Notice a few sounds around you.
+- Notice one physical sensation.
+- Let each observation come and go without judging it.
+- Bring your attention back to the room.
+
+::: {.big-prompt}
+Listen to each person as though you are learning about them for the first time.
+:::
+
+# Today's Plan
+
+1. Presentation expectations
+2. Class presentations
+3. Listen actively
+4. Make connections
+5. Submit your listening sheet
+6. End-of-class routine
+
+# Presentations
+
+Today is primarily for **student introductions**.
+
+- Present when your name is called.
+- You still present if the file was not submitted last night.
+- Give each presenter your attention.
+- Listen for something you connect with or find interesting.
+
+# While Others Present
+
+For each presenter, record:
+
+- **Presenter**
+- **One thing I learned**
+- **Something I relate to or have in common**
+
+The goal is active listening, not waiting for your turn.
+
+# Beginner's Mind
+
+Try to meet each person without assuming you already know their story.
+
+- What surprised you?
+- What did you relate to?
+- What did you notice that you might normally miss?
+
+# Before You Leave
+
+- Make sure your listening sheet is readable.
+- Take a clear photo of the completed sheet.
+- Submit it through Google Classroom, as directed.
