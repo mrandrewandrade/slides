@@ -6,16 +6,7 @@ archive_root="$site_root/archive/2026-27/semester-1"
 mkdir -p "$archive_root" "$site_root/wip"
 
 python_flow() {
-  if command -v py >/dev/null 2>&1; then
-    py -3 scripts/semester_flow.py "$@"
-  elif command -v python3 >/dev/null 2>&1; then
-    python3 scripts/semester_flow.py "$@"
-  elif command -v python >/dev/null 2>&1; then
-    python scripts/semester_flow.py "$@"
-  else
-    echo "Python was not found." >&2
-    exit 1
-  fi
+  bash scripts/python.sh scripts/semester_flow.py "$@"
 }
 
 echo "Building archive indexes..."
