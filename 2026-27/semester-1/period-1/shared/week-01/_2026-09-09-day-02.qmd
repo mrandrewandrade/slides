@@ -1,10 +1,3 @@
-<!--
-lesson-day: 2
-date: 2026-09-09
-week: 1
-status: planned
--->
-
 # Quote {.quote-hero-slide background-color="#171717"}
 
 ::: {.quote-hero-text}
