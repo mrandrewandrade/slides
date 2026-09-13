@@ -14,7 +14,7 @@ git push
 
 branch="$(git branch --show-current)"
 if [[ "$branch" == "master" ]]; then
-  echo "Pushed. GitHub will build the latest decks, archive today's published versions, refresh the index, and publish GitHub Pages."
+  echo "Pushed master. GitHub will build the complete slide site and refresh the gh-pages branch."
 else
-  echo "Pushed branch '$branch'. The live site publishes only from master."
+  echo "Pushed branch '$branch'. The published site is generated only from master."
 fi
