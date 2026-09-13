@@ -16,7 +16,9 @@ It is all we leave behind.
 :::
 
 ::: {.quote-attribution}
-<span class="quote-author">Richard Wagamese</span><span class="quote-sep"> · </span><span class="quote-role">Ojibway writer</span><span class="quote-sep"> · </span><span class="quote-work">Medicine Walk</span>
+<span class="quote-author">Richard Wagamese</span>
+<span class="quote-role">Ojibway writer</span>
+<span class="quote-work">Medicine Walk</span>
 :::
 
 # {{< meta course >}} · Day 1 {.course-day-slide}
