@@ -2,13 +2,19 @@
 
 Quarto RevealJS slides for the 2026-27 school year.
 
-The classroom slides are designed to be used in conjunction with the course notes and resources at https://andrewandrade.ca/commons.
+The classroom slides are designed to be used with the course notes and resources at https://andrewandrade.ca/commons.
 
-## Normal use
+## Local workflow
 
-There are only two commands you should normally need.
+Use the `master` branch in `~/Documents/slides`.
 
-### Run one class locally
+```bash
+cd ~/Documents/slides
+git switch master
+git pull --ff-only
+```
+
+### Preview one current class
 
 ```bash
 bash run.sh tej
@@ -16,77 +22,91 @@ bash run.sh tej
 
 Use `tej`, `tts`, or `tas`.
 
-This previews only that course's latest deck, so last-minute classroom edits stay fast.
+This previews only the current classroom deck for that course.
 
-To inspect the complete site, including Work in Progress views:
+### Check the semester state
+
+```bash
+bash run.sh status
+```
+
+For each course this shows:
+
+- **Current**: the one live classroom day
+- **Full**: published days through Current, newest first
+- **Future**: staged days after Current
+
+### Build the complete local site
 
 ```bash
 bash run.sh all
 ```
 
-That intentionally performs a full render and is slower. It is for checking the whole slide system, not normal classroom use.
-
-### Publish changes
-
-```bash
-bash publish.sh
-```
-
-This safely pulls, commits local changes if needed, and pushes them to GitHub. On `main`, GitHub Actions handles the heavier publishing work in the background.
-
-## Future slide planning
-
-Upcoming lessons are staged on the dedicated branch:
+This regenerates the Full decks, builds Current and Full, builds the Future decks, and starts a local server at:
 
 ```text
-future-slides
+http://localhost:4200/
 ```
 
-Future lessons use their final canonical paths and are not active classroom render targets. When a planned day is ready, ChatGPT can promote it to `main` and update the three `current/*.qmd` wrappers. There is no local promotion command to remember.
+The local site includes Current, archived days, Full slides, and Future slides.
 
-## Fast classroom build
+### Move to the next class day
 
-The normal Quarto project renders only:
-
-```text
-index.qmd
-current/tej.qmd
-current/tts.qmd
-current/tas.qmd
-```
-
-Old lesson source and future lesson source do not increase normal classroom preview time.
-
-## Full background build
-
-The full build uses `_quarto-full.yml` and includes the current decks plus the alternate course, week, day, and semester views listed under **Work in Progress** on the first page.
-
-The full build runs in GitHub Actions for validation and publication. It can also be viewed locally with:
+When the next staged day is ready:
 
 ```bash
+bash run.sh advance tej
+```
+
+Use `tej`, `tts`, `tas`, or `all`.
+
+Advance performs the lifecycle in this order:
+
+1. confirms that the next staged day exists
+2. renders the current deck as a self-contained permanent archive HTML file
+3. changes `current/<course>.qmd` to the next staged day
+4. regenerates the course Full deck through the new Current day
+
+Then inspect the result:
+
+```bash
+bash run.sh status
 bash run.sh all
 ```
 
-## Background publish and archive
+Example:
 
-When `main` is pushed, GitHub Actions:
+```text
+Before advance
+Current: Day 1
+Full:    Day 1
+Future:  Day 2, Day 3, ...
 
-1. restores the previously published archive from `gh-pages`
-2. rebuilds the student index
-3. performs the full site build
-4. makes a self-contained dated snapshot of each current deck
-5. preserves every older snapshot
-6. publishes the complete site to `gh-pages`
+After advance
+Archive: Day 1
+Current: Day 2
+Full:    Day 2, Day 1
+Future:  Day 3, ...
+```
 
-Publishing the same instructional day again replaces that day's snapshot with the newest version. When a new day is promoted to `main`, the previous day's published snapshot remains as the permanent historical copy.
+`advance` archives Current before changing the pointer. If the next staged day cannot be found, promotion does not start.
 
-## Student navigation
+## Source layout
 
-There is one student-facing `/slides/` index page.
+```text
+current/                         one live wrapper per course
+2026-27/semester-1/period-1/
+  shared/week-*/                 shared staged day sources
+  tej/week-*/                    TEJ-specific staged day sources
+  tts/week-*/                    TTS-specific staged day sources
+  tas/week-*/                    TAS-specific staged day sources
+  tej/full.qmd                   generated cumulative TEJ deck
+  tts/full.qmd                   generated cumulative TTS deck
+  tas/full.qmd                   generated cumulative TAS deck
+archive/                         completed self-contained classroom decks
+```
 
-Each class is collapsible. The newest week appears first, with older weeks underneath it. The current day links to the current deck; previous days link to their dated archive URLs.
-
-A separate collapsed **Work in Progress** section links directly to the alternate and cumulative slide views. Those links are clearly marked as draft material and may change before class.
+The day source files remain the staging pool. A day is Current, published in Full, or shown in Future according to the day referenced by `current/<course>.qmd`.
 
 ## RevealJS navigation
 
@@ -97,16 +117,6 @@ Slide decks use `navigation-mode: vertical`:
 - Left/right moves between major parts.
 - Up/down opens supporting slides.
 - Space advances through the full sequence.
-
-## GitHub Pages
-
-After the setup PR is merged, configure **Repository Settings > Pages** to deploy from the `gh-pages` branch at `/ (root)`.
-
-## Links
-
-- Slides repository: https://github.com/mrandrewandrade/slides
-- GitHub: https://github.com/mrandrewandrade
-- Commons course notes: https://andrewandrade.ca/commons
 
 ## License
 
