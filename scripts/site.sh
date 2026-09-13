@@ -56,8 +56,6 @@ EOF
       echo '<details class="course-block">'
       echo "<summary><strong>${label}</strong></summary>"
       echo
-      echo "<p><a href=\"2026-27/semester-1/period-1/${course}/semester.html\">Semester deck / template</a></p>"
-      echo
     } >> index.qmd
 
     local first_week=1
@@ -105,10 +103,6 @@ EOF
         done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort -r)
       fi
 
-      if [[ $first_week -eq 1 ]]; then
-        echo "<li><a href=\"wip/${course}/index.html\">Future slide deck</a></li>" >> index.qmd
-      fi
-
       {
         echo '</ul>'
         echo '</details>'
@@ -119,6 +113,11 @@ EOF
     done
 
     {
+      echo '<div class="course-deck-links">'
+      echo "<p><a href=\"2026-27/semester-1/period-1/${course}/full.html\"><strong>Full slides</strong></a> · all published days in one deck, newest first</p>"
+      echo "<p><a href=\"wip/${course}/index.html\"><strong>Future slide deck</strong></a> · staged slides for the rest of the semester</p>"
+      echo '</div>'
+      echo
       echo '</details>'
       echo
     } >> index.qmd
