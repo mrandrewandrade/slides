@@ -19,15 +19,13 @@ Monday, September 14, 2026
 
 # Arrive Every Day On Time
 
-::: {.big-prompt}
-**Be Present**
-:::
-
-# Arrive Every Day On Time
+# Be Present
 
 ::: {.big-prompt}
 If you can't be on time, be ahead of time.
 :::
+
+I close the door when the bell rings so we do not disturb the opening activity or disrupt the peace.
 
 - Sit down. Relax.
 - Look at the quote.
@@ -126,22 +124,6 @@ We want to **grow together**.
 
 Has anyone heard of **flow state**?
 
-# Other Ways We Say It
-
-**Momentum + success**
-
-- **In the groove:** moving smoothly.
-- **Jamming:** everything is clicking.
-- **On a roll:** success keeps building.
-- **On fire:** performing at a very high level.
-- **Killing it:** executing extremely well.
-
-**Focus**
-
-- **Locked in:** completely focused and unshakeable.
-- **In my element:** working where you thrive.
-- **Head down:** immersed without distraction.
-
 # Name Game
 
 - Fully participate.
@@ -151,8 +133,10 @@ Has anyone heard of **flow state**?
 - We go around the circle.
 - Help each other.
 
+# Any Questions?
+
 ::: {.big-prompt}
-**Any questions? Let's go outside.**
+**Let's go outside.**
 :::
 
 # Name Tag V1
@@ -166,7 +150,7 @@ Make a clear, useful name tag that helps me learn your name.
 # One PDF
 
 ::: {.big-prompt}
-**One finished PDF. Your student number on the page.**
+**One PDF. Submitted by: student-number and clear name tag photo.**
 :::
 
 # Why So Specific?
@@ -189,9 +173,9 @@ Make a clear, useful name tag that helps me learn your name.
 One page. Clear photo. Student number.
 :::
 
-<iframe src="https://mrandrewandrade.github.io/slides/assets/examples/name-tag-example.pdf.pdf#view=FitH" title="Example name tag PDF" style="width:100%; height:58vh; border:0;"></iframe>
+<iframe src="../assets/examples/name-tag-example.pdf.pdf#view=FitH" title="Example name tag PDF" style="width:100%; height:58vh; border:0;"></iframe>
 
-[**Open the example PDF**](https://mrandrewandrade.github.io/slides/assets/examples/name-tag-example.pdf.pdf){target="_blank"}
+[**Open the example PDF**](../assets/examples/name-tag-example.pdf.pdf){target="_blank"}
 
 # How I Am Marking It
 
