@@ -56,6 +56,10 @@ if [[ -z "$browser" ]]; then
   exit 1
 fi
 
+echo "NOTE: headless PDF output is for rough export only."
+echo "      Use 'bash run.sh review <course>' to judge the actual browser layout."
+echo
+
 echo "Building full slide site..."
 bash scripts/full-build.sh archive
 bash scripts/build-published-extras.sh _site
