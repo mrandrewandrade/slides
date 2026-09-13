@@ -1,0 +1,14 @@
+---
+course: "TAS"
+format:
+  revealjs:
+    footer: "These [slides](https://andrewandrade.ca/slides) and the [course website](https://andrewandrade.ca/commons/tas2) are open-sourced by [Mr. Andrew Andrade on GitHub](https://github.com/mrandrewandrade) under the CC BY 4.0 copyright licence.<br>You may copy, share, and adapt them for educational, personal, or commercial purposes, but you must attribute the source to [mrandrewandrade](https://github.com/mrandrewandrade)."
+---
+
+{{< include ../shared/week-01/_2026-09-09-day-02.qmd >}}
+
+{{< include ../shared/routines/_end-of-class.qmd >}}
+
+{{< include ../shared/week-01/_2026-09-08-day-01.qmd >}}
+
+{{< include ../shared/routines/_end-of-class.qmd >}}
