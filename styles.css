@@ -72,34 +72,41 @@
   text-underline-offset: 0.13em;
 }
 
-/* Opening slides: the hero line is anchored at exactly the same place. */
+/* Opening slides: explicit visible text, same anchor on slides 1 and 2. */
 .reveal .quote-hero-slide,
 .reveal .quote-detail-slide {
   position: relative;
+  min-height: 100%;
+  background: var(--ink) !important;
+  color: var(--white);
   text-align: left;
 }
 
-.reveal .quote-hero-slide h1,
-.reveal .quote-detail-slide h1 {
+.reveal .quote-hero-slide > h1,
+.reveal .quote-detail-slide > h1 {
+  display: none;
+}
+
+.reveal .quote-hero-text {
   position: absolute;
   top: 31%;
   left: 6%;
   width: 88%;
   margin: 0;
-  color: var(--white);
+  color: var(--white) !important;
   font-size: 2.35em;
   font-weight: 680;
   line-height: 1.02;
   letter-spacing: -0.05em;
 }
 
-.reveal .quote-detail-slide > p {
+.reveal .quote-continuation {
   position: absolute;
   top: 53%;
   left: 6%;
   width: 84%;
   margin: 0;
-  color: #e7e7e4;
+  color: #e7e7e4 !important;
   font-size: 1.22em;
   line-height: 1.2;
 }
@@ -110,7 +117,7 @@
   left: 6%;
   width: 84%;
   margin: 0;
-  color: #bdbdb8;
+  color: #bdbdb8 !important;
   font-size: 0.78em;
   line-height: 1.25;
 }
