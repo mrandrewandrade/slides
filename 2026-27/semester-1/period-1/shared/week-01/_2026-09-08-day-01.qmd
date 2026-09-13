@@ -11,11 +11,12 @@ All that we are is story...
 :::
 
 ::: {.quote-continuation}
-It is what we arrive with. It is all we leave behind.
+It is what we arrive with.  
+It is all we leave behind.
 :::
 
 ::: {.quote-attribution}
-Richard Wagamese · Ojibway writer · *Medicine Walk*
+<span class="quote-author">Richard Wagamese</span><span class="quote-sep"> · </span><span class="quote-role">Ojibway writer</span><span class="quote-sep"> · </span><span class="quote-work">Medicine Walk</span>
 :::
 
 # {{< meta course >}} · Day {{< meta day >}} {.course-day-slide}
