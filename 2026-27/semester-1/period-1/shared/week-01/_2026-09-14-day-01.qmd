@@ -19,14 +19,14 @@ Monday, September 14, 2026
 
 # Arrive Every Day
 
-- Sit down and relax.
-- Take a look at the quote.
+- Sit down. Relax.
+- Look at the quote.
 - Phones are okay until attendance is finished.
-- No talking while attendance is being taken.
-- When your name is called, say **"here"** or something else loud enough for me to hear.
+- No talking during attendance.
+- When called, say **"here"** loudly enough for me to hear.
 
 ::: {.big-prompt}
-If I do not hear you **and** see you, I cannot mark you present.
+If I do not **hear you and see you**, I cannot mark you present.
 :::
 
 # Why do this?
@@ -35,26 +35,33 @@ If I do not hear you **and** see you, I cannot mark you present.
 Why do you think we start class this way?
 :::
 
+# Be Present. Build With Purpose. Leave It Better.
+
+::: {.big-prompt}
+Notice what matters.  
+Try things. Learn quickly.  
+Take care of the people, tools, and space around you.
+:::
+
 # Attendance & Participation
 
 ::: {.big-prompt}
 **Physically present:** required.  
-**Mentally present:** your choice, but it affects your participation and learning.
+**Mentally present:** your choice, but it affects your learning and participation.
 :::
 
-- Attendance and participation are part of your course grade.
-- Participation includes **in-class** and **online** participation. More on online participation later.
-- Lateness, repeated or extended time out of class, and avoiding participation all count.
-- Making it harder for someone else to be present and learn also counts.
+- Participation includes **in class** and **online**.
+- Lateness, extended time out of class, and avoiding participation count.
+- Preventing someone else from learning also counts.
 
 **Participation is a significant part of the grade.**
 
 # Essential Expectations
 
-- Respect **transition times and timers**.
+- Respect the **timers and transitions**.
 - Respect **no-phone** moments.
 - Respect **no-talking** moments.
-- Do not prevent other people from learning.
+- Let other people learn.
 
 ::: {.big-prompt}
 Otherwise, I am very flexible. This class should be a lot of fun.
@@ -63,11 +70,12 @@ Otherwise, I am very flexible. This class should be a lot of fun.
 # Very Difficult to Fail
 
 ::: {.big-prompt}
-If you submit your work, it is very difficult to fail my class.
+Submit your work and it is very difficult to fail my class.
 :::
 
-- The main way to fail is to submit **little or nothing**.
-- More importantly: do not prevent other people from learning.
+The main way to fail is to submit **little or nothing**.
+
+More importantly: **do not prevent other people from learning.**
 
 # Any Questions?
 
@@ -81,10 +89,11 @@ Ask now. Ask later. Ask when you need help.
 
 # Today's Route
 
-- **10-15 min:** Entering flow state - name game
-- Build something and document it.
-- Submit a **PDF** on Google Classroom.
-- **Final 15 min:** quiet reflection and daily log.
+- **10-15 min:** Name game
+- **5-10 min:** Build a name tag
+- Document the work
+- Submit **one PDF**
+- **Final 15 min:** reflection + reset
 
 # Entering Flow: Name Game
 
@@ -92,12 +101,8 @@ Ask now. Ask later. Ask when you need help.
 
 1. Say your **preferred name**.
 2. Add one simple **action or gesture**.
-3. The next person repeats a few names/actions before adding their own.
-4. Help each other if someone gets stuck.
-
-::: {.big-prompt}
-Learn names, move around, and get comfortable working together.
-:::
+3. Repeat a few names/actions before adding your own.
+4. Help each other.
 
 # Name Tag V1
 
@@ -107,20 +112,51 @@ Make a clear, useful name tag that helps me learn your name.
 
 **5-10 minutes**
 
+# How I Am Marking It
+
+- **Photo quality** · /2
+- **Crop + layout** · /2
+- **Student number** · /2
+- **PDF skill** · /2
+- **Following instructions** · /2
+
+::: {.big-prompt}
+**/10** · I am not grading artistic talent. I am grading communication and process.
+:::
+
+# Why So Specific?
+
+::: {.big-prompt}
+In engineering and consulting, the deliverable has to work for the person receiving it.
+:::
+
+- PDFs are **stable snapshots** of finished work.
+- They open consistently across devices and software.
+- Editable files are working files. A PDF is the **deliverable**.
+- Clear presentation makes good work easier to understand and trust.
+
+# Example PDF
+
+::: {.big-prompt}
+One page. Clear photo. Student number. Nothing extra.
+:::
+
+[**Open the example PDF**](https://raw.githubusercontent.com/mrandrewandrade/slides/master/assets/examples/name-tag-example.pdf)
+
 # Document + Submit
 
-1. Take a **clear, well-lit photo** of your name tag.
-2. Put the photo in a Google Doc or other software that can create a PDF.
-3. Crop and resize it so the name tag is easy to read.
-4. Add: **Submitted by: your-student-number**
-5. Export as a **PDF**, open it, and check it.
-6. Submit the PDF to **Google Classroom**.
+1. Take a **clear, well-lit photo**.
+2. Put it on one page and crop it cleanly.
+3. Add **Submitted by: your-student-number**.
+4. Export as **PDF**.
+5. **Open the PDF and check it.**
+6. Submit it to **Google Classroom**.
 
 # Mission Complete
 
-- Name tag is clear and easy to read.
-- Photo is clear and well-lit.
-- PDF includes **Submitted by: your-student-number**.
+- Name tag is easy to read.
+- Photo is clear and well composed.
+- Student number uses the required format.
 - PDF opens and looks correct.
-- PDF is submitted to Google Classroom.
+- Correct PDF is submitted.
 - Physical name tag goes home and comes back usable.
