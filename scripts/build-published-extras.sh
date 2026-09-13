@@ -82,7 +82,20 @@ EOF
 
 for course in tej tts tas; do
   mkdir -p "$site_root/wip/$course"
-  python_flow render-future "$course" "$site_root/wip/$course"
+  generated="future-${course}.generated.html"
+  rm -f "$generated"
+
+  if ! python_flow render-future "$course" "$site_root/wip/$course"; then
+    # Quarto may place an explicitly rendered top-level generated file beside
+    # the source instead of under _site. Treat that as a successful render.
+    if [[ -f "$generated" ]]; then
+      mv "$generated" "$site_root/wip/$course/index.html"
+    else
+      exit 1
+    fi
+  fi
+
+  rm -f "$generated"
 done
 
 echo "Archive and future slide deck pages ready."
