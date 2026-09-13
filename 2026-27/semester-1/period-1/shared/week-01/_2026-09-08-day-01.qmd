@@ -4,24 +4,23 @@ date: 2026-09-08
 week: 1
 -->
 
-# Quote of the Day {.quote-slide}
+# Quote {.quote-slide .quote-primary .dark background-color="#171717"}
 
-> "All that we are is story..."
+<div class="quote-hero">“All that we are is story...”</div>
 
-## Quote of the Day {.quote-slide .dark background-color="#171717"}
+## Quote {.quote-slide .quote-secondary background-color="#f7f7f5"}
 
-> "All that we are is story... It is what we arrive with. It is all we leave behind."
+<div class="quote-hero">“All that we are is story... It is what we arrive with. It is all we leave behind.”</div>
 
-<div class="quote-source">Richard Wagamese · <em>Medicine Walk</em></div>
+<div class="quote-source">Richard Wagamese, <em>Medicine Walk</em></div>
 
 # {{< meta course >}} · Day {{< meta day >}} {.course-start}
 
-<div class="course-date">{{< meta class-date >}} · Semester 1</div>
+<div class="course-date">{{< meta class-date >}}</div>
 
 <div class="course-start-grid">
-<div class="course-start-logos">
-<img src="../assets/aa-logo.svg" alt="Andrew Andrade logo">
-<img class="commons-emblem" src="../assets/commons-emblem-copper.svg" alt="Technology Commons emblem">
+<div class="course-start-crest">
+<img src="../assets/commons-emblem.svg" alt="Technology Commons crest">
 </div>
 
 <div class="course-start-main">
@@ -34,15 +33,9 @@ week: 1
 
 </div>
 
-<div class="course-start-logos">
-<img src="https://raw.githubusercontent.com/mrandrewandrade/commons/feature/pcss-logo-downloads/site/assets/branding/pcss/pcss-warriors.png" alt="Port Credit Secondary School logo">
-<img src="https://raw.githubusercontent.com/mrandrewandrade/commons/feature/pcss-logo-downloads/site/assets/branding/pcss/pcss-scitech-badge.png" alt="SciTech logo">
+<div class="course-start-crest">
+<img src="../assets/commons-emblem.svg" alt="Technology Commons crest">
 </div>
-</div>
-
-<div class="course-start-license">
-<a href="https://andrewandrade.ca/commons">andrewandrade.ca/commons</a> · <a href="https://github.com/mrandrewandrade/slides">github.com/mrandrewandrade/slides</a><br>
-CC BY 4.0 means you may share and adapt this material with attribution.
 </div>
 
 # Arrival
