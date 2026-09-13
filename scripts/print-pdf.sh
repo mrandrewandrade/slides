@@ -60,7 +60,7 @@ echo "Building full slide site..."
 bash scripts/full-build.sh archive
 bash scripts/build-published-extras.sh _site
 
-mkdir -p pdfs
+mkdir -p _site/pdfs
 
 port=4201
 server_log="${TMPDIR:-/tmp}/slides-pdf-server.log"
@@ -81,7 +81,7 @@ if ! kill -0 "$server_pid" >/dev/null 2>&1; then
 fi
 
 for course in "${courses[@]}"; do
-  output="$(pwd)/pdfs/${course}-full.pdf"
+  output="$(pwd)/_site/pdfs/${course}-full.pdf"
   native_output="$(native_path "$output")"
   url="http://127.0.0.1:${port}/2026-27/semester-1/period-1/${course}/full.html?print-pdf"
 
@@ -100,5 +100,5 @@ for course in "${courses[@]}"; do
     exit 1
   fi
 
-  echo "Created: pdfs/${course}-full.pdf"
+  echo "Created: _site/pdfs/${course}-full.pdf"
 done
