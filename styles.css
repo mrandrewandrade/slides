@@ -87,9 +87,8 @@
   text-align: left;
 }
 
-/* The quote hook is the actual slide heading. */
-.reveal .quote-hero-slide > h1,
-.reveal .quote-detail-slide > h1 {
+/* First quote slide: one large opening thought. */
+.reveal .quote-hero-slide > h1 {
   position: absolute;
   top: 168px;
   left: 63px;
@@ -102,20 +101,37 @@
   letter-spacing: -0.05em;
 }
 
+/*
+ * Second quote slide: the hook becomes a smaller lead-in so the complete
+ * quotation reads as one composition instead of two competing headlines.
+ */
+.reveal .quote-detail-slide > h1 {
+  position: absolute;
+  top: 96px;
+  left: 63px;
+  width: 924px;
+  margin: 0;
+  color: var(--white) !important;
+  font-size: 1.55em;
+  font-weight: 680;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
 .reveal .quote-continuation {
   position: absolute;
-  top: 430px;
+  top: 285px;
   left: 63px;
   width: 882px;
   margin: 0;
   color: #e7e7e4 !important;
-  font-size: 1.22em;
-  line-height: 1.25;
+  font-size: 1.2em;
+  line-height: 1.32;
 }
 
 .reveal .quote-attribution {
   position: absolute;
-  top: 565px;
+  top: 505px;
   left: 63px;
   width: 924px;
   margin: 0;
