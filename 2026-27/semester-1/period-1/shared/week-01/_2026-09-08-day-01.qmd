@@ -1,14 +1,6 @@
-# Quote {.quote-hero-slide background-color="#171717"}
+# All that we are is story... {.quote-hero-slide background-color="#171717"}
 
-::: {.quote-hero-text}
-All that we are is story...
-:::
-
-# Quote {.quote-detail-slide background-color="#171717"}
-
-::: {.quote-hero-text}
-All that we are is story...
-:::
+# All that we are is story... {.quote-detail-slide background-color="#171717"}
 
 ::: {.quote-continuation}
 It is what we arrive with.  
