@@ -72,7 +72,7 @@
   text-underline-offset: 0.13em;
 }
 
-/* Opening slides: explicit visible text, same anchor on slides 1 and 2. */
+/* Opening quotes use one consistent two-slide layout every day. */
 .reveal .quote-hero-slide,
 .reveal .quote-detail-slide {
   position: relative;
@@ -100,7 +100,6 @@
   letter-spacing: -0.05em;
 }
 
-/* Keep the repeated hero fixed, then place the added text clearly below it. */
 .reveal .quote-continuation {
   position: absolute;
   top: 62%;
@@ -121,25 +120,6 @@
   font-size: 0.8em;
   line-height: 1.25;
   letter-spacing: 0.005em;
-}
-
-/* Longer opening quotes need more vertical breathing room on the detail slide. */
-.reveal .quote-detail-slide.quote-long-slide .quote-hero-text {
-  top: 18%;
-  font-size: 1.72em;
-  line-height: 1.06;
-}
-
-.reveal .quote-detail-slide.quote-long-slide .quote-continuation {
-  top: 58%;
-  width: 88%;
-  font-size: 1.05em;
-  line-height: 1.22;
-}
-
-.reveal .quote-detail-slide.quote-long-slide .quote-attribution {
-  top: 82%;
-  font-size: 0.72em;
 }
 
 .reveal .quote-author {
