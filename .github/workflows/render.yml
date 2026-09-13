@@ -3,7 +3,7 @@ name: Build and publish slides
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
   workflow_dispatch:
 
@@ -26,56 +26,17 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Full validation build
-        if: github.event_name == 'pull_request'
-        run: |
-          bash scripts/full-build.sh archive
-          bash scripts/site.sh snapshot _site/archive
-          bash scripts/build-published-extras.sh _site
-
-      - name: Restore published archive
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        run: |
-          rm -rf .published-site
-          mkdir -p .published-site
-          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
-            git fetch origin gh-pages
-            git archive origin/gh-pages archive | tar -x -C .published-site || true
-          fi
-
-      - name: Archive previous main state
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        env:
-          PREVIOUS_SHA: ${{ github.event.before }}
-        run: |
-          if [[ -n "$PREVIOUS_SHA" ]] && [[ "$PREVIOUS_SHA" != "0000000000000000000000000000000000000000" ]] && git cat-file -e "${PREVIOUS_SHA}:current/tej.qmd" 2>/dev/null; then
-            rm -rf .previous-main
-            git worktree add --detach .previous-main "$PREVIOUS_SHA"
-            mkdir -p "$GITHUB_WORKSPACE/.published-site/archive"
-            (
-              cd .previous-main
-              bash scripts/site.sh snapshot "$GITHUB_WORKSPACE/.published-site/archive"
-            )
-            git worktree remove --force .previous-main
-          fi
-
       - name: Full site build
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        run: bash scripts/full-build.sh .published-site/archive
+        run: bash scripts/full-build.sh archive
 
-      - name: Preserve archive and snapshot latest day
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+      - name: Add latest snapshot and generated indexes
         run: |
-          if [[ -d .published-site/archive ]]; then
-            mkdir -p _site/archive
-            cp -R .published-site/archive/. _site/archive/
-          fi
           bash scripts/site.sh snapshot _site/archive
           bash scripts/build-published-extras.sh _site
           touch _site/.nojekyll
 
       - name: Publish gh-pages branch
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
