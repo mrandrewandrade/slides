@@ -20,14 +20,6 @@ Richard Wagamese · Ojibway writer · *Medicine Walk*
 
 # Announcements {.announcements-slide}
 
-::: {.announcement-title-row}
-![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
-
-## Announcements
-
-![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
-:::
-
 - Welcome to the course.
 - Introduction presentation due by **7:00 PM**.
 - Presentations begin **Day 2**.
