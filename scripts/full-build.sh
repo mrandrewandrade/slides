@@ -3,9 +3,8 @@ set -euo pipefail
 
 archive_root="${1:-archive}"
 
-# The site index is generated for full builds, but index.qmd is tracked source.
-# Preserve whatever is currently in the working tree so a local full preview
-# never leaves the repository dirty or blocks the next git pull.
+# index.qmd is generated for the full site, but it is tracked source.
+# Restore the working copy after the render so local builds do not leave git dirty.
 tmp_index="$(mktemp)"
 had_index=0
 
@@ -25,8 +24,10 @@ restore_index() {
 
 trap restore_index EXIT
 
-# Remove obsolete generated course pages from the older per-day/semester layout.
-# Archived classroom snapshots live under _site/archive and are intentionally kept.
+# Full is generated from the current pointer before every complete local build.
+bash scripts/python.sh scripts/semester_flow.py sync all
+
+# Remove stale output from the older per-day/semester layout.
 for course in tej tts tas; do
   rm -rf "_site/2026-27/semester-1/period-1/${course}"
 done
