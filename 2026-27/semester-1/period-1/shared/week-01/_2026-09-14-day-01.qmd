@@ -23,11 +23,6 @@ Monday, September 14, 2026
 - Look at the quote.
 - Phones are okay until attendance is finished.
 - No talking during attendance.
-- When called, say **"here"** loudly enough for me to hear.
-
-::: {.big-prompt}
-If I do not **hear you and see you**, I cannot mark you present.
-:::
 
 # Why do this?
 
@@ -35,26 +30,25 @@ If I do not **hear you and see you**, I cannot mark you present.
 Why do you think we start class this way?
 :::
 
-# Be Present. Build With Purpose. Leave It Better.
+# Attendance
 
 ::: {.big-prompt}
-Notice what matters.  
-Try things. Learn quickly.  
-Take care of the people, tools, and space around you.
+**Physically present:** required.
 :::
 
-# Attendance & Participation
+When called, say **"here"** loudly enough for me to hear.
 
-::: {.big-prompt}
-**Physically present:** required.  
-**Mentally present:** your choice, but it affects your learning and participation.
-:::
+**If I do not hear you and see you, I cannot mark you present.**
+
+# Participation
 
 - Participation includes **in class** and **online**.
 - Lateness, extended time out of class, and avoiding participation count.
 - Preventing someone else from learning also counts.
 
+::: {.big-prompt}
 **Participation is a significant part of the grade.**
+:::
 
 # Essential Expectations
 
@@ -83,6 +77,9 @@ More importantly: **do not prevent other people from learning.**
 Ask now. Ask later. Ask when you need help.
 :::
 
+If you think something can be better, **speak up**.  
+We want to **grow together**.
+
 # Announcements {.announcements-slide}
 
 - Welcome to the course!
@@ -92,7 +89,7 @@ Ask now. Ask later. Ask when you need help.
 - **10-15 min:** Name game
 - **5-10 min:** Build a name tag
 - Document the work
-- Submit **one PDF**
+- Submit **one PDF with your student number**
 - **Final 15 min:** reflection + reset
 
 # Entering Flow: Name Game
@@ -121,27 +118,35 @@ Make a clear, useful name tag that helps me learn your name.
 - **Following instructions** · /2
 
 ::: {.big-prompt}
-**/10** · I am not grading artistic talent. I am grading communication and process.
+**/10** · Communication and process, not artistic talent.
+:::
+
+# One PDF
+
+::: {.big-prompt}
+**One finished PDF. Your student number on the page.**
 :::
 
 # Why So Specific?
 
 ::: {.big-prompt}
-In engineering and consulting, the deliverable has to work for the person receiving it.
+**In engineering and consulting, the deliverable has to work for the person receiving it. It must be professional and confidential.**
 :::
+
+# Why PDF?
 
 - PDFs are **stable snapshots** of finished work.
 - They open consistently across devices and software.
-- Editable files are working files. A PDF is the **deliverable**.
+- Editable files are working files and have hidden details. A PDF is the **deliverable**.
 - Clear presentation makes good work easier to understand and trust.
 
 # Example PDF
 
 ::: {.big-prompt}
-One page. Clear photo. Student number. Nothing extra.
+One page. Clear photo. Student number.
 :::
 
-[**Open the example PDF**](https://raw.githubusercontent.com/mrandrewandrade/slides/master/assets/examples/name-tag-example.pdf)
+<iframe src="https://raw.githubusercontent.com/mrandrewandrade/slides/master/assets/examples/name-tag-example.pdf.pdf#view=FitH" title="Example name tag PDF" style="width:100%; height:58vh; border:0;"></iframe>
 
 # Document + Submit
 
