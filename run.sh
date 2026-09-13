@@ -50,6 +50,21 @@ case "$command" in
         ;;
     esac
     ;;
+  ppt)
+    target="${2:-tej}"
+    target="${target,,}"
+    mode="${3:-all}"
+    mode="${mode,,}"
+    case "$target" in
+      tej|tts|tas|all)
+        exec bash scripts/build-ppt.sh "$target" "$mode"
+        ;;
+      *)
+        echo "Use: bash run.sh ppt <tej|tts|tas|all> [current|full|future|all]" >&2
+        exit 1
+        ;;
+    esac
+    ;;
   advance)
     target="${2:-}"
     target="${target,,}"
@@ -96,6 +111,7 @@ case "$command" in
     echo "     bash run.sh all" >&2
     echo "     bash run.sh review [tej|tts|tas]" >&2
     echo "     bash run.sh pdf [tej|tts|tas|all]" >&2
+    echo "     bash run.sh ppt <tej|tts|tas|all> [current|full|future|all]" >&2
     echo "     bash run.sh status [tej|tts|tas|all]" >&2
     echo "     bash run.sh advance <tej|tts|tas|all>" >&2
     echo "     bash run.sh sync [tej|tts|tas|all]" >&2
