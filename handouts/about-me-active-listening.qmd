@@ -1,0 +1,65 @@
+---
+title: "About Me - Active Listening"
+format:
+  html:
+    toc: false
+    embed-resources: true
+---
+
+<style>
+body { font-family: Aptos, "Segoe UI", Arial, sans-serif; max-width: 8in; margin: 0 auto; color: #171717; }
+h1 { margin-bottom: 0.5rem; }
+.meta-line { margin: 0.6rem 0 1rem; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1rem; }
+th, td { border: 1px solid #777; padding: 0.45rem; vertical-align: top; }
+th:nth-child(1) { width: 22%; }
+th:nth-child(2) { width: 36%; }
+th:nth-child(3) { width: 42%; }
+td { height: 2.6rem; }
+.page-break { break-before: page; page-break-before: always; }
+@media print {
+  @page { size: letter portrait; margin: 0.55in; }
+  body { max-width: none; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+
+# About Me - Active Listening
+
+<div class="meta-line"><strong>Name:</strong> ______________________________ &nbsp;&nbsp;&nbsp; <strong>Class:</strong> ______________________________</div>
+
+As people present, write a few words about what you learned and one thing you connected with, found interesting, or want to remember. **Short notes are enough.**
+
+| Presenter | One thing I learned | A connection / something interesting |
+|---|---|---|
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+<div class="page-break"></div>
+
+# About Me - Active Listening
+
+<div class="meta-line"><strong>Name:</strong> ______________________________ &nbsp;&nbsp;&nbsp; <strong>Class:</strong> ______________________________</div>
+
+Continue your notes here. **Short notes are enough.**
+
+| Presenter | One thing I learned | A connection / something interesting |
+|---|---|---|
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
