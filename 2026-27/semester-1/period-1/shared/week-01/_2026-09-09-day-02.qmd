@@ -5,49 +5,33 @@ week: 1
 status: planned
 -->
 
-# Quote {.quote-slide .dark background-color="#171717"}
+# Teachings come from everywhere when you open yourself to them. {.quote-hero-slide background-color="#171717"}
 
-::: {.quote-frame}
-::: {.hero-quote}
-Teachings come from everywhere when you open yourself to them.
-:::
-:::
+# Teachings come from everywhere when you open yourself to them. {.quote-detail-slide background-color="#171717"}
 
-# Quote {.quote-slide .dark background-color="#171717"}
-
-::: {.quote-frame}
-::: {.hero-quote}
-Teachings come from everywhere when you open yourself to them.
-:::
-
-::: {.quote-continuation}
 That's the trick of it really, to open yourself to everything and everything opens itself to you.
-:::
 
-::: {.quote-source}
+::: {.quote-attribution}
 Richard Wagamese · Ojibway writer · *Embers: One Ojibway's Meditations*
 :::
-:::
 
-# {{< meta course >}} · Day {{< meta day >}} {.course-start}
+# {{< meta course >}} · Day {{< meta day >}} {.course-day-slide}
 
-::: {.course-date}
 {{< meta class-date >}}
-:::
 
-::: {.course-start-main}
-::: {.announcement-heading}
-![Technology Commons crest](../assets/commons-emblem.svg){.announcement-crest}
+# Announcements {.announcements-slide}
+
+::: {.announcement-title-row}
+![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
 
 ## Announcements
 
-![Technology Commons crest](../assets/commons-emblem.svg){.announcement-crest}
+![Technology Commons crest](../assets/commons-emblem-color.svg){.announcement-crest}
 :::
 
 - Presentations are today.
 - Be ready when your name is called.
 - Complete the listening sheet while classmates present.
-:::
 
 # Observe
 
