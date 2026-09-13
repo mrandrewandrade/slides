@@ -33,6 +33,8 @@ format:
 
 Choose a course. The latest week opens first, with earlier weeks kept out of the way.
 
+<div class="print-help"><strong>Printing:</strong> use <strong>Print / PDF</strong> beside any deck, then use your browser's Print dialog to print or save as PDF.</div>
+
 EOF
 
   for course in "${COURSES[@]}"; do
@@ -79,7 +81,7 @@ EOF
 
       if [[ "$current_week" == "$week" ]]; then
         local current_day_num=$((10#$current_day))
-        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a></li>" >> index.qmd
+        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a> <a class=\"print-link\" href=\"current/${course}.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
       fi
 
       if [[ -d "$archive_dir" ]]; then
@@ -98,7 +100,7 @@ EOF
 
             local archive_day_num=$((10#$archive_day))
             local relative="archive/2026-27/semester-1/${course}/week-${week}/${base}"
-            echo "<li><a href=\"${relative}\">Day ${archive_day_num} · ${archive_date}</a></li>" >> index.qmd
+            echo "<li><a href=\"${relative}\">Day ${archive_day_num} · ${archive_date}</a> <a class=\"print-link\" href=\"${relative}?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
           fi
         done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort -r)
       fi
@@ -114,8 +116,8 @@ EOF
 
     {
       echo '<div class="course-deck-links">'
-      echo "<p><a href=\"2026-27/semester-1/period-1/${course}/full.html\"><strong>Full slides</strong></a> · all published days in one deck, newest first</p>"
-      echo "<p><a href=\"wip/${course}/index.html\"><strong>Future slide deck</strong></a> · staged slides for the rest of the semester</p>"
+      echo "<p><a href=\"2026-27/semester-1/period-1/${course}/full.html\"><strong>Full slides</strong></a> · all published days in one deck, newest first <a class=\"print-link\" href=\"2026-27/semester-1/period-1/${course}/full.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></p>"
+      echo "<p><a href=\"wip/${course}/index.html\"><strong>Future slide deck</strong></a> · staged slides for the rest of the semester <a class=\"print-link\" href=\"wip/${course}/index.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></p>"
       echo '</div>'
       echo
       echo '</details>'
