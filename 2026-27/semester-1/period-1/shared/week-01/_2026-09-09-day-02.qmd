@@ -15,7 +15,7 @@ That's the trick of it really, to open yourself to everything and everything ope
 :::
 
 ::: {.quote-attribution}
-Richard Wagamese · Ojibway writer · *Embers: One Ojibway's Meditations*
+<span class="quote-author">Richard Wagamese</span><span class="quote-sep"> · </span><span class="quote-role">Ojibway writer</span><span class="quote-sep"> · </span><span class="quote-work">Embers: One Ojibway's Meditations</span>
 :::
 
 # {{< meta course >}} · Day {{< meta day >}} {.course-day-slide}
