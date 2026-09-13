@@ -72,55 +72,46 @@
   text-underline-offset: 0.13em;
 }
 
-/* Opening slide 1: one large hero line, nothing else. */
-.reveal .quote-hero-slide {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Opening slides: the hero line is anchored at exactly the same place. */
+.reveal .quote-hero-slide,
+.reveal .quote-detail-slide {
+  position: relative;
+  text-align: left;
 }
 
-.reveal .quote-hero-slide h1 {
-  width: 92%;
+.reveal .quote-hero-slide h1,
+.reveal .quote-detail-slide h1 {
+  position: absolute;
+  top: 31%;
+  left: 6%;
+  width: 88%;
   margin: 0;
   color: var(--white);
-  font-size: 2.45em;
+  font-size: 2.35em;
   font-weight: 680;
   line-height: 1.02;
   letter-spacing: -0.05em;
 }
 
-/* Opening slide 2: same hero line with readable continuation and attribution. */
-.reveal .quote-detail-slide {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.reveal .quote-detail-slide h1 {
-  width: 90%;
-  margin: 0 0 0.55em;
-  color: var(--white);
-  font-size: 2.05em;
-  font-weight: 680;
-  line-height: 1.02;
-  letter-spacing: -0.045em;
-}
-
 .reveal .quote-detail-slide > p {
+  position: absolute;
+  top: 53%;
+  left: 6%;
   width: 84%;
   margin: 0;
   color: #e7e7e4;
-  font-size: 1.15em;
-  line-height: 1.22;
+  font-size: 1.22em;
+  line-height: 1.2;
 }
 
 .reveal .quote-attribution {
+  position: absolute;
+  top: 70%;
+  left: 6%;
   width: 84%;
-  margin-top: 1.1em;
+  margin: 0;
   color: #bdbdb8;
-  font-size: 0.68em;
+  font-size: 0.78em;
   line-height: 1.25;
 }
 
@@ -151,35 +142,26 @@
   font-size: 0.95em;
 }
 
-/* Announcements get their own slide. */
-.reveal .announcements-slide > h1 {
-  display: none;
-}
-
-.reveal .announcement-title-row {
+/* Announcements: simple heading, with the canonical crest generated in CSS. */
+.reveal .announcements-slide h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55em;
-  margin: 0.45em 0 0.8em;
-}
-
-.reveal .announcement-title-row p {
-  margin: 0;
-}
-
-.reveal .announcement-title-row h2 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 1.6em;
+  gap: 0.42em;
+  margin-top: 0.55em;
+  margin-bottom: 0.75em;
+  font-size: 1.75em;
   line-height: 1;
 }
 
-.reveal .announcement-crest {
+.reveal .announcements-slide h1::before,
+.reveal .announcements-slide h1::after {
+  content: "";
   display: block;
-  width: 92px;
-  height: 92px;
-  object-fit: contain;
+  width: 1.2em;
+  height: 1.2em;
+  flex: 0 0 1.2em;
+  background: url("assets/commons-emblem-color.svg") center / contain no-repeat;
 }
 
 .reveal .announcements-slide > ul {
@@ -195,17 +177,19 @@
   border-radius: 0.06em;
 }
 
-/* Footer: useful but deliberately quiet. */
+/* Footer: two readable lines, allowed to wrap instead of clipping. */
 .reveal .footer {
-  left: 3.5%;
-  right: 3.5%;
-  bottom: 0.45em;
+  left: 4%;
+  right: 4%;
+  bottom: 0.28em;
   color: #858585;
   border-top: 0;
-  font-size: 0.205em;
-  line-height: 1.25;
-  opacity: 0.8;
+  font-size: 0.215em;
+  line-height: 1.35;
+  opacity: 0.82;
   text-align: center;
+  white-space: normal;
+  overflow: visible;
 }
 
 .reveal .footer a {
