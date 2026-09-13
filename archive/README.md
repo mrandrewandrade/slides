@@ -15,4 +15,10 @@ archive/
       tas/
 ```
 
-Use `scripts/archive-current.sh` after a daily deck is finished, then update `index.qmd` so that day links to its archived HTML file.
+Do not move daily slides here by hand. Use the semester flow command:
+
+```bash
+bash run.sh advance tej
+```
+
+That command first renders and stores the current deck in this archive, then promotes the next staged day to `current/` and regenerates the course's `full.qmd` deck. Use `bash run.sh status` to inspect Current, Full, and Future before or after a promotion.
