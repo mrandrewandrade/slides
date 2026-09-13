@@ -1,0 +1,106 @@
+# All that we are is story... {.quote-hero-slide background-color="#171717"}
+
+# All that we are is story... {.quote-detail-slide background-color="#171717"}
+
+::: {.quote-continuation}
+It is what we arrive with.  
+It is all we leave behind.
+:::
+
+::: {.quote-attribution}
+<span class="quote-author">Richard Wagamese</span>
+<span class="quote-role">Ojibway writer</span>
+<span class="quote-work">Medicine Walk</span>
+:::
+
+# {{< meta course >}} · Day 1 {.course-day-slide}
+
+Monday, September 14, 2026
+
+# Arrive
+
+Take about **60 seconds**.
+
+- Sit comfortably.
+- Notice your breathing.
+- Notice a few sounds.
+- Notice one physical sensation.
+- You do not need to change anything.
+- Bring your attention back to the room.
+
+# Why do this?
+
+::: {.big-prompt}
+Why do you think we start class this way?
+:::
+
+Pause and take a few answers.
+
+# Why?
+
+- Shift attention into the room.
+- Notice before reacting.
+- Practise focusing on what is happening now.
+
+::: {.big-prompt}
+These are useful skills when you are learning, designing, troubleshooting, working with tools, or listening to someone else.
+:::
+
+# Announcements {.announcements-slide}
+
+- Welcome to the course.
+- Today is about names, expectations, and getting set up.
+- Bring your physical name tag back **usable** next class.
+
+# Essential Expectations
+
+- No phones while **Mr. Andrade is talking**.
+- Washroom: **one person at a time**, about **5 minutes**. Tell me if you expect to be longer.
+- Respect the timers and protect the learning environment.
+
+# Today's Route
+
+::: {.big-prompt}
+Meet the crew -> Names -> Name Tag V1 -> Google Classroom -> Submit photo
+:::
+
+# Name-and-Action Game
+
+1. Say your **preferred name**.
+2. Add one simple **action or gesture**.
+3. The next person repeats a few names/actions before adding their own.
+4. Help each other if someone gets stuck.
+
+::: {.big-prompt}
+Learn names, move around, and make names easier to remember.
+:::
+
+# Name Tag V1
+
+::: {.big-prompt}
+Make a name tag that helps me learn your name.
+:::
+
+Give yourself about **5 minutes**.
+
+**This is Version 1, not a masterpiece.**
+
+**Materials:** paper/card stock and markers
+
+# When Finished
+
+1. Take a **clear photo**.
+2. Make sure your **name is readable**.
+3. Open/join **Google Classroom**.
+4. Submit the photo to **Name Tag V1 - Photo Submission**.
+5. Take the physical name tag home.
+6. Bring it back **usable**.
+
+# Mission Complete
+
+- Name tag made
+- Clear photo taken
+- Google Classroom joined
+- Photo uploaded
+- Assignment turned in
+- Physical tag goes home and comes back usable
