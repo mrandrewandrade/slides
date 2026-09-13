@@ -16,6 +16,7 @@ SEM1 = ROOT / "2026-27" / "semester-1" / "period-1"
 SHARED = SEM1 / "shared"
 ROUTINE = SHARED / "routines" / "_end-of-class.qmd"
 PLAN = ROOT / "planning" / "2026-27-student-slide-calendar.tsv"
+EXAMS = ROOT / "planning" / "2026-27-exam-days.tsv"
 COURSES = ("tej", "tts", "tas")
 DAY_RE = re.compile(r"^_?(\d{4}-\d{2}-\d{2})-day-(\d{2})\.qmd$")
 CURRENT_RE = re.compile(r"_([0-9]{4}-[0-9]{2}-[0-9]{2})-day-[0-9]{2}\.qmd")
@@ -26,6 +27,13 @@ class PlanDay:
     date: str
     semester: str
     announcements: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class ExamDay:
+    date: str
+    semester: str
+    label: str
 
 
 def pretty_date(iso_date: str) -> str:
@@ -43,6 +51,16 @@ def load_plan() -> list[PlanDay]:
             item.strip() for item in raw_announcements.split(" || ") if item.strip()
         )
         days.append(PlanDay(date, semester, announcements))
+    return days
+
+
+def load_exams() -> list[ExamDay]:
+    days: list[ExamDay] = []
+    for raw in EXAMS.read_text(encoding="utf-8").splitlines():
+        if not raw or raw.startswith("#"):
+            continue
+        date, semester, label = raw.split("\t", 2)
+        days.append(ExamDay(date, semester, label))
     return days
 
 
@@ -111,7 +129,30 @@ def placeholder_day(day: PlanDay, lesson_label: str) -> str:
 '''
 
 
-def semester1_document(course: str, plan: list[PlanDay]) -> str:
+def exam_day(day: ExamDay) -> str:
+    date_label = pretty_date(day.date)
+    return f'''# Quote
+
+{date_label}
+
+[QUOTE]
+
+# Announcements {{.announcements-slide}}
+
+{date_label}
+
+- **Exam day:** {day.label}.
+
+# Exam Day
+
+{date_label}
+
+[EXAM SCHEDULE / COURSE-SPECIFIC DETAILS]
+
+'''
+
+
+def semester1_document(course: str, plan: list[PlanDay], exams: list[ExamDay]) -> str:
     label = course.upper()
     now = current_date(course)
     staged = staged_days(course)
@@ -120,7 +161,16 @@ def semester1_document(course: str, plan: list[PlanDay]) -> str:
         for day in plan
         if day.semester == "semester-1" and day.date > now
     }
-    dates = sorted(set(planned) | {date for date in staged if date > now})
+    exam_map = {
+        day.date: day
+        for day in exams
+        if day.semester == "semester-1" and day.date > now
+    }
+    dates = sorted(
+        set(planned)
+        | set(exam_map)
+        | {date for date in staged if date > now}
+    )
 
     pieces = [reveal_header(label)]
     pieces.append("# Future Slide Deck {.course-day-slide}\n\n")
@@ -130,6 +180,10 @@ def semester1_document(course: str, plan: list[PlanDay]) -> str:
     )
 
     for date in dates:
+        if date in exam_map:
+            pieces.append(exam_day(exam_map[date]))
+            continue
+
         staged_path = staged.get(date)
         if staged_path is not None:
             relative = staged_path.relative_to(ROOT).as_posix()
@@ -143,15 +197,22 @@ def semester1_document(course: str, plan: list[PlanDay]) -> str:
     return "".join(pieces).rstrip() + "\n"
 
 
-def semester2_document(plan: list[PlanDay]) -> str:
+def semester2_document(plan: list[PlanDay], exams: list[ExamDay]) -> str:
     pieces = [reveal_header("Semester 2")]
     pieces.append("# Semester 2 Planning {.course-day-slide}\n\n")
     pieces.append(
         "Generic course deck. Semester 2 timetable periods are intentionally not assumed.\n\n"
     )
-    for day in plan:
-        if day.semester == "semester-2":
-            pieces.append(placeholder_day(day, "Course"))
+
+    planned = {day.date: day for day in plan if day.semester == "semester-2"}
+    exam_map = {day.date: day for day in exams if day.semester == "semester-2"}
+
+    for date in sorted(set(planned) | set(exam_map)):
+        if date in exam_map:
+            pieces.append(exam_day(exam_map[date]))
+        else:
+            pieces.append(placeholder_day(planned[date], "Course"))
+
     return "".join(pieces).rstrip() + "\n"
 
 
@@ -191,9 +252,18 @@ def main() -> int:
         output_root = ROOT / output_root
 
     plan = load_plan()
+    exams = load_exams()
     for course in COURSES:
-        render_document(course, semester1_document(course, plan), output_root / course)
-    render_document("semester2", semester2_document(plan), output_root / "semester2")
+        render_document(
+            course,
+            semester1_document(course, plan, exams),
+            output_root / course,
+        )
+    render_document(
+        "semester2",
+        semester2_document(plan, exams),
+        output_root / "semester2",
+    )
     return 0
 
 
