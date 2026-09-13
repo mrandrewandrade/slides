@@ -162,7 +162,8 @@ def render_document(name: str, document: str, output_dir: Path) -> None:
 
     output_dir.mkdir(parents=True, exist_ok=True)
     temp = ROOT / f"future-{name}.generated.qmd"
-    rendered = ROOT / "_site" / f"future-{name}.generated.html"
+    project_rendered = ROOT / "_site" / f"future-{name}.generated.html"
+    adjacent_rendered = ROOT / f"future-{name}.generated.html"
     temp.write_text(document, encoding="utf-8")
     try:
         subprocess.run(
@@ -170,12 +171,14 @@ def render_document(name: str, document: str, output_dir: Path) -> None:
             cwd=ROOT,
             check=True,
         )
+        rendered = project_rendered if project_rendered.exists() else adjacent_rendered
         if not rendered.exists():
-            raise RuntimeError(f"Quarto did not produce {rendered.relative_to(ROOT)}.")
+            raise RuntimeError(f"Quarto did not produce HTML for {temp.name}.")
         shutil.copy2(rendered, output_dir / "index.html")
     finally:
         temp.unlink(missing_ok=True)
-        rendered.unlink(missing_ok=True)
+        project_rendered.unlink(missing_ok=True)
+        adjacent_rendered.unlink(missing_ok=True)
 
 
 def main() -> int:
