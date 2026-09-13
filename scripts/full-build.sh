@@ -25,5 +25,11 @@ restore_index() {
 
 trap restore_index EXIT
 
+# Remove obsolete generated course pages from the older per-day/semester layout.
+# Archived classroom snapshots live under _site/archive and are intentionally kept.
+for course in tej tts tas; do
+  rm -rf "_site/2026-27/semester-1/period-1/${course}"
+done
+
 bash scripts/site.sh index "$archive_root"
 quarto render --profile full
