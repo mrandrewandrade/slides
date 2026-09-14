@@ -20,16 +20,14 @@ bash scripts/full-build.sh archive
 bash scripts/build-published-extras.sh _site
 touch _site/.nojekyll
 
-# The full build regenerates tracked cumulative decks, so commit after building.
+# The full build may regenerate tracked cumulative decks, so commit after building.
 git add -A
 if ! git diff --cached --quiet; then
   git commit -m "Update slides $(date '+%Y-%m-%d %H:%M')"
 fi
 
+# Pushing master triggers the GitHub Pages deployment workflow.
 git push origin master
 
-# Publish the exact local build with the user's normal Git credentials.
-bash scripts/publish-gh-pages.sh
-
 echo
-echo "Published master and gh-pages."
+echo "Pushed master. GitHub Pages deployment has been triggered."
