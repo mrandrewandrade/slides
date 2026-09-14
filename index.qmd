@@ -27,7 +27,8 @@ Each course has three areas: the **Current** classroom deck, **All Published Sli
 <details class="week-block" open>
 <summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tej.html">Day 1 · 2026-09-08</a> <span class="current-label">Latest day</span></li>
+<li><a href="2026-27/semester-1/period-1/tej/full.html#/all-that-we-are-is-story">Day 1 · 2026-09-14</a></li>
+<li><a href="current/tej.html">Day 2 · 2026-09-15</a> <span class="current-label">Latest day</span></li>
 </ul>
 </details>
 
@@ -43,7 +44,8 @@ Each course has three areas: the **Current** classroom deck, **All Published Sli
 <details class="week-block" open>
 <summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tts.html">Day 1 · 2026-09-08</a> <span class="current-label">Latest day</span></li>
+<li><a href="2026-27/semester-1/period-1/tts/full.html#/all-that-we-are-is-story">Day 1 · 2026-09-14</a></li>
+<li><a href="current/tts.html">Day 2 · 2026-09-15</a> <span class="current-label">Latest day</span></li>
 </ul>
 </details>
 
@@ -59,7 +61,8 @@ Each course has three areas: the **Current** classroom deck, **All Published Sli
 <details class="week-block" open>
 <summary><strong>Week 1</strong> <span class="current-label">Latest week</span></summary>
 <ul>
-<li><a href="current/tas.html">Day 1 · 2026-09-08</a> <span class="current-label">Latest day</span></li>
+<li><a href="2026-27/semester-1/period-1/tas/full.html#/all-that-we-are-is-story">Day 1 · 2026-09-14</a></li>
+<li><a href="current/tas.html">Day 2 · 2026-09-15</a> <span class="current-label">Latest day</span></li>
 </ul>
 </details>
 
