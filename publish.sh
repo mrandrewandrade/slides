@@ -26,8 +26,9 @@ if ! git diff --cached --quiet; then
   git commit -m "Update slides $(date '+%Y-%m-%d %H:%M')"
 fi
 
-# Pushing master triggers the GitHub Pages deployment workflow.
+# Pushing master triggers the publishing workflow. The workflow mirrors the exact
+# generated site to gh-pages and deploys the same build through GitHub Pages.
 git push origin master
 
 echo
-echo "Pushed master. GitHub Pages deployment has been triggered."
+echo "Pushed master. The workflow will update gh-pages and deploy GitHub Pages."
