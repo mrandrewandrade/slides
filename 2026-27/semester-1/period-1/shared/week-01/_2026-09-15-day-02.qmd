@@ -23,10 +23,7 @@ Tuesday, September 15, 2026
 Notice what is here without trying to change it.
 :::
 
-- Notice your breathing.
-- Notice a few sounds around you.
-- Notice one physical sensation.
-- Let each observation come and go without judging it.
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/QtE00VP4W3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Why do this?
 
@@ -51,6 +48,7 @@ Listen to people as though you are learning about them for the first time.
 - Shift attention into the room.
 - Notice before reacting.
 - Practise focusing on what is happening now.
+- Engineering starts with inspection. Before you judge, diagnose, or decide whether something is safe or unsafe, you need to observe what is actually there.
 
 ::: {.big-prompt}
 These are useful skills when you are learning, designing, troubleshooting, working with tools, or listening to someone else.
@@ -78,21 +76,7 @@ Open the separate Mr. A About Me deck.
 
 # Grade Mr. A
 
-Use Mentimeter to assess the example:
-
-- Knowledge & Understanding
-- Thinking
-- Communication
-- Application
-- Overall percentage
-
-# Evidence beats vibes.
-
-::: {.big-prompt}
-What evidence supports the grade?
-:::
-
-Keep the discussion brief and connect evidence back to the rubric.
+[Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit?question=akir5bck85i4)
 
 # About Me - Purpose
 
