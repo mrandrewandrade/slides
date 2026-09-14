@@ -8,3 +8,7 @@ format:
 {{< include ../shared/week-01/_2026-09-14-day-01.qmd >}}
 
 {{< include ../shared/routines/_end-of-class.qmd >}}
+
+{{< include ../shared/week-01/_2026-09-15-day-02.qmd >}}
+
+{{< include ../shared/routines/_end-of-class.qmd >}}
