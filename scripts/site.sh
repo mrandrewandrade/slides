@@ -79,11 +79,15 @@ EOF
         echo '<ul>'
       } >> index.qmd
 
-      if [[ "$current_week" == "$week" ]]; then
-        local current_day_num=$((10#$current_day))
-        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a> <a class=\"print-link\" href=\"current/${course}.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
+      # Day 1 is intentionally linked into the cumulative Full deck at its opening quote.
+      # It was already presented before the archive lifecycle was turned on, so preserve
+      # that direct historical entry instead of pointing students at Current.
+      if [[ "$week" == "01" && $((10#$current_day)) -gt 1 ]]; then
+        local day1_full="2026-27/semester-1/period-1/${course}/full.html#/all-that-we-are-is-story"
+        echo "<li><a href=\"${day1_full}\">Day 1 · 2026-09-14</a></li>" >> index.qmd
       fi
 
+      # Older completed days appear in chronological order beneath Day 1.
       if [[ -d "$archive_dir" ]]; then
         local archived
         while IFS= read -r archived; do
@@ -98,11 +102,22 @@ EOF
               continue
             fi
 
+            # Day 1 is represented by the direct Full-deck quote link above.
+            if [[ "$week" == "01" && "$archive_day" == "01" ]]; then
+              continue
+            fi
+
             local archive_day_num=$((10#$archive_day))
             local relative="archive/2026-27/semester-1/${course}/week-${week}/${base}"
             echo "<li><a href=\"${relative}\">Day ${archive_day_num} · ${archive_date}</a> <a class=\"print-link\" href=\"${relative}?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
           fi
-        done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort -r)
+        done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort)
+      fi
+
+      # Current is the latest day and is listed last so the week reads Day 1, Day 2, ...
+      if [[ "$current_week" == "$week" ]]; then
+        local current_day_num=$((10#$current_day))
+        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a> <span class=\"current-label\">Latest day</span> <a class=\"print-link\" href=\"current/${course}.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
       fi
 
       {
