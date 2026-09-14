@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -37,6 +37,15 @@ jobs:
         run: |
           bash scripts/build-published-extras.sh _site
           touch _site/.nojekyll
+
+      - name: Mirror generated site to gh-pages
+        if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          keep_files: false
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
