@@ -16,10 +16,19 @@ SEM1 = ROOT / "2026-27" / "semester-1" / "period-1"
 SHARED = SEM1 / "shared"
 ROUTINE = SHARED / "routines" / "_end-of-class.qmd"
 PLAN = ROOT / "planning" / "2026-27-student-slide-calendar.tsv"
+REQUIRED_ANNOUNCEMENTS = ROOT / "planning" / "2026-27-required-announcements.tsv"
 EXAMS = ROOT / "planning" / "2026-27-exam-days.tsv"
 COURSES = ("tej", "tts", "tas")
 DAY_RE = re.compile(r"^_?(\d{4}-\d{2}-\d{2})-day-(\d{2})\.qmd$")
 CURRENT_RE = re.compile(r"_([0-9]{4}-[0-9]{2}-[0-9]{2})-day-[0-9]{2}\.qmd")
+SUPERSEDED_ANNOUNCEMENT_MARKERS = (
+    "Fire Drill",
+    "Lockdown",
+    "Bomb Threat",
+    "**Reporting cycle:**",
+    "**Submission cutoff for this reporting cycle:**",
+    "**Reporting deadline today:**",
+)
 
 
 @dataclass(frozen=True)
@@ -41,9 +50,9 @@ def pretty_date(iso_date: str) -> str:
     return f"{value.strftime('%A, %B')} {value.day}, {value.year}"
 
 
-def load_plan() -> list[PlanDay]:
+def parse_announcement_file(path: Path) -> list[PlanDay]:
     days: list[PlanDay] = []
-    for raw in PLAN.read_text(encoding="utf-8").splitlines():
+    for raw in path.read_text(encoding="utf-8").splitlines():
         if not raw or raw.startswith("#"):
             continue
         date, semester, raw_announcements = raw.split("\t", 2)
@@ -52,6 +61,18 @@ def load_plan() -> list[PlanDay]:
         )
         days.append(PlanDay(date, semester, announcements))
     return days
+
+
+def load_plan() -> list[PlanDay]:
+    return parse_announcement_file(PLAN)
+
+
+def load_required_announcements() -> dict[tuple[str, str], tuple[str, ...]]:
+    required: dict[tuple[str, str], tuple[str, ...]] = {}
+    for day in parse_announcement_file(REQUIRED_ANNOUNCEMENTS):
+        key = (day.semester, day.date)
+        required[key] = required.get(key, ()) + day.announcements
+    return required
 
 
 def load_exams() -> list[ExamDay]:
@@ -101,13 +122,46 @@ format:
 '''
 
 
+def remove_superseded_announcements(
+    announcements: tuple[str, ...],
+) -> tuple[str, ...]:
+    return tuple(
+        item
+        for item in announcements
+        if not any(marker in item for marker in SUPERSEDED_ANNOUNCEMENT_MARKERS)
+    )
+
+
+def merged_plan(
+    plan: list[PlanDay],
+    required: dict[tuple[str, str], tuple[str, ...]],
+    semester: str,
+) -> dict[str, PlanDay]:
+    merged: dict[str, PlanDay] = {}
+
+    for day in plan:
+        if day.semester != semester:
+            continue
+        cleaned = remove_superseded_announcements(day.announcements)
+        additions = required.get((semester, day.date), ())
+        merged[day.date] = PlanDay(day.date, semester, cleaned + additions)
+
+    for (required_semester, date), announcements in required.items():
+        if required_semester != semester or date in merged:
+            continue
+        merged[date] = PlanDay(date, semester, announcements)
+
+    return merged
+
+
+def announcement_text(announcements: tuple[str, ...]) -> str:
+    if not announcements:
+        return "[No calendar announcements.]"
+    return "\n".join(f"- {item}" for item in announcements)
+
+
 def placeholder_day(day: PlanDay, lesson_label: str) -> str:
     date_label = pretty_date(day.date)
-    announcement_text = (
-        "\n".join(f"- {item}" for item in day.announcements)
-        if day.announcements
-        else "[No calendar announcements.]"
-    )
     return f'''# Quote
 
 {date_label}
@@ -118,7 +172,7 @@ def placeholder_day(day: PlanDay, lesson_label: str) -> str:
 
 {date_label}
 
-{announcement_text}
+{announcement_text(day.announcements)}
 
 # {lesson_label} - Lesson
 
@@ -129,8 +183,11 @@ def placeholder_day(day: PlanDay, lesson_label: str) -> str:
 '''
 
 
-def exam_day(day: ExamDay) -> str:
+def exam_day(day: ExamDay, planned_day: PlanDay | None = None) -> str:
     date_label = pretty_date(day.date)
+    announcements = (f"**Exam day:** {day.label}.",)
+    if planned_day is not None:
+        announcements += planned_day.announcements
     return f'''# Quote
 
 {date_label}
@@ -141,7 +198,7 @@ def exam_day(day: ExamDay) -> str:
 
 {date_label}
 
-- **Exam day:** {day.label}.
+{announcement_text(announcements)}
 
 # Exam Day
 
@@ -152,14 +209,19 @@ def exam_day(day: ExamDay) -> str:
 '''
 
 
-def semester1_document(course: str, plan: list[PlanDay], exams: list[ExamDay]) -> str:
+def semester1_document(
+    course: str,
+    plan: list[PlanDay],
+    required: dict[tuple[str, str], tuple[str, ...]],
+    exams: list[ExamDay],
+) -> str:
     label = course.upper()
     now = current_date(course)
     staged = staged_days(course)
     planned = {
-        day.date: day
-        for day in plan
-        if day.semester == "semester-1" and day.date > now
+        date: day
+        for date, day in merged_plan(plan, required, "semester-1").items()
+        if date > now
     }
     exam_map = {
         day.date: day
@@ -181,7 +243,7 @@ def semester1_document(course: str, plan: list[PlanDay], exams: list[ExamDay]) -
 
     for date in dates:
         if date in exam_map:
-            pieces.append(exam_day(exam_map[date]))
+            pieces.append(exam_day(exam_map[date], planned.get(date)))
             continue
 
         staged_path = staged.get(date)
@@ -197,19 +259,23 @@ def semester1_document(course: str, plan: list[PlanDay], exams: list[ExamDay]) -
     return "".join(pieces).rstrip() + "\n"
 
 
-def semester2_document(plan: list[PlanDay], exams: list[ExamDay]) -> str:
+def semester2_document(
+    plan: list[PlanDay],
+    required: dict[tuple[str, str], tuple[str, ...]],
+    exams: list[ExamDay],
+) -> str:
     pieces = [reveal_header("Semester 2")]
     pieces.append("# Semester 2 Planning {.course-day-slide}\n\n")
     pieces.append(
         "Generic course deck. Semester 2 timetable periods are intentionally not assumed.\n\n"
     )
 
-    planned = {day.date: day for day in plan if day.semester == "semester-2"}
+    planned = merged_plan(plan, required, "semester-2")
     exam_map = {day.date: day for day in exams if day.semester == "semester-2"}
 
     for date in sorted(set(planned) | set(exam_map)):
         if date in exam_map:
-            pieces.append(exam_day(exam_map[date]))
+            pieces.append(exam_day(exam_map[date], planned.get(date)))
         else:
             pieces.append(placeholder_day(planned[date], "Course"))
 
@@ -252,16 +318,17 @@ def main() -> int:
         output_root = ROOT / output_root
 
     plan = load_plan()
+    required = load_required_announcements()
     exams = load_exams()
     for course in COURSES:
         render_document(
             course,
-            semester1_document(course, plan, exams),
+            semester1_document(course, plan, required, exams),
             output_root / course,
         )
     render_document(
         "semester2",
-        semester2_document(plan, exams),
+        semester2_document(plan, required, exams),
         output_root / "semester2",
     )
     return 0
