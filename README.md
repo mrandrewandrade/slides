@@ -6,49 +6,51 @@ The classroom slides are designed to be used with the course notes and resources
 
 ## Operating model
 
-The site has three states for each course:
+Each course has three states:
 
 - **Current** is the lesson being taught next or now.
 - **Full** contains completed lessons only, newest completed day first.
 - **Future** contains staged material after Current.
 
-The homepage lists days in normal chronological order. Completed days link to their exact day anchor inside the Full deck. The Current day appears underneath the completed days and links to `current/<course>.html`.
+The homepage is also newest first. The Current day appears at the top of the latest week, followed by completed days in descending order. Completed days link to their exact anchor inside the Full deck.
 
 Example during Day 2:
 
 ```text
-Homepage
-Day 1 -> Full deck at #/day-01
+Week 1
 Day 2 -> Current
-
-Full
-Day 1 only
-
-Current
-Day 2
+Day 1 -> Full deck at #/day-01
 ```
 
 After Day 2 is finished and the course is advanced to Day 3:
 
 ```text
-Homepage
-Day 1 -> Full deck at #/day-01
-Day 2 -> Full deck at #/day-02
+Week 1
 Day 3 -> Current
+Day 2 -> Full deck at #/day-02
+Day 1 -> Full deck at #/day-01
+```
 
-Full
+As the semester grows, the newest week appears first. Within each week, the newest day appears first.
+
+Example later in the semester:
+
+```text
+Week 2
+Day 5
+Day 4
+Day 3
+
+Week 1
 Day 2
 Day 1
-
-Current
-Day 3
 ```
 
 This is the intended lifecycle for TEJ, TTS, and TAS.
 
 ## Standard operating procedure
 
-### 1. Start from `master`
+### 1. Work from `master`
 
 ```bash
 cd ~/Documents/slides
@@ -56,7 +58,9 @@ git switch master
 git pull --ff-only
 ```
 
-`master` is the source branch used for classroom publishing. Do not prepare or publish classroom changes from `main`.
+`master` is the source branch for classroom publishing.
+
+Do not prepare or publish classroom changes from `main`. The `main` branch is legacy and should be removed once GitHub's default branch is set to `master`.
 
 ### 2. Check the current state
 
@@ -64,9 +68,11 @@ git pull --ff-only
 bash run.sh status
 ```
 
-Confirm that each course shows the expected Current day before editing or publishing.
+Confirm that TEJ, TTS, and TAS show the expected Current day before editing, advancing, or publishing.
 
-### 3. Preview a course locally
+### 3. Preview locally
+
+Preview one Current deck:
 
 ```bash
 bash run.sh tej
@@ -74,23 +80,32 @@ bash run.sh tej
 
 Use `tej`, `tts`, or `tas`.
 
-This previews only the Current deck for that course.
-
-To build the complete site locally:
+To build the complete local site exactly as students will navigate it:
 
 ```bash
 bash run.sh all
 ```
 
-The complete local site is served at:
+Open:
 
 ```text
 http://localhost:4200/
+http://localhost:4200/current/tej.html
+http://localhost:4200/current/tts.html
+http://localhost:4200/current/tas.html
 ```
+
+Before publishing, verify:
+
+- the homepage is newest first
+- Current is the top day in the latest week
+- completed days point to `full.html#/day-XX`
+- Full contains completed days only
+- Current contains only the live day
 
 ### 4. Prepare the next day
 
-Future lesson content remains staged in the semester source folders until it is promoted to Current.
+Future lesson content stays staged in the semester source folders until it is promoted to Current.
 
 Before advancing, confirm that the next staged day exists and renders correctly.
 
@@ -115,23 +130,18 @@ Advance must follow this sequence:
 3. move the completed Current day into Full
 4. place the completed day at the front of Full
 5. promote the next staged day to Current
-6. regenerate Full and homepage links
+6. regenerate the homepage links
 
 The newly promoted Current day must **not** appear in Full until that day is completed and the course is advanced again.
 
-After advancing, check:
+After advancing:
 
 ```bash
 bash run.sh status
 bash run.sh all
 ```
 
-Verify the homepage locally before publishing:
-
-- completed days link to `full.html#/day-XX`
-- the newest Current day links to `current/<course>.html`
-- Full contains completed days only
-- Current contains only the live day
+Check the homepage and all three Current decks before publishing.
 
 ### 6. Publish
 
@@ -147,11 +157,18 @@ bash publish.sh
 2. builds the complete site locally
 3. commits regenerated tracked files when needed
 4. pushes `master`
-5. relies on the GitHub Pages workflow to deploy the site
+5. triggers `.github/workflows/render.yml`
 
-The deployment workflow is `.github/workflows/render.yml`. It renders the site from `master` and deploys the resulting `_site` directory with GitHub Pages.
+The workflow then:
 
-The public site is:
+1. rebuilds the complete site from `master`
+2. mirrors the exact generated `_site` output to `gh-pages`
+3. uploads the same `_site` output as the GitHub Pages artifact
+4. deploys that artifact to the public site
+
+This means `master` is the source of truth and `gh-pages` is a generated mirror of the published site.
+
+Public site:
 
 ```text
 https://andrewandrade.ca/slides/
@@ -159,9 +176,9 @@ https://andrewandrade.ca/slides/
 
 ### 7. Verify the public site
 
-Do not treat a successful source push as proof that the public site is correct.
+A successful source push is not proof that the public site is correct.
 
-After deployment completes, check at least:
+After the deployment finishes, check:
 
 ```text
 https://andrewandrade.ca/slides/
@@ -170,16 +187,24 @@ https://andrewandrade.ca/slides/current/tts.html
 https://andrewandrade.ca/slides/current/tas.html
 ```
 
-Confirm that the Current decks show the expected day and that completed homepage links open the correct day inside each Full deck.
+Confirm that:
+
+- Current shows the expected day for each course
+- the homepage lists newest days first
+- completed day links open the exact day inside Full
+- Full does not contain the Current day
+
+If the source and public site disagree, check the workflow run and the generated `gh-pages` output before changing lesson content.
 
 ## Deployment rules
 
-- `master` is the only branch that should deploy the classroom site.
-- `main` is legacy and must not deploy GitHub Pages.
+- `master` is the only source branch used for classroom publishing.
+- `gh-pages` is generated output and should not be edited by hand.
+- `main` is legacy and should not be used for classroom publishing.
 - `_site/` is generated output and is not the source of truth.
-- The public site is deployed by GitHub Pages Actions, not by copying files to `gh-pages`.
+- The workflow mirrors `_site` to `gh-pages` and deploys the same build through GitHub Pages.
 - A successful build and a successful deployment are separate checks.
-- When debugging a mismatch, compare the Current source on `master`, the rendered Pages deployment, and the public URL before changing lesson content.
+- When debugging, compare `master`, `gh-pages`, the workflow result, and the public URL.
 
 ## Source layout
 
