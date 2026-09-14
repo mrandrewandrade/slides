@@ -5,8 +5,8 @@ The source-of-truth is deliberately small:
 - staged day fragments live under shared/week-* or <course>/week-*
 - current/<course>.qmd points at the one live day
 - archive/ stores immutable self-contained HTML for completed days
-- <course>/full.qmd is generated from all days up to Current, newest first
-- Future is generated at build time from all staged days after Current
+- <course>/full.qmd contains completed days before Current, newest first
+- Future is generated at build time from staged days after Current
 
 Advance is fail-safe: it resolves the next staged day and archives Current before
 changing the current pointer.
@@ -33,6 +33,7 @@ DAY_RE = re.compile(r"^_?(\d{4}-\d{2}-\d{2})-day-(\d{2})\.qmd$")
 INCLUDE_RE = re.compile(
     r"\{\{<\s*include\s+([^>]*week-(\d{2})/_?(\d{4}-\d{2}-\d{2})-day-(\d{2})\.qmd)\s*>\}\}"
 )
+EXPLICIT_ID_RE = re.compile(r"(^|\s)#[A-Za-z][A-Za-z0-9_-]*")
 
 
 @dataclass(frozen=True)
@@ -45,6 +46,10 @@ class Day:
     @property
     def key(self) -> tuple[str, int]:
         return (self.date, self.day)
+
+    @property
+    def anchor(self) -> str:
+        return f"day-{self.day:02d}"
 
 
 def pretty_date(iso_date: str) -> str:
@@ -127,11 +132,12 @@ def collect_days(course: str) -> list[Day]:
 
 
 def published_days(course: str) -> list[Day]:
+    """Return completed days only. Current is deliberately excluded from Full."""
     current = current_day(course)
-    days = [day for day in collect_days(course) if day.key <= current.key]
-    if not any(day.key == current.key for day in days):
+    all_days = collect_days(course)
+    if not any(day.key == current.key for day in all_days):
         raise RuntimeError(f"Current {course.upper()} day is missing from the staging pool")
-    return days
+    return [day for day in all_days if day.key < current.key]
 
 
 def future_days(course: str) -> list[Day]:
@@ -151,6 +157,38 @@ def next_day(course: str) -> Day:
 
 def rel_include(from_dir: Path, source: Path) -> str:
     return os.path.relpath(source, from_dir).replace(os.sep, "/")
+
+
+def ensure_day_anchor(day: Day) -> None:
+    """Give the first slide a stable #day-NN id for homepage deep links."""
+    text = day.source.read_text(encoding="utf-8")
+    lines = text.splitlines()
+
+    for index, line in enumerate(lines):
+        if not line.startswith("# "):
+            continue
+
+        if f"#{day.anchor}" in line:
+            return
+
+        attr_match = re.search(r"\s+\{([^}]*)\}\s*$", line)
+        if attr_match:
+            attrs = attr_match.group(1).strip()
+            if EXPLICIT_ID_RE.search(attrs):
+                attrs = EXPLICIT_ID_RE.sub(
+                    lambda match: f"{match.group(1)}#{day.anchor}", attrs, count=1
+                )
+            else:
+                attrs = f"#{day.anchor} {attrs}".strip()
+            lines[index] = line[: attr_match.start()] + f" {{{attrs}}}"
+        else:
+            lines[index] = line + f" {{#{day.anchor}}}"
+
+        ending = "\n" if text.endswith("\n") else ""
+        atomic_write(day.source, "\n".join(lines) + ending)
+        return
+
+    raise RuntimeError(f"Could not find a first-level heading in {day.source.relative_to(ROOT)}")
 
 
 def write_current(course: str, day: Day) -> None:
@@ -189,9 +227,13 @@ def write_full(course: str) -> None:
     header, _ = split_frontmatter(current.read_text(encoding="utf-8"))
     header = header_without_day(header)
     target = full_path(course)
+    completed = published_days(course)
+
+    for day in completed:
+        ensure_day_anchor(day)
 
     pieces = ["---\n", "\n".join(header), "\n---\n\n"]
-    for day in reversed(published_days(course)):
+    for day in reversed(completed):
         pieces.append(f"{{{{< include {rel_include(target.parent, day.source)} >}}}}\n\n")
         pieces.append(f"{{{{< include {rel_include(target.parent, ROUTINE)} >}}}}\n\n")
 
@@ -275,7 +317,7 @@ def advance(courses: list[str]) -> None:
         write_full(course)
         print(
             f"Promoted {course.upper()} to Day {day.day} ({day.date}); "
-            f"Full now contains {len(published_days(course))} published day(s)."
+            f"Full now contains {len(published_days(course))} completed day(s)."
         )
 
 
@@ -358,7 +400,10 @@ def print_status(course: str) -> None:
     published = published_days(course)
     future = future_days(course)
     print(f"{course.upper()}: Current = Day {current.day} ({current.date}), Week {current.week}")
-    print("  Full:   " + ", ".join(f"Day {d.day}" for d in reversed(published)))
+    if published:
+        print("  Full:   " + ", ".join(f"Day {d.day}" for d in reversed(published)))
+    else:
+        print("  Full:   no completed days")
     if future:
         print("  Future: " + ", ".join(f"Day {d.day} ({d.date})" for d in future))
     else:
@@ -381,7 +426,7 @@ def main() -> int:
     advance_parser = sub.add_parser("advance", help="archive Current, then promote the next staged day")
     advance_parser.add_argument("course")
 
-    sync_parser = sub.add_parser("sync", help="regenerate Full from the current pointer")
+    sync_parser = sub.add_parser("sync", help="regenerate Full from completed days before Current")
     sync_parser.add_argument("course")
 
     status_parser = sub.add_parser("status", help="show Current, Full, and Future state")
