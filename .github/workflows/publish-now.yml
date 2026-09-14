@@ -1,5 +1,6 @@
 name: Publish Slides Now
 
+# Triggered for the September 15 Day 2 current decks.
 on:
   push:
     branches: [master]
