@@ -79,15 +79,15 @@ EOF
         echo '<ul>'
       } >> index.qmd
 
-      # Day 1 predates the archive lifecycle. Once Current advances past Day 1,
-      # link it directly to its stable slide anchor inside the cumulative Full deck.
-      if [[ "$week" == "01" && $((10#$current_day)) -gt 1 ]]; then
-        local day1_full="2026-27/semester-1/period-1/${course}/full.html#/day-01"
-        echo "<li><a href=\"${day1_full}\">Day 1 · 2026-09-14</a></li>" >> index.qmd
+      # Current is always shown first. It is the lesson being taught next and is
+      # not part of Full until the course advances again.
+      if [[ "$current_week" == "$week" ]]; then
+        local current_day_num=$((10#$current_day))
+        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a> <span class=\"current-label\">Latest day</span> <a class=\"print-link\" href=\"current/${course}.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
       fi
 
-      # Completed archived days are listed chronologically, but their student-facing
-      # links go to the exact day anchor inside Full rather than to separate archives.
+      # Completed days are listed newest first. Their student-facing links go to
+      # exact stable day anchors inside Full rather than to separate archives.
       if [[ -d "$archive_dir" ]]; then
         local archived
         while IFS= read -r archived; do
@@ -102,7 +102,8 @@ EOF
               continue
             fi
 
-            # Day 1 is represented by the direct Full-deck link above.
+            # Day 1 predates the archive lifecycle and is emitted separately at
+            # the bottom of Week 1 so it keeps the correct newest-first order.
             if [[ "$week" == "01" && "$archive_day" == "01" ]]; then
               continue
             fi
@@ -111,13 +112,14 @@ EOF
             local full_anchor="2026-27/semester-1/period-1/${course}/full.html#/day-${archive_day}"
             echo "<li><a href=\"${full_anchor}\">Day ${archive_day_num} · ${archive_date}</a></li>" >> index.qmd
           fi
-        done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort)
+        done < <(find "$archive_dir" -maxdepth 1 -type f -name '*.html' -print 2>/dev/null | sort -r)
       fi
 
-      # Current is the lesson to be taught next. It is not part of Full yet.
-      if [[ "$current_week" == "$week" ]]; then
-        local current_day_num=$((10#$current_day))
-        echo "<li><a href=\"current/${course}.html\">Day ${current_day_num} · ${current_date}</a> <span class=\"current-label\">Latest day</span> <a class=\"print-link\" href=\"current/${course}.html?print-pdf\" target=\"_blank\" rel=\"noopener\">Print / PDF</a></li>" >> index.qmd
+      # Day 1 predates the archive lifecycle. Once Current advances past Day 1,
+      # link it directly to its stable slide anchor inside the cumulative Full deck.
+      if [[ "$week" == "01" && $((10#$current_day)) -gt 1 ]]; then
+        local day1_full="2026-27/semester-1/period-1/${course}/full.html#/day-01"
+        echo "<li><a href=\"${day1_full}\">Day 1 · 2026-09-14</a></li>" >> index.qmd
       fi
 
       {
