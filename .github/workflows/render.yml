@@ -1,4 +1,4 @@
-name: Build Slides
+name: Deploy Slides to GitHub Pages
 
 on:
   push:
@@ -9,9 +9,11 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: build-${{ github.ref }}
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -24,6 +26,10 @@ jobs:
         with:
           version: '1.10.15'
 
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
       - name: Render slide site
         run: bash scripts/full-build.sh archive
 
@@ -31,3 +37,21 @@ jobs:
         run: |
           bash scripts/build-published-extras.sh _site
           touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
