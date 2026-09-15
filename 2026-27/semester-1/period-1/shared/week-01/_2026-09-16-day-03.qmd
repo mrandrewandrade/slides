@@ -105,7 +105,7 @@ Before leaving class:
 - turn in the assignment
 - make sure your name and writing are readable
 
-[Open the printable listening sheet](/handouts/about-me-active-listening.html)
+[Open the printable listening sheet](https://andrewandrade.ca/slides/handouts/about-me-active-listening.html){target="_blank"}
 
 # Before You Leave
 
