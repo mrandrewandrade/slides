@@ -72,11 +72,6 @@
   text-underline-offset: 0.13em;
 }
 
-/*
- * Opening quotes use one consistent two-slide layout every day.
- * The first slide is a large hook. The second uses normal document flow in a
- * fixed Reveal-sized grid so longer text cannot collide with the attribution.
- */
 .reveal .quote-hero-slide,
 .reveal .quote-detail-slide {
   position: relative;
@@ -86,7 +81,6 @@
   text-align: left;
 }
 
-/* First quote slide: one large opening thought. */
 .reveal .quote-hero-slide > h1 {
   position: absolute;
   top: 168px;
@@ -100,11 +94,6 @@
   letter-spacing: -0.05em;
 }
 
-/*
- * Second quote slide: three vertical zones - hook, continuation, attribution.
- * Grid flow is intentionally used instead of absolute coordinates so the
- * continuation can wrap without ever running into the author/source block.
- */
 .reveal .quote-detail-slide {
   display: grid !important;
   grid-template-rows: auto minmax(0, 1fr) auto;
@@ -177,7 +166,6 @@
   opacity: 0;
 }
 
-/* Course/day/date is intentionally its own simple slide. */
 .reveal .course-day-slide {
   text-align: center;
 }
@@ -195,7 +183,6 @@
   font-size: 0.95em;
 }
 
-/* Video-only slides keep the player high and leave the heading visually hidden. */
 .reveal .video-only-slide > h1 {
   display: none;
 }
@@ -206,7 +193,6 @@
   margin: 0.65em auto 0;
 }
 
-/* Announcements start high to preserve vertical space for longer lists. */
 .reveal .announcements-slide h1 {
   display: flex;
   align-items: center;
@@ -241,7 +227,6 @@
   border-radius: 0.06em;
 }
 
-/* Footer: two readable lines, allowed to wrap instead of clipping. */
 .reveal .footer {
   left: 4%;
   right: 4%;
