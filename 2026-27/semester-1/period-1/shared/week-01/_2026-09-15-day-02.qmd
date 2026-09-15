@@ -48,7 +48,7 @@ Meet Mr. A -> Review rubrics -> Grade Mr. A -> Build Yours -> Submit by 7 PM
 
 **Mr. Andrade / Mr. A**
 
-[Open Who am I presentation](../../../../../assets/who-am-i.pdf){target="_blank"}
+[Open Who am I presentation](https://andrewandrade.ca/slides/assets/who-am-i.pdf){target="_blank"}
 
 # Review the Rubric
 
