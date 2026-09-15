@@ -1,1 +1,311 @@
-/* unchanged */
+/*
+ * Technology Commons classroom RevealJS styles.
+ * Code/configuration: GPL-3.0-or-later.
+ * Slide/content material: CC BY 4.0.
+ */
+
+:root {
+  --ink: #171717;
+  --charcoal: #2f2f2f;
+  --grey: #727272;
+  --light-grey: #d8d8d5;
+  --paper: #f7f7f5;
+  --white: #ffffff;
+  --copper: #ac7652;
+  --copper-light: #d8bca8;
+  --red: #b23939;
+}
+
+.reveal-viewport {
+  background: var(--paper);
+}
+
+.reveal {
+  --r-background-color: var(--paper);
+  --r-main-font: Aptos, "Segoe UI Variable", "Segoe UI", Helvetica, Arial, sans-serif;
+  --r-main-color: var(--charcoal);
+  --r-heading-font: Aptos, "Segoe UI Variable", "Segoe UI", Helvetica, Arial, sans-serif;
+  --r-heading-color: var(--ink);
+  --r-heading-font-weight: 650;
+  --r-link-color: var(--ink);
+  --r-link-color-hover: var(--copper);
+  --r-selection-background-color: var(--copper-light);
+  --r-selection-color: var(--ink);
+  font-size: 42px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2 {
+  color: var(--ink);
+  line-height: 1.03;
+  margin-bottom: 0.5em;
+  text-transform: none;
+  letter-spacing: -0.035em;
+}
+
+.reveal h1 {
+  font-size: 2.05em;
+}
+
+.reveal h2 {
+  font-size: 1.48em;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.27;
+}
+
+.reveal strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+.reveal a {
+  color: var(--ink);
+  text-decoration-color: var(--copper);
+  text-decoration-thickness: 0.045em;
+  text-underline-offset: 0.13em;
+}
+
+/*
+ * Opening quotes use one consistent two-slide layout every day.
+ * The first slide is a large hook. The second uses normal document flow in a
+ * fixed Reveal-sized grid so longer text cannot collide with the attribution.
+ */
+.reveal .quote-hero-slide,
+.reveal .quote-detail-slide {
+  position: relative;
+  min-height: 700px;
+  background: var(--ink) !important;
+  color: var(--white);
+  text-align: left;
+}
+
+/* First quote slide: one large opening thought. */
+.reveal .quote-hero-slide > h1 {
+  position: absolute;
+  top: 168px;
+  left: 63px;
+  width: 924px;
+  margin: 0;
+  color: var(--white) !important;
+  font-size: 2.35em;
+  font-weight: 680;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+/*
+ * Second quote slide: three vertical zones - hook, continuation, attribution.
+ * Grid flow is intentionally used instead of absolute coordinates so the
+ * continuation can wrap without ever running into the author/source block.
+ */
+.reveal .quote-detail-slide {
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  row-gap: 0.8em;
+  box-sizing: border-box;
+  height: 700px;
+  padding: 82px 63px 54px;
+}
+
+.reveal .quote-detail-slide > h1 {
+  position: static;
+  align-self: start;
+  width: auto;
+  margin: 0;
+  color: var(--white) !important;
+  font-size: 1.42em;
+  font-weight: 680;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.reveal .quote-continuation {
+  position: static;
+  align-self: start;
+  width: auto;
+  max-width: 900px;
+  margin: 0;
+  color: #e7e7e4 !important;
+  font-size: 0.94em;
+  line-height: 1.24;
+}
+
+.reveal .quote-attribution {
+  position: static;
+  align-self: end;
+  width: auto;
+  margin: 0;
+  font-size: 0.72em;
+  line-height: 1.18;
+  letter-spacing: 0.005em;
+}
+
+.reveal .quote-attribution span {
+  display: block;
+}
+
+.reveal .quote-author {
+  color: var(--white);
+  font-weight: 650;
+  font-size: 1.08em;
+}
+
+.reveal .quote-role {
+  margin-top: 0.12em;
+  color: var(--copper);
+}
+
+.reveal .quote-work {
+  margin-top: 0.08em;
+  color: var(--copper-light);
+  font-style: italic;
+}
+
+.reveal:has(.quote-hero-slide.present) .footer,
+.reveal:has(.quote-hero-slide.present) .slide-number,
+.reveal:has(.quote-hero-slide.present) .progress,
+.reveal:has(.quote-detail-slide.present) .footer,
+.reveal:has(.quote-detail-slide.present) .slide-number,
+.reveal:has(.quote-detail-slide.present) .progress {
+  opacity: 0;
+}
+
+/* Course/day/date is intentionally its own simple slide. */
+.reveal .course-day-slide {
+  text-align: center;
+}
+
+.reveal .course-day-slide h1 {
+  margin-top: 0.8em;
+  margin-bottom: 0.22em;
+  font-size: 2.35em;
+  line-height: 1;
+}
+
+.reveal .course-day-slide > p {
+  margin-top: 0;
+  color: var(--grey);
+  font-size: 0.95em;
+}
+
+/* Video-only slides keep the player high and leave the heading visually hidden. */
+.reveal .video-only-slide > h1 {
+  display: none;
+}
+
+.reveal .video-only-slide > iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0.65em auto 0;
+}
+
+/* Announcements start high to preserve vertical space for longer lists. */
+.reveal .announcements-slide h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  margin-top: 0.05em;
+  margin-bottom: 0.42em;
+  font-size: 1.7em;
+  line-height: 1;
+}
+
+.reveal .announcements-slide h1::before,
+.reveal .announcements-slide h1::after {
+  content: "";
+  display: block;
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 1.05em;
+  background: url("assets/commons-emblem.svg") center / contain no-repeat;
+}
+
+.reveal .announcements-slide > ul {
+  width: 82%;
+  margin: 0 auto;
+  font-size: 0.95em;
+}
+
+.reveal code:not(pre code) {
+  padding: 0.04em 0.18em;
+  color: var(--ink);
+  background: #ececea;
+  border-radius: 0.06em;
+}
+
+/* Footer: two readable lines, allowed to wrap instead of clipping. */
+.reveal .footer {
+  left: 4%;
+  right: 4%;
+  bottom: 0.28em;
+  color: #858585;
+  border-top: 0;
+  font-size: 0.215em;
+  line-height: 1.35;
+  opacity: 0.82;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+}
+
+.reveal .footer a {
+  color: inherit;
+  text-decoration-color: #a9a9a9;
+}
+
+.reveal .controls,
+.reveal .progress,
+.reveal .slide-number {
+  color: #8a8a8a;
+}
+
+.reveal .progress {
+  height: 2px;
+}
+
+.reveal .slide-number {
+  background: transparent;
+  opacity: 0.72;
+}
+
+.reveal .small-note {
+  color: var(--grey);
+  font-size: 0.58em;
+}
+
+.reveal .big-prompt {
+  max-width: 88%;
+  padding: 0.12em 0 0.12em 0.65em;
+  color: var(--ink);
+  background: transparent;
+  border-left: 0.07em solid var(--copper);
+  font-size: 1.14em;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.reveal .callout-important,
+.reveal .important {
+  border-color: var(--red);
+}
+
+.reveal section.dark {
+  color: var(--white);
+}
+
+.reveal section.dark h1,
+.reveal section.dark h2,
+.reveal section.dark strong,
+.reveal section.dark blockquote,
+.reveal section.dark p,
+.reveal section.dark li {
+  color: var(--white);
+}
