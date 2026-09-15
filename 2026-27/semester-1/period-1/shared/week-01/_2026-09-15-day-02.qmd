@@ -41,20 +41,22 @@ Tuesday, September 15, 2026
 # Today's Route
 
 ::: {.big-prompt}
-Meet Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM today
+Meet Mr. A -> Review rubrics -> Grade Mr. A -> Build Yours -> Submit by 7 PM
 :::
 
 # About Me
 
 **Mr. Andrade / Mr. A**
 
-::: {.big-prompt}
-\@Who am I
-:::
+[Open Who am I presentation](../../../../../assets/who-am-i.pdf){target="_blank"}
+
+# Review the Rubric
+
+[Open the About Me rubric](https://andrewandrade.ca/assets/0.1-past-present-becoming.pdf){target="_blank"}
 
 # Grade Mr. A
 
-[Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit)
+[Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit){target="_blank"}
 
 # About Me - Purpose
 
