@@ -1,19 +1,15 @@
-# Practising this simple awareness allows me to be present in all moments, to fully inhabit my life. {.quote-hero-slide background-color="#171717"}
+# Practising this simple awareness allows me {.quote-hero-slide background-color="#171717"}
+
+# Practising this simple awareness allows me... {.quote-detail-slide background-color="#171717"}
+
+::: {.quote-continuation}
+to be present in all moments, to fully inhabit my life.
+:::
 
 ::: {.quote-attribution}
 <span class="quote-author">Richard Wagamese</span>
 <span class="quote-role">Ojibway writer</span>
 <span class="quote-work">Embers: One Ojibway's Meditations</span>
-:::
-
-# {{< meta course >}} · Day 2 {.course-day-slide}
-
-Tuesday, September 15, 2026
-
-# What is Mindfulness?
-
-::: {.big-prompt}
-Paying attention to what is happening right now, without immediately judging it.
 :::
 
 # Mindfulness
@@ -22,15 +18,19 @@ Paying attention to what is happening right now, without immediately judging it.
 Mindfulness is a non-judgmental awareness of feelings, thoughts, and behaviors in the current moment.
 :::
 
-#  
+# Video {style="display:none"}
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/JDSIfNLlFds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="900" height="506" style="display:block; margin:-2rem auto 0;" src="https://www.youtube.com/embed/JDSIfNLlFds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Mindfulness Is Not Necessarily Religion or Meditation
 
 - Meditation can be a form of mindfulness.
 - So can pausing before you speak.
 - So can being fully present while playing a sport or doing an activity.
+
+# {{< meta course >}} · Day 2 {.course-day-slide}
+
+Tuesday, September 15, 2026
 
 # Announcements {.announcements-slide}
 
@@ -41,7 +41,7 @@ Mindfulness is a non-judgmental awareness of feelings, thoughts, and behaviors i
 # Today's Route
 
 ::: {.big-prompt}
-Meet Mr. A -> Grade Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM
+Meet Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM today
 :::
 
 # About Me
@@ -49,12 +49,12 @@ Meet Mr. A -> Grade Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM
 **Mr. Andrade / Mr. A**
 
 ::: {.big-prompt}
-Open the separate Mr. A About Me deck.
+@Who am I
 :::
 
 # Grade Mr. A
 
-[Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit?question=akir5bck85i4)
+[Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit)
 
 # About Me - Purpose
 
