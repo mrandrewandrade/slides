@@ -195,6 +195,17 @@
   font-size: 0.95em;
 }
 
+/* Video-only slides keep the player high and leave the heading visually hidden. */
+.reveal .video-only-slide > h1 {
+  display: none;
+}
+
+.reveal .video-only-slide > iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0.65em auto 0;
+}
+
 /* Announcements start high to preserve vertical space for longer lists. */
 .reveal .announcements-slide h1 {
   display: flex;
