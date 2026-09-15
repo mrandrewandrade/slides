@@ -48,15 +48,21 @@ Meet Mr. A -> Review rubrics -> Grade Mr. A -> Build Yours -> Submit by 7 PM
 
 **Mr. Andrade / Mr. A**
 
+::: {.big-prompt}
 [Open Who am I presentation](https://andrewandrade.ca/slides/assets/who-am-i.pdf){target="_blank"}
+:::
 
 # Review the Rubric
 
+::: {.big-prompt}
 [Open the About Me rubric](https://andrewandrade.ca/assets/0.1-past-present-becoming.pdf){target="_blank"}
+:::
 
 # Grade Mr. A
 
+::: {.big-prompt}
 [Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit){target="_blank"}
+:::
 
 # About Me - Purpose
 
