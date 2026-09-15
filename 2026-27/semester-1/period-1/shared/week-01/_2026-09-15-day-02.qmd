@@ -18,9 +18,9 @@ to be present in all moments, to fully inhabit my life.
 Mindfulness is a non-judgmental awareness of feelings, thoughts, and behaviors in the current moment.
 :::
 
-# Video {style="display:none"}
+# Video {.video-only-slide}
 
-<iframe width="900" height="506" style="display:block; margin:-2rem auto 0;" src="https://www.youtube.com/embed/JDSIfNLlFds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/JDSIfNLlFds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Mindfulness Is Not Necessarily Religion or Meditation
 
@@ -49,7 +49,7 @@ Meet Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM today
 **Mr. Andrade / Mr. A**
 
 ::: {.big-prompt}
-@Who am I
+\@Who am I
 :::
 
 # Grade Mr. A
