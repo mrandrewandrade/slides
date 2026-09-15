@@ -1,11 +1,4 @@
-# Teachings come from everywhere... {.quote-hero-slide background-color="#171717"}
-
-# Teachings come from everywhere... {.quote-detail-slide background-color="#171717"}
-
-::: {.quote-continuation}
-when you open yourself to them.  
-That's the trick of it really, to open yourself to everything and everything opens itself to you.
-:::
+# Practising this simple awareness allows me to be present in all moments, to fully inhabit my life. {.quote-hero-slide background-color="#171717"}
 
 ::: {.quote-attribution}
 <span class="quote-author">Richard Wagamese</span>
@@ -17,42 +10,27 @@ That's the trick of it really, to open yourself to everything and everything ope
 
 Tuesday, September 15, 2026
 
-# Observe
+# What is Mindfulness?
 
 ::: {.big-prompt}
-Notice what is here without trying to change it.
+Paying attention to what is happening right now, without immediately judging it.
 :::
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/QtE00VP4W3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-# Why do this?
+# Mindfulness
 
 ::: {.big-prompt}
-Why might observing without immediately judging be useful today?
+Mindfulness is a non-judgmental awareness of feelings, thoughts, and behaviors in the current moment.
 :::
 
-Pause and take a few answers.
+#  
 
-# Why?
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/JDSIfNLlFds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-- It helps us actually notice.
-- It slows down snap judgments.
-- It makes us better listeners.
+# Mindfulness Is Not Necessarily Religion or Meditation
 
-::: {.big-prompt}
-Listen to people as though you are learning about them for the first time.
-:::
-
-# Why We Start This Way
-
-- Shift attention into the room.
-- Notice before reacting.
-- Practise focusing on what is happening now.
-- Engineering starts with inspection. Before you judge, diagnose, or decide whether something is safe or unsafe, you need to observe what is actually there.
-
-::: {.big-prompt}
-These are useful skills when you are learning, designing, troubleshooting, working with tools, or listening to someone else.
-:::
+- Meditation can be a form of mindfulness.
+- So can pausing before you speak.
+- So can being fully present while playing a sport or doing an activity.
 
 # Announcements {.announcements-slide}
 
