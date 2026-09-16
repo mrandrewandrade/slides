@@ -23,21 +23,59 @@ Wednesday, September 16, 2026
 Raise your hands.
 :::
 
+# Spot the Difference
+
+::: {.big-prompt}
+[Colorful Dice](https://spotdiffs.com/game/colorful-dice){target="_blank" rel="noopener"}
+
+[Classic Racing Car Collection](https://spotdiffs.com/game/classic-racing-car-collection){target="_blank" rel="noopener"}
+
+[Shadow Play](https://spotdiffs.com/game/shadow-play){target="_blank" rel="noopener"}
+:::
+
 # Skill of the Day
 
 ::: {.big-prompt}
 Observe without judgement
 :::
 
+# What is judgement?
+
+# What is judgement?
+
+::: {.big-prompt}
+***the act or process of forming an evaluation by discerning or creating an opinion***
+:::
+
+# Is judgement useful or not useful?
+
+# It depends
+
+Judgements that discern are based on **FACTS**.
+
+::: {.big-prompt}
+They keep you safe: don't use a machine with a broken part.
+:::
+
+# Judgements that opinionate
+
+Judgements that opinionate (**good or bad, valuable or not**) can be dangerous if they are based on personal values or ideas in our mind.
+
+For example, if you walk by a friend in the hall and they don't say hi, that doesn't mean they are a bad friend or they don't care about you.
+
+It means they didn't say hi. They might have had a fight at home.
+
+# Observe, Describe, Participate
+
+::: {.big-prompt}
+That brings us to a very important set of skills:
+
+**Observe, Describe, Participate.**
+:::
+
 # Mindfulness Moment {.video-only-slide}
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/uEOX5Bt_cYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-# Spot the Difference
-
-::: {.big-prompt}
-[Open Spot the Difference](https://spotdiffs.com/game/sunny-alley?from=home){target="_blank" rel="noopener"}
-:::
 
 # Why do this?
 
@@ -92,6 +130,12 @@ For each presenter, write:
 
 ::: {.big-prompt}
 The goal is to actually listen.
+:::
+
+# About Me Presentations
+
+::: {.big-prompt}
+**Listen. Notice. Connect.**
 :::
 
 # Presentation Listening Sheet - Photo Submission
