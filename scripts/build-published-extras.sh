@@ -5,10 +5,6 @@ site_root="${1:-_site}"
 archive_root="$site_root/archive/2026-27/semester-1"
 mkdir -p "$archive_root" "$site_root/wip"
 
-python_flow() {
-  bash scripts/python.sh scripts/semester_flow.py "$@"
-}
-
 echo "Building archive indexes..."
 
 for course in tej tts tas; do
@@ -57,48 +53,62 @@ EOF
   } > "$course_root/index.html"
 done
 
-echo "Building future slide decks from staged days..."
+echo "Building semester planning decks..."
 
 cat > "$site_root/wip/index.html" <<'EOF'
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Work in Progress Slides</title>
+<title>Semester Planning Decks</title>
 <style>body{font-family:system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#2f3439}a{color:#234a73}.muted{color:#777}li{margin:.55rem 0}</style>
 </head>
 <body>
-<h1>Work in Progress</h1>
-<p class="muted">Future slides under development, plus preserved backup copies of the current staged lesson.</p>
+<h1>Semester Planning Decks</h1>
+<p class="muted">Calendar-driven work in progress. Staged lesson slides replace placeholders when they exist.</p>
 <ul>
-<li><a href="tej/index.html">TEJ future slide deck</a> · <a href="tej/day-03-backup.html">Day 3 backup</a></li>
-<li><a href="tts/index.html">TTS future slide deck</a> · <a href="tts/day-03-backup.html">Day 3 backup</a></li>
-<li><a href="tas/index.html">TAS future slide deck</a> · <a href="tas/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="tej/index.html">TEJ Semester 1 planning deck</a> · <a href="tej/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="tts/index.html">TTS Semester 1 planning deck</a> · <a href="tts/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="tas/index.html">TAS Semester 1 planning deck</a> · <a href="tas/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="semester2/index.html">Generic Semester 2 planning deck</a></li>
 </ul>
 <p><a href="../index.html">Back to Slides Home</a></p>
 </body>
 </html>
 EOF
 
-for course in tej tts tas; do
-  mkdir -p "$site_root/wip/$course"
-  generated="future-${course}.generated.html"
-  error_log="$(mktemp)"
-  rm -f "$generated"
+planning_sources=(tej tts tas semester2)
 
-  if ! python_flow render-future "$course" "$site_root/wip/$course" 2>"$error_log"; then
-    # Quarto may place an explicitly rendered top-level generated file beside
-    # the source instead of under _site. Treat that as a successful render.
-    if [[ -f "$generated" ]]; then
-      mv "$generated" "$site_root/wip/$course/index.html"
-    else
-      cat "$error_log" >&2
-      rm -f "$error_log"
-      exit 1
-    fi
+cleanup_planning_sources() {
+  local name
+  for name in "${planning_sources[@]}"; do
+    rm -f "future-${name}.generated.qmd"
+    rm -f "future-${name}.generated.html"
+    rm -f "_site/future-${name}.generated.html"
+  done
+}
+
+trap cleanup_planning_sources EXIT
+
+bash scripts/python.sh scripts/build-semester-planning.py
+
+for name in "${planning_sources[@]}"; do
+  source_file="future-${name}.generated.qmd"
+  rendered_file="_site/future-${name}.generated.html"
+  adjacent_file="future-${name}.generated.html"
+  destination="$site_root/wip/$name/index.html"
+
+  mkdir -p "$(dirname "$destination")"
+  quarto render "$source_file" -M embed-resources:true
+
+  if [[ -f "$rendered_file" ]]; then
+    mv "$rendered_file" "$destination"
+  elif [[ -f "$adjacent_file" ]]; then
+    mv "$adjacent_file" "$destination"
+  else
+    echo "Could not find rendered planning deck for $name" >&2
+    exit 1
   fi
-
-  rm -f "$error_log" "$generated"
 done
 
-echo "Archive, future, and WIP backup pages ready."
+echo "Archive, semester planning, and WIP backup pages ready."
