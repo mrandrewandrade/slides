@@ -3,7 +3,7 @@
 # Teachings come from everywhere... {.quote-detail-slide background-color="#171717"}
 
 ::: {.quote-continuation}
-when you open yourself to them.  
+when you open yourself to them.<br>
 That's the trick of it really, to open yourself to everything and everything opens itself to you.
 :::
 
@@ -13,9 +13,9 @@ That's the trick of it really, to open yourself to everything and everything ope
 <span class="quote-work">Embers: One Ojibway's Meditations</span>
 :::
 
-# {{< meta course >}} · Day 3 {.course-day-slide}
+# {{< meta course >}} · Day 4 {.course-day-slide}
 
-Wednesday, September 16, 2026
+Thursday, September 17, 2026
 
 # Who is stressed?
 
@@ -29,15 +29,9 @@ Raise your hands.
 Observe without judgement
 :::
 
-# Mindfulness Moment {.video-only-slide}
+# Mindfulness Moment
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/uEOX5Bt_cYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-# Spot the Difference
-
-::: {.big-prompt}
-[Open Spot the Difference](https://spotdiffs.com/game/sunny-alley?from=home){target="_blank" rel="noopener"}
-:::
+[MINDFULNESS VIDEO PLACEHOLDER]
 
 # Why do this?
 
@@ -59,8 +53,7 @@ Listen to people as though you are learning about them for the first time.
 
 # Announcements {.announcements-slide}
 
-- About Me presentations begin today.
-- We will continue tomorrow.
+- About Me presentations continue today.
 - Listening reflection is due Friday at 5:00 PM.
 
 # Today's Route
@@ -76,7 +69,7 @@ Listen -> Present -> Connect -> Photograph -> Submit
 - If it is incomplete, **present what you have**.
 
 ::: {.big-prompt}
-You do not need to impress us.  
+You do not need to impress us.<br>
 Help us know you. Help us connect with you.
 :::
 
