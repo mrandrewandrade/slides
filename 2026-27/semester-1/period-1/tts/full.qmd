@@ -5,6 +5,10 @@ format:
     footer: "These [slides](https://andrewandrade.ca/slides) and the [course website](https://andrewandrade.ca/commons/tts) are open-sourced by [Mr. Andrew Andrade on GitHub](https://github.com/mrandrewandrade) under the CC BY 4.0 copyright licence.<br>You may copy, share, and adapt them for educational, personal, or commercial purposes. Attribution: github.com/mrandrewandrade"
 ---
 
+{{< include ../shared/week-01/_2026-09-16-day-03.qmd >}}
+
+{{< include ../shared/routines/_end-of-class.qmd >}}
+
 {{< include ../shared/week-01/_2026-09-15-day-02.qmd >}}
 
 {{< include ../shared/routines/_end-of-class.qmd >}}

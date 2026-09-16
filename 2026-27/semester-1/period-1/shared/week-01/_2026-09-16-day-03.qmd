@@ -1,4 +1,4 @@
-# Teachings come from everywhere... {.quote-hero-slide background-color="#171717"}
+# Teachings come from everywhere... {#day-03 .quote-hero-slide background-color="#171717"}
 
 # Teachings come from everywhere... {.quote-detail-slide background-color="#171717"}
 
