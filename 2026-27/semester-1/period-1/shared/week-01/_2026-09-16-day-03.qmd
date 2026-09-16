@@ -23,10 +23,70 @@ Wednesday, September 16, 2026
 Raise your hands.
 :::
 
+# Spot the Difference
+
+::: {.big-prompt}
+[Colorful Dice](https://spotdiffs.com/game/colorful-dice){target="_blank" rel="noopener"}
+
+[Classic Racing Car Collection](https://spotdiffs.com/game/classic-racing-car-collection){target="_blank" rel="noopener"}
+
+[Shadow Play](https://spotdiffs.com/game/shadow-play){target="_blank" rel="noopener"}
+:::
+
 # Skill of the Day
 
 ::: {.big-prompt}
 Observe without judgement
+:::
+
+# What is judgement?
+
+# What is judgement?
+
+::: {.big-prompt}
+***the act or process of forming an evaluation by discerning or creating an opinion***
+:::
+
+# Is judgement useful or not useful?
+
+# It depends
+
+Judgements that discern are based on **FACTS**.
+
+They can keep you safe.
+
+::: {.big-prompt}
+Don't use a machine with a broken part.
+:::
+
+# Judgements that opinionate
+
+Judgements that opinionate label something:
+
+- **good or bad**
+- **valuable or not valuable**
+
+::: {.big-prompt}
+They can be dangerous when they are based on personal values, assumptions, or ideas in our minds rather than observable facts.
+:::
+
+## A hallway example
+
+If you walk by a friend in the hall and they don't say hi, that does not mean:
+
+- they are a bad friend
+- they don't care about you
+
+**The observable fact is only: They did not say hi.**
+
+There may be information you do not know. They might have had a fight at home.
+
+# Observe, Describe, Participate
+
+::: {.big-prompt}
+That brings us to a very important set of skills:
+
+**Observe, Describe, Participate.**
 :::
 
 # Mindfulness Moment {.video-only-slide}
@@ -36,7 +96,7 @@ Observe without judgement
 # Spot the Difference
 
 ::: {.big-prompt}
-[Open Spot the Difference](https://spotdiffs.com/game/sunny-alley?from=home){target="_blank" rel="noopener"}
+[Open Sunny Alley Spot the Difference](https://spotdiffs.com/game/sunny-alley?from=home){target="_blank" rel="noopener"}
 :::
 
 # Why do this?
@@ -92,6 +152,12 @@ For each presenter, write:
 
 ::: {.big-prompt}
 The goal is to actually listen.
+:::
+
+# About Me Presentations
+
+::: {.big-prompt}
+**Listen. Notice. Connect.**
 :::
 
 # Presentation Listening Sheet - Photo Submission

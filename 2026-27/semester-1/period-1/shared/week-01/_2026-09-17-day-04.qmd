@@ -87,6 +87,12 @@ For each presenter, write:
 The goal is to actually listen.
 :::
 
+# About Me Presentations
+
+::: {.big-prompt}
+**Listen. Notice. Connect.**
+:::
+
 # Presentation Listening Sheet - Photo Submission
 
 You already have a printed listening sheet.
