@@ -1,0 +1,251 @@
+# TAS · Day 4 {.course-day-slide}
+
+Thursday, September 17, 2026
+
+# Today: Batteries + Boosting
+
+::: {.big-prompt}
+Understand the battery. Respect the energy. Follow the order.
+:::
+
+Before we work on cars, we need a few basics.
+
+# What is a battery?
+
+::: columns
+::: {.column width="46%"}
+A battery **stores energy**.
+
+In a car battery, energy is stored chemically.
+
+When the car needs it, the battery releases electrical energy.
+
+::: {.big-prompt}
+Stored energy waiting to move.
+:::
+:::
+::: {.column width="54%"}
+<svg viewBox="0 0 700 420" role="img" aria-label="Simple battery diagram" style="width:100%;max-height:430px">
+  <rect x="90" y="85" width="470" height="240" rx="28" fill="#2d3748"/>
+  <rect x="560" y="155" width="45" height="100" rx="8" fill="#4a5568"/>
+  <rect x="145" y="120" width="95" height="170" rx="14" fill="#e2e8f0"/>
+  <rect x="260" y="120" width="95" height="170" rx="14" fill="#e2e8f0"/>
+  <rect x="375" y="120" width="95" height="170" rx="14" fill="#e2e8f0"/>
+  <rect x="490" y="120" width="45" height="170" rx="14" fill="#fc8181"/>
+  <text x="512" y="228" font-size="105" text-anchor="middle" font-family="Arial" fill="#9b2c2c">+</text>
+  <text x="350" y="375" font-size="32" text-anchor="middle" font-family="Arial" fill="currentColor">BATTERY = STORED ENERGY</text>
+</svg>
+:::
+:::
+
+# Energy is transferred
+
+::: columns
+::: {.column width="43%"}
+Energy is not created or destroyed.
+
+It is **transferred**.
+
+Battery energy can become:
+
+- motion, the starter turns
+- heat, wires warm up
+- sound, the engine cranks
+- light, a spark
+:::
+::: {.column width="57%"}
+<svg viewBox="0 0 800 430" role="img" aria-label="Battery energy transfer diagram" style="width:100%;max-height:430px">
+  <rect x="25" y="140" width="190" height="140" rx="20" fill="#2d3748"/>
+  <rect x="215" y="180" width="25" height="60" rx="5" fill="#4a5568"/>
+  <text x="120" y="335" font-size="28" text-anchor="middle" font-family="Arial" fill="currentColor">Battery</text>
+  <line x1="260" y1="210" x2="420" y2="210" stroke="#3182ce" stroke-width="14"/>
+  <polygon points="420,210 390,190 390,230" fill="#3182ce"/>
+  <circle cx="510" cy="210" r="70" fill="#ecc94b"/>
+  <text x="510" y="220" font-size="34" text-anchor="middle" font-family="Arial" fill="#1a202c">START</text>
+  <line x1="580" y1="210" x2="700" y2="210" stroke="#3182ce" stroke-width="14"/>
+  <polygon points="700,210 670,190 670,230" fill="#3182ce"/>
+  <text x="735" y="145" font-size="26" text-anchor="middle" font-family="Arial" fill="currentColor">motion</text>
+  <text x="735" y="195" font-size="26" text-anchor="middle" font-family="Arial" fill="currentColor">heat</text>
+  <text x="735" y="245" font-size="26" text-anchor="middle" font-family="Arial" fill="currentColor">sound</text>
+  <text x="735" y="295" font-size="26" text-anchor="middle" font-family="Arial" fill="currentColor">light</text>
+</svg>
+:::
+:::
+
+# Charge and Discharge
+
+::: columns
+::: {.column width="50%"}
+### CHARGE
+
+<div style="font-size:5rem;text-align:center">⚡ → 🔋</div>
+
+**Energy goes into the battery.**
+:::
+::: {.column width="50%"}
+### DISCHARGE
+
+<div style="font-size:5rem;text-align:center">🔋 → 🚗</div>
+
+**Energy comes out of the battery.**
+:::
+:::
+
+Think about your phone: plug it in = charge, use it = discharge.
+
+# Voltage and Current
+
+::: columns
+::: {.column width="50%"}
+### Voltage = PUSH
+
+<div style="font-size:5rem;text-align:center">➡️ ➡️ ➡️</div>
+
+Voltage helps push electricity through a circuit.
+:::
+::: {.column width="50%"}
+### Current = FLOW
+
+<div style="font-size:5rem;text-align:center">••••••••→</div>
+
+Current is how much electrical charge is moving. It is measured in **amps**.
+:::
+:::
+
+::: {.big-prompt}
+Volts push. Amps flow.
+:::
+
+# Low Voltage, High Current
+
+<div style="display:flex;gap:2rem;align-items:center;justify-content:center;margin-top:2rem">
+  <div style="font-size:6rem;font-weight:800;border:6px solid #3182ce;border-radius:24px;padding:1rem 2rem">12 V</div>
+  <div style="font-size:5rem">+</div>
+  <div style="font-size:4rem;font-weight:800;border:6px solid #dd6b20;border-radius:24px;padding:1rem 2rem">HIGH AMPS</div>
+</div>
+
+A starter needs **a lot of current**. A car battery can deliver hundreds of amps.
+
+A short circuit can create intense heat, sparks, damaged tools, and burns.
+
+# Why are jumper cables thick?
+
+::: columns
+::: {.column width="50%"}
+### Thin conductor
+
+<div style="height:18px;background:#c53030;border-radius:10px;margin:4rem 2rem"></div>
+
+Less current capacity. It can heat up faster.
+:::
+::: {.column width="50%"}
+### Thick jumper cable
+
+<div style="height:68px;background:#2d3748;border-radius:34px;margin:2.5rem 2rem"></div>
+
+More current needs a **thicker conductor**.
+:::
+:::
+
+For higher voltage, insulation must be rated to safely contain that voltage.
+
+# DC and AC
+
+::: columns
+::: {.column width="50%"}
+### DC: Direct Current
+
+<svg viewBox="0 0 500 220" style="width:100%">
+  <line x1="50" y1="110" x2="420" y2="110" stroke="#3182ce" stroke-width="24" stroke-linecap="round"/>
+  <polygon points="430,110 380,75 380,145" fill="#3182ce"/>
+</svg>
+
+Flows one way. **A battery gives DC.**
+:::
+::: {.column width="50%"}
+### AC: Alternating Current
+
+<svg viewBox="0 0 500 220" style="width:100%">
+  <path d="M30,110 C90,20 150,20 210,110 S330,200 390,110 S450,20 480,70" fill="none" stroke="#3182ce" stroke-width="18"/>
+</svg>
+
+Changes direction repeatedly. **Wall outlets use AC.**
+:::
+:::
+
+# Before You Touch the Cables
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem;text-align:center">
+  <div style="border:4px solid #3182ce;border-radius:18px;padding:1rem"><div style="font-size:4rem">🥽</div><strong>Safety glasses</strong></div>
+  <div style="border:4px solid #3182ce;border-radius:18px;padding:1rem"><div style="font-size:4rem">💍</div><strong>Remove loose jewelry</strong></div>
+  <div style="border:4px solid #3182ce;border-radius:18px;padding:1rem"><div style="font-size:4rem">🔍</div><strong>Inspect the battery</strong></div>
+  <div style="border:4px solid #3182ce;border-radius:18px;padding:1rem"><div style="font-size:4rem">🚫</div><strong>No cracks or leaks</strong></div>
+  <div style="border:4px solid #3182ce;border-radius:18px;padding:1rem"><div style="font-size:4rem">🙈</div><strong>Face away</strong></div>
+  <div style="border:4px solid #3182ce;border-radius:18px;padding:1rem"><div style="font-size:4rem">✋</div><strong>Teacher permission</strong></div>
+</div>
+
+# Boosting Order
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:1.35em">
+  <div style="border-left:12px solid #e53e3e;padding:1rem"><strong>1.</strong> RED → dead battery <strong>+</strong></div>
+  <div style="border-left:12px solid #e53e3e;padding:1rem"><strong>2.</strong> RED → good battery <strong>+</strong></div>
+  <div style="border-left:12px solid #2d3748;padding:1rem"><strong>3.</strong> BLACK → good battery <strong>-</strong></div>
+  <div style="border-left:12px solid #2d3748;padding:1rem"><strong>4.</strong> BLACK → solid engine/chassis ground on the dead car, away from the battery</div>
+</div>
+
+<div style="font-size:4rem;text-align:center;margin-top:2rem">🔴 → 🔴 → ⚫ → ⚫</div>
+
+# Then What?
+
+1. Check every connection.
+2. Start the good vehicle.
+3. Try to start the dead vehicle.
+4. Once running, remove the cables in **reverse order**.
+
+::: {.big-prompt}
+Slow is smooth. Smooth is safe.
+:::
+
+# The Clamp Rule
+
+::: columns
+::: {.column width="50%"}
+<div style="font-size:7rem;text-align:center">✅</div>
+
+- keep the loose clamp controlled
+- move slowly
+- keep positive away from metal
+- ask before guessing
+:::
+::: {.column width="50%"}
+<div style="font-size:7rem;text-align:center">❌</div>
+
+- do not let clamps touch
+- do not toss cables around
+- do not guess at a connection
+:::
+:::
+
+# Stop and Call the Teacher
+
+<div style="font-size:9rem;text-align:center">⚠️</div>
+
+Stop if you see **unexpected sparks, smoke, a burning smell, a hot cable, a damaged battery, or anything you are unsure about**.
+
+# Before We Go Outside
+
+::: {.big-prompt}
+Tell the person beside you:
+:::
+
+1. What does a battery store?
+2. Why can a 12 V battery still cause problems?
+3. What are the four cable connections, in order?
+
+# Shop Time
+
+::: {.big-prompt}
+Safety glasses on. Jacket on. Stay with the demonstration.
+:::
+
+We will boost a vehicle together before anyone works independently.
