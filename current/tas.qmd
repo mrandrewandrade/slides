@@ -1,12 +1,12 @@
 ---
 course: "TAS"
-day: 2
-class-date: "Tuesday, September 15, 2026"
+day: 4
+class-date: "Thursday, September 17, 2026"
 format:
   revealjs:
     footer: "These [slides](https://andrewandrade.ca/slides) and the [course website](https://andrewandrade.ca/commons/tas2) are open-sourced by [Mr. Andrew Andrade on GitHub](https://github.com/mrandrewandrade) under the CC BY 4.0 copyright licence.<br>You may copy, share, and adapt them for educational, personal, or commercial purposes. Attribution: github.com/mrandrewandrade"
 ---
 
-{{< include ../2026-27/semester-1/period-1/shared/week-01/_2026-09-15-day-02.qmd >}}
+{{< include ../2026-27/semester-1/period-1/tas/week-01/_2026-09-17-day-04.qmd >}}
 
 {{< include ../2026-27/semester-1/period-1/shared/routines/_end-of-class.qmd >}}
