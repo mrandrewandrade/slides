@@ -15,7 +15,7 @@ courses=(tej tts tas)
 current_date() {
   local course="$1"
   local include_line
-  include_line="$(grep -m1 'shared/week-' "$main_root/current/${course}.qmd" || true)"
+  include_line="$(grep -m1 'week-' "$main_root/current/${course}.qmd" || true)"
   if [[ "$include_line" =~ _([0-9]{4}-[0-9]{2}-[0-9]{2})-day-([0-9]{2})\.qmd ]]; then
     printf '%s\n' "${BASH_REMATCH[1]}"
     return 0

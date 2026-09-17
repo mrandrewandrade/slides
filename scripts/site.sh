@@ -6,7 +6,7 @@ COURSES=(tej tts tas)
 current_metadata() {
   local course="$1"
   local include_line
-  include_line="$(grep -m1 'shared/week-' "current/${course}.qmd" || true)"
+  include_line="$(grep -m1 'week-' "current/${course}.qmd" || true)"
 
   if [[ "$include_line" =~ week-([0-9]{2})/_([0-9]{4}-[0-9]{2}-[0-9]{2})-day-([0-9]{2})\.qmd ]]; then
     printf '%s %s %s\n' "${BASH_REMATCH[1]}" "${BASH_REMATCH[3]}" "${BASH_REMATCH[2]}"
