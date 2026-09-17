@@ -1,54 +1,88 @@
-# Teachings come from everywhere... {.quote-hero-slide background-color="#171717"}
+# “I need to do that so other people can inhabit the same space that I do, feel the magic of my stories.” {#day-04 .quote-hero-slide background-color="#171717"}
 
-# Teachings come from everywhere... {.quote-detail-slide background-color="#171717"}
-
-::: {.quote-continuation}
-when you open yourself to them.<br>
-That's the trick of it really, to open yourself to everything and everything opens itself to you.
-:::
+# “I can describe what I encounter and imagine. I need to do that so other people can inhabit the same space that I do, feel the magic of my stories” {.quote-detail-slide background-color="#171717"}
 
 ::: {.quote-attribution}
 <span class="quote-author">Richard Wagamese</span>
-<span class="quote-role">Ojibway writer</span>
-<span class="quote-work">Embers: One Ojibway's Meditations</span>
 :::
 
 # {{< meta course >}} · Day 4 {.course-day-slide}
 
 Thursday, September 17, 2026
 
-# Who is stressed?
-
-::: {.big-prompt}
-Raise your hands.
-:::
-
 # Skill of the Day
 
 ::: {.big-prompt}
-Observe without judgement
+Describe
 :::
 
-# Mindfulness Moment
+Observe gives you information.
 
-[MINDFULNESS VIDEO PLACEHOLDER]
+Describe lets you communicate it.
 
-# Why do this?
+Participate lets you act with it.
+
+# Describe It
+
+1. One person receives an object or item.
+2. Describe it without saying what it is.
+3. Words only. No gestures.
+4. The class shouts out guesses.
+5. Take turns.
 
 ::: {.big-prompt}
-Why might observing without immediately judging be useful today?
+Make us see it with your words.
 :::
 
-Pause and take a few answers.
+# What made a description useful?
 
-# Why?
+- What details helped you guess?
+- What happened when the description was vague?
+- Which words communicated the most information?
 
-- It helps us actually notice.
-- It slows down snap judgments.
-- It makes us better listeners.
+# Why Describe?
+
+- Description turns observation into communication.
+- Technical work needs precise language.
+- Describing forces you to notice details.
+- Explaining something helps you learn it better.
+
+# Technical Language
 
 ::: {.big-prompt}
-Listen to people as though you are learning about them for the first time.
+Specific words reduce misunderstanding.
+:::
+
+Not:<br>
+“that thing”
+
+Better:<br>
+“the red positive battery terminal”
+
+# Technical Language
+
+Not:<br>
+“it is broken”
+
+Better:<br>
+“the wire insulation is cut”
+
+# Describe to Learn
+
+::: {.big-prompt}
+When you describe what you know, you have to organize what you know.
+:::
+
+Teaching someone else is one way of learning more deeply.
+
+# Observe → Describe → Participate
+
+::: {.big-prompt}
+Notice it.
+
+Put it into words.
+
+Do something with it.
 :::
 
 # Announcements {.announcements-slide}
@@ -59,7 +93,7 @@ Listen to people as though you are learning about them for the first time.
 # Today's Route
 
 ::: {.big-prompt}
-Listen -> Present -> Connect -> Photograph -> Submit
+Describe → Present → Connect → Photograph → Submit
 :::
 
 # When You Present
@@ -75,7 +109,7 @@ Help us know you. Help us connect with you.
 
 # While Others Present
 
-For each presenter, write:
+For each presenter:
 
 1. **Presenter**
 2. **One thing I learned**
@@ -101,7 +135,7 @@ Complete it while classmates present.
 
 Before leaving class:
 
-- take clear photos of every page you completed
+- take clear photos of every completed page
 - upload the photos to Google Classroom
 - turn in the assignment
 - make sure your name and writing are readable
