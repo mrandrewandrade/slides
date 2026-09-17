@@ -67,9 +67,9 @@ cat > "$site_root/wip/index.html" <<'EOF'
 <h1>Semester Planning Decks</h1>
 <p class="muted">Calendar-driven work in progress. Staged lesson slides replace placeholders when they exist.</p>
 <ul>
-<li><a href="tej/index.html">TEJ Semester 1 planning deck</a> · <a href="tej/day-03-backup.html">Day 3 backup</a></li>
-<li><a href="tts/index.html">TTS Semester 1 planning deck</a> · <a href="tts/day-03-backup.html">Day 3 backup</a></li>
-<li><a href="tas/index.html">TAS Semester 1 planning deck</a> · <a href="tas/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="tej/index.html">TEJ Semester 1 planning deck</a></li>
+<li><a href="tts/index.html">TTS Semester 1 planning deck</a></li>
+<li><a href="tas/index.html">TAS Semester 1 planning deck</a></li>
 <li><a href="semester2/index.html">Generic Semester 2 planning deck</a></li>
 </ul>
 <p><a href="../index.html">Back to Slides Home</a></p>
