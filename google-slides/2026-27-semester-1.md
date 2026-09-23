@@ -6,15 +6,15 @@ Access: commenter for the Google Workspace domain.
 
 Source data: `semester-planning-announcements` branch, `planning/2026-27-student-slide-calendar.tsv` plus `planning/2026-27-required-announcements.tsv`.
 
-Style: native Google Slides converted from the clean course-template look. Announcement slides are black on white with two coloured Technology Commons logos at the top.
+Style: native Google Slides converted from the clean course-template look. Announcement slides are black on white with two coloured Technology Commons logos at the top. Fonts, colours, and footer treatment are aligned to the clean course slide style.
 
 ## Course decks
 
 | Course | Deck | Notes |
 |---|---|---|
-| TAS | [TAS 2026-27 S1 Daily Announcements and Open Slides - Clean Template](https://docs.google.com/presentation/d/1lm04SRBvSWJTxM0PmSOi_JRKlqooaGSLVfl4ZTYz6Cg/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
-| TEJ | [TEJ 2026-27 S1 Daily Announcements and Open Slides - Clean Template](https://docs.google.com/presentation/d/131N-qzZKCjAI4z_dAyBVTPq4xBIL34dlcHB5FONRwfY/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
-| TTS | [TTS 2026-27 S1 Daily Announcements and Open Slides - Clean Template](https://docs.google.com/presentation/d/1vKyCr2R3xfUuF6JL-jcoN90knzSJDDTTwDjhZlc00vg/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
+| TAS | [TAS 2026-27 S1 Daily Announcements and Open Slides - Uniform Logo Style](https://docs.google.com/presentation/d/1lfqyAIK-i8hOQIJAf8eY9e0zzLLWr-uJ3DgICyoulco/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
+| TEJ | [TEJ 2026-27 S1 Daily Announcements and Open Slides - Uniform Logo Style](https://docs.google.com/presentation/d/1KckDtnuKo-ZDnMg21iKyh62HLWzHS3EoXKWw5po0hwU/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
+| TTS | [TTS 2026-27 S1 Daily Announcements and Open Slides - Uniform Logo Style](https://docs.google.com/presentation/d/1SqFOpcnkeLZKTMWZSukpXE-JIYpbuTYRkICsdE0hVq4/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
 
 ## Templates
 
