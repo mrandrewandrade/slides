@@ -4,15 +4,17 @@ These are the Google Drive slide decks for Semester 1. Each deck starts on Monda
 
 Access: commenter for the Google Workspace domain.
 
-Source data: `semester-planning-announcements` branch, `planning/2026-27-student-slide-calendar.tsv`.
+Source data: `semester-planning-announcements` branch, `planning/2026-27-student-slide-calendar.tsv` plus `planning/2026-27-required-announcements.tsv`.
+
+Style: native Google Slides converted from the clean course-template look. Announcement slides are black on white with two coloured Technology Commons logos at the top.
 
 ## Course decks
 
 | Course | Deck | Notes |
 |---|---|---|
-| TAS | [TAS 2026-27 S1 Daily Announcements and Open Slides](https://docs.google.com/presentation/d/1L0SsxWwHNGQCX86crYJ2LzMCNLAeUbJE/edit?usp=drivesdk&ouid=103379330816796177718&rtpof=true&sd=true) | Announcements + open slide for each school day. |
-| TEJ | [TEJ 2026-27 S1 Daily Announcements and Open Slides](https://docs.google.com/presentation/d/18cOZD3D3FBVzBlfwb63p6lCqJZUoMi5c/edit?usp=drivesdk&ouid=103379330816796177718&rtpof=true&sd=true) | Announcements + open slide for each school day. |
-| TTS | [TTS 2026-27 S1 Daily Announcements and Open Slides](https://docs.google.com/presentation/d/105IpaS-YSbDMZaU2dhb9UrkrUvLiM4sV/edit?usp=drivesdk&ouid=103379330816796177718&rtpof=true&sd=true) | Announcements + open slide for each school day. |
+| TAS | [TAS 2026-27 S1 Daily Announcements and Open Slides - Clean Template](https://docs.google.com/presentation/d/1lm04SRBvSWJTxM0PmSOi_JRKlqooaGSLVfl4ZTYz6Cg/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
+| TEJ | [TEJ 2026-27 S1 Daily Announcements and Open Slides - Clean Template](https://docs.google.com/presentation/d/131N-qzZKCjAI4z_dAyBVTPq4xBIL34dlcHB5FONRwfY/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
+| TTS | [TTS 2026-27 S1 Daily Announcements and Open Slides - Clean Template](https://docs.google.com/presentation/d/1vKyCr2R3xfUuF6JL-jcoN90knzSJDDTTwDjhZlc00vg/edit?usp=drivesdk) | Native Google Slides. Announcements + open slide for each school day. |
 
 ## Templates
 
