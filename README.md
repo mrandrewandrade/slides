@@ -1,4 +1,14 @@
-# Technology Class Slides
+# Technology Class Slides (Archived)
+
+> **Archive notice**
+>
+> This repository is no longer the active home for classroom slide decks. Beginning in September 2026, current classroom slides moved to native Google Slides and are linked from the **Slides** menu on [TechEd Commons](https://andrewandrade.ca/commons/).
+>
+> Google Slides are now used because they are easier for other teachers to open, copy, edit, adapt, and reuse.
+>
+> Existing Quarto/RevealJS decks, generated archives, and branches are intentionally retained here as historical and reference material. Older day decks and branches should be preserved even though this repository is no longer the primary slide workflow.
+
+The documentation below describes the former RevealJS publishing workflow and is kept for archive and reference purposes.
 
 Quarto RevealJS slides for the 2026-27 school year.
 
