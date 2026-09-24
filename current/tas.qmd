@@ -4,7 +4,7 @@ day: 2
 class-date: "Tuesday, September 15, 2026"
 format:
   revealjs:
-    footer: "These [slides](https://andrewandrade.ca/slides) and the [course website](https://andrewandrade.ca/commons/tas2) are open-sourced by [Mr. Andrew Andrade on GitHub](https://github.com/mrandrewandrade) under the CC BY 4.0 copyright licence.<br>You may copy, share, and adapt them for educational, personal, or commercial purposes. Attribution: github.com/mrandrewandrade"
+    footer: "These [slides](https://andrewandrade.ca/slides) and the [course website](https://andrewandrade.ca/commons/tas2) are licensed CC BY 4.0.<br>Please copy, modify, and redistribute as you please. Attribute [andrewandrade.ca](https://andrewandrade.ca) and [github.com/mrandrewandrade](https://github.com/mrandrewandrade) as the sources. Sharing is caring :)"
 ---
 
 {{< include ../2026-27/semester-1/period-1/shared/week-01/_2026-09-15-day-02.qmd >}}
