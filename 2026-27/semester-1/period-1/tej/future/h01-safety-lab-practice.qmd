@@ -81,23 +81,7 @@ Conductors join every block. Protection belongs close to the source.
 
 # Proper Schematic
 
-<svg class="slide-schematic" viewBox="0 0 1100 360" role="img" aria-labelledby="h01-schematic-title h01-schematic-desc">
-  <title id="h01-schematic-title">Protected low-voltage LED circuit</title>
-  <desc id="h01-schematic-desc">A 9 volt battery, 500 milliamp fuse, normally open switch, 330 ohm resistor, and LED are connected in series.</desc>
-  <g fill="none" stroke="#1e2b55" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M120 230 V75 H970 V230 H880"/><path d="M740 230 H620 M500 230 H390 M260 230 H120"/>
-  </g>
-  <g fill="white" stroke="#171717" stroke-width="7">
-    <line x1="80" y1="200" x2="160" y2="200"/><line x1="98" y1="240" x2="142" y2="240"/><line x1="120" y1="200" x2="120" y2="240"/>
-    <rect x="260" y="205" width="130" height="50" rx="5"/>
-    <path d="M500 230 H535 M605 230 H620 M535 230 L595 190"/>
-    <rect x="640" y="205" width="100" height="50"/>
-    <circle cx="810" cy="230" r="70"/><path d="M780 200 L840 260 M840 200 L780 260"/>
-  </g>
-  <g font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#1e2b55" text-anchor="middle">
-    <text x="120" y="315">9 V source</text><text x="325" y="315">500 mA fuse</text><text x="555" y="315">switch</text><text x="690" y="315">330 Ω</text><text x="810" y="315">LED</text>
-  </g>
-</svg>
+![A 9 V source, 500 mA fuse, normally open switch, 330 ohm resistor, and LED connected in one series path.](../../../../../assets/tej/H01_Safety_Lab_Practice_Schematic.svg){width=96%}
 
 # Stop Conditions
 
@@ -272,7 +256,8 @@ Why can voltage exist where current is zero?
 # Downloads and Notes
 
 - [H01 module page](https://andrewandrade.ca/commons/tej3-4/electronics-library/modules/h01-safety-lab-practice.html)
-- [Formula reference](https://mrandrewandrade.github.io/assets/TEJ-Electronics-Formula-Reference.html)
+- [Two-page quick reference](https://mrandrewandrade.github.io/assets/TEJ-Electronics-Quick-Reference.pdf)
+- [Electronics reference handbook](https://mrandrewandrade.github.io/assets/TEJ-Electronics-Reference-Handbook.html)
 - [Student worksheet](https://mrandrewandrade.github.io/assets/H01_Safety_Lab_Practice_Student_Worksheet.pdf)
 - [Lab handout](https://mrandrewandrade.github.io/assets/H01_Safety_Lab_Practice_Lab.pdf)
 - [Tinkercad guide](https://mrandrewandrade.github.io/assets/H01_Safety_Lab_Practice_Tinkercad_Guide.pdf)
