@@ -7,6 +7,7 @@ execute: {enabled: false}
 
 - [H01 Safety and Lab Practice](h01-safety-lab-practice.qmd)
 - [D01 Digital Inputs](d01-digital-inputs.qmd)
+- [Basic Computer Systems](basic-computer-systems.qmd)
 - [Control Systems and CNC](control-systems-and-cnc.qmd)
 
 These sources remain unpublished until the classroom advance workflow is explicitly authorized.
