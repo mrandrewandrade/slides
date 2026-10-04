@@ -1,0 +1,10 @@
+---
+title: "TEJ Future Lessons"
+subtitle: "Staged, not Current and not Full"
+format: html
+execute: {enabled: false}
+---
+
+- [H01 Safety and Lab Practice](h01-safety-lab-practice.qmd)
+
+These sources remain unpublished until the classroom advance workflow is explicitly authorized.
