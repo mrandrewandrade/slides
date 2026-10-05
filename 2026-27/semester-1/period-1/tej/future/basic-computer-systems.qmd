@@ -1,6 +1,6 @@
 ---
 title: "Basic Computer Systems"
-subtitle: "CS01-CS08 Main Quest and SQ01-SQ06 Side Quests"
+subtitle: "Current missions and the after-Thanksgiving CS01-CS08 project"
 course: "TEJ"
 module: "CS01-CS08"
 status: "Future"
@@ -19,7 +19,7 @@ execute: {enabled: false}
 
 # Basic Computer Systems {.course-day-slide}
 
-From basic electricity to a commissioned, upgraded, benchmarked Xubuntu workstation
+Three current missions, then a commissioned, upgraded, benchmarked classroom workstation
 
 # Main Quest Route
 
@@ -28,7 +28,7 @@ From basic electricity to a commissioned, upgraded, benchmarked Xubuntu workstat
 3. CS03 Power and connections
 4. CS04 Ready-to-power gate and first boot
 5. CS05 POST and BIOS/UEFI
-6. CS06 Xubuntu 26.04 LTS commissioning
+6. CS06 Teacher-selected Linux commissioning
 7. CS07 RAM upgrade
 8. CS08 Build-the-best-computer challenge
 
@@ -46,30 +46,53 @@ Never open or probe inside a power supply.
 # Current Classroom Order
 
 1. Every student completes Power Circuits Questions 1-6.
-2. Early finishers may choose an approved 3D-printing Side Quest or the limited Computer Recovery Crew pilot.
-3. The recovery crew prepares equipment now.
-4. The whole class later completes CS01-CS08.
+2. Every student completes the Computer Power and Parts Main Mission.
+3. Early finishers may choose Make It Print.
+4. One limited pair completes the Computer Recovery and OS Comparison.
+5. After Thanksgiving, the whole class begins CS01-CS08 with the selected OS.
 
 Pilot work does not complete the formal sequence early.
 
-# Computer Recovery Crew Pilot
+# Make It Print
 
-1. Known-condition baseline
-2. Safe opening and ESD controls
-3. Parts, RAM, and storage inventory
-4. Reassembly inspection
-5. Teacher ready-to-power signature
-6. POST and firmware, or Apple Diagnostics
+**3D Printing Side Quest**
 
-## Pilot Route Continued
+- Power Circuits Questions 1-6 complete
+- teacher approval
+- printer available
+- existing teacher-approved model
 
-7. Xubuntu 26.04 LTS live session
-8. Green, yellow, or red classification
-9. Teacher-approved hardware work
-10. Teacher-approved installation
-11. Acceptance testing
+## Make It Print Workflow
 
-The pilot prepares equipment quickly. Formal benchmarking remains in CS08.
+1. Obtain the printer login from your teacher.
+2. Confirm model, printer, scale, orientation, material, and estimated time.
+3. Show the sliced preview and obtain approval.
+4. Observe the first layer.
+5. Stop and notify the teacher for any unsafe or unexpected condition.
+6. Cool, remove only when approved, clean, and document.
+
+# Computer Recovery and OS Comparison
+
+Select two closely matched computers and use identical USB models, the same port type, waiting period, and test procedure.
+
+| Round | Computer A | Computer B |
+|:--|:--|:--|
+| 1 | Xubuntu live | Mint Xfce live |
+| 2 | Mint Xfce live | Xubuntu live |
+
+Live-USB boot time is not a fair performance benchmark.
+
+## Comparison Measures
+
+Use **Pass / Concern / Fail** for:
+
+- display, keyboard, mouse, and cursor stability
+- USB, Ethernet, Wi-Fi, and sound
+- internal-storage visibility
+
+Compare idle memory, browser launch, Tinkercad, Inkscape, VS Code, settings clarity, and update experience.
+
+Reserve Green, Yellow, and Red for final machine classification.
 
 ## Pilot Approval Gates
 
@@ -78,7 +101,7 @@ The pilot prepares equipment quickly. Formal benchmarking remains in CS08.
 | ready to power | first power after opening |
 | hardware work | moving RAM or replacing storage |
 | data action | erasing or partitioning a drive |
-| installation | installing Xubuntu or Lubuntu |
+| installation | installing the teacher-selected OS |
 
 Student success uses safe evidence, reasoning, and following the gates. The machine does not need to work.
 
@@ -99,17 +122,33 @@ Use a wired keyboard. Intel Macs use EFI or UEFI firmware rather than an ordinar
 Official Apple sources: https://support.apple.com/102603 and https://support.apple.com/102550
 :::
 
-## Live Session and Triage
+## Teacher OS Decision
 
-Test display, input, USB, Ethernet, Wi-Fi, sound, and storage visibility.
+- Xubuntu as the classroom standard
+- Mint Xfce as the classroom standard
+- Lubuntu for weak machines
+- additional testing required
 
-| Class | Meaning |
-|:--|:--|
-| green | safe, stable, required tests pass |
-| yellow | one defined repair or closer review is needed |
-| red | stop student work and isolate for teacher review |
+The current Xubuntu choice is provisional until this comparison is complete.
 
-USB live-session boot time is not a fair computer benchmark.
+# Computer Power and Parts
+
+**Main Mission | Thursday, October 8, 2026**
+
+Use a powered-off desktop, cutaway, exterior PSU nameplate, computer power schematic, calculator, GUESS, and Google Docs equation tools.
+
+This is not an OS installation activity.
+
+## Six Questions
+
+1. Label source, conversion/protection, distribution, control, and parallel loads.
+2. Calculate branch power $P_1$.
+3. Calculate branch current $I_2$.
+4. Calculate equivalent resistance $R_2$.
+5. Add branch powers to find $P_T$.
+6. Compare $P_T$ with the PSU nameplate rating.
+
+Each calculation includes Given, Unknown, equation, substitution with units, full calculator result, correct precision, final-answer table, and answer sentence.
 
 # CS01 Computer Cutaway
 
@@ -291,7 +330,7 @@ Test before installation:
 
 A live session is temporary. It does not prove the installation is complete.
 
-## Xubuntu 26.04 LTS Commissioning
+## Approved Linux Commissioning
 
 After the approved installation, verify:
 
@@ -307,11 +346,11 @@ After the approved installation, verify:
 Official sources: https://xubuntu.org/release/26.04/ and https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/
 :::
 
-## Classroom Deployment Policy
+## Classroom Deployment Decision
 
 | Use | Operating system |
 |:--|:--|
-| standard student desktop | Xubuntu 26.04 LTS |
+| standard student desktop | pilot decision pending |
 | exceptionally weak hardware | Lubuntu 26.04 LTS fallback |
 | later SSH and systems machine | Ubuntu Server |
 
@@ -482,13 +521,14 @@ Compare safety, workload, cost, data/privacy, energy, expected life, repairabili
 
 ## Computer Recovery Crew Pilot Posting {.smaller}
 
-**Title:** Computer Recovery Crew Pilot
+**Title:** Computer Recovery and OS Comparison
 
 **Topic:** Side Quests
 
 - Power Circuits Questions 1-6 must be complete first.
-- Places are limited and each pair uses only its assigned machine.
-- Submit the completed job sheet and approved photos.
+- Places are limited and each pair uses only its assigned matched computers.
+- Compare Xubuntu and Mint Xfce in both crossover rounds.
+- Submit the shared Google Doc and approved photos.
 - Teacher approval is required before power, hardware changes, or installation.
 - Safe evidence determines success, even when the machine does not work.
 
@@ -502,9 +542,11 @@ The Leaderboard remains teacher-only.
 # Downloads
 
 - [Basic Computer Systems notes](https://andrewandrade.ca/commons/tej3-4/computer-systems/)
+- [Make It Print](https://andrewandrade.ca/commons/tej3-4/computer-systems/make-it-print.html)
+- [Computer Power and Parts](https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-power-parts.html)
 - [Student activity packages](https://mrandrewandrade.github.io/assets/TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf)
-- [Recovery Crew Pilot Job Sheet](https://mrandrewandrade.github.io/assets/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf)
-- [Pilot Teacher Launch Guide](https://mrandrewandrade.github.io/assets/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf)
+- [Recovery and OS Comparison Job Sheet](https://mrandrewandrade.github.io/assets/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf)
+- [Recovery and OS Comparison Teacher Guide](https://mrandrewandrade.github.io/assets/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf)
 - [Electronics Quick Reference](https://mrandrewandrade.github.io/assets/TEJ-Electronics-Quick-Reference.pdf)
 
 # Exit Check
