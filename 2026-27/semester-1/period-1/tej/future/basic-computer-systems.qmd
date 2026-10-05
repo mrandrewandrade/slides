@@ -46,7 +46,7 @@ Never open or probe inside a power supply.
 # Current Classroom Order
 
 1. Every student completes Power Circuits Questions 1-6.
-2. Every student completes the Computer Power and Parts Main Mission.
+2. The Computer Power and Parts lab remains a teacher-planning shell until the actual classroom computer and safe measurement method are documented.
 3. Early finishers may choose Make It Print.
 4. One limited pair completes the Computer Recovery and OS Comparison.
 5. After Thanksgiving, the whole class begins CS01-CS08 with the selected OS.
@@ -133,22 +133,22 @@ The current Xubuntu choice is provisional until this comparison is complete.
 
 # Computer Power and Parts
 
-**Main Mission | Thursday, October 8, 2026**
+**Future lab shell**
 
-Use a powered-off desktop, cutaway, exterior PSU nameplate, computer power schematic, calculator, GUESS, and Google Docs equation tools.
+The teacher will add photographs of the actual classroom computer and exterior PSU label, an approved measurement method, and cited values before this becomes a student assignment.
 
-This is not an OS installation activity.
+Never open the PSU or probe energized internal circuits.
 
 ## Six Questions
 
-1. Label source, conversion/protection, distribution, control, and parallel loads.
-2. Calculate branch power $P_1$.
-3. Calculate branch current $I_2$.
-4. Calculate equivalent resistance $R_2$.
-5. Add branch powers to find $P_T$.
-6. Compare $P_T$ with the PSU nameplate rating.
+1. Label evidence on the actual computer and nameplate photographs.
+2. Calculate branch power from approved values.
+3. Calculate branch current from approved values.
+4. Calculate equivalent resistance.
+5. Add cited branch powers to find $P_{\mathrm{T}}$.
+6. Compare teacher-approved wall-input data with the PSU rating.
 
-Each calculation includes Given, Unknown, equation, substitution with units, full calculator result, correct precision, final-answer table, and answer sentence.
+Each GUESS step has its own row. Question 5 keeps the branch variables in separate columns.
 
 # CS01 Computer Cutaway
 
