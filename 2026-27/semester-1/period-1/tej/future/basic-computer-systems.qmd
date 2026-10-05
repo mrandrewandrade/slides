@@ -19,7 +19,7 @@ execute: {enabled: false}
 
 # Basic Computer Systems {.course-day-slide}
 
-From basic electricity to a commissioned, upgraded, benchmarked Linux workstation
+From basic electricity to a commissioned, upgraded, benchmarked Xubuntu workstation
 
 # Main Quest Route
 
@@ -28,7 +28,7 @@ From basic electricity to a commissioned, upgraded, benchmarked Linux workstatio
 3. CS03 Power and connections
 4. CS04 Ready-to-power gate and first boot
 5. CS05 POST and BIOS/UEFI
-6. CS06 Linux Mint Xfce commissioning
+6. CS06 Xubuntu 26.04 LTS commissioning
 7. CS07 RAM upgrade
 8. CS08 Build-the-best-computer challenge
 
@@ -42,6 +42,74 @@ Never open or probe inside a power supply.
 - Students never create shorts or invent faults.
 - The teacher prepares every fault station.
 - Stop for damage, liquid, swollen cells, burnt areas, smoke, unusual smell, abnormal heat, or unexpected noise.
+
+# Current Classroom Order
+
+1. Every student completes Power Circuits Questions 1-6.
+2. Early finishers may choose an approved 3D-printing Side Quest or the limited Computer Recovery Crew pilot.
+3. The recovery crew prepares equipment now.
+4. The whole class later completes CS01-CS08.
+
+Pilot work does not complete the formal sequence early.
+
+# Computer Recovery Crew Pilot
+
+1. Known-condition baseline
+2. Safe opening and ESD controls
+3. Parts, RAM, and storage inventory
+4. Reassembly inspection
+5. Teacher ready-to-power signature
+6. POST and firmware, or Apple Diagnostics
+
+## Pilot Route Continued
+
+7. Xubuntu 26.04 LTS live session
+8. Green, yellow, or red classification
+9. Teacher-approved hardware work
+10. Teacher-approved installation
+11. Acceptance testing
+
+The pilot prepares equipment quickly. Formal benchmarking remains in CS08.
+
+## Pilot Approval Gates
+
+| Gate | Teacher signature required before |
+|:--|:--|
+| ready to power | first power after opening |
+| hardware work | moving RAM or replacing storage |
+| data action | erasing or partitioning a drive |
+| installation | installing Xubuntu or Lubuntu |
+
+Student success uses safe evidence, reasoning, and following the gates. The machine does not need to work.
+
+## PC and Intel Mac Startup Keys
+
+| Machine | Key | Purpose |
+|:--|:--|:--|
+| PC | F2 or Delete | firmware setup |
+| PC | F12 | boot selection, when supported |
+| Intel Mac | Option or Alt | Startup Manager |
+| Intel Mac | D or Option-D | Apple Diagnostics |
+| Intel Mac | Command-R | Recovery |
+| Intel Mac | Option-Command-R | Internet Recovery |
+
+Use a wired keyboard. Intel Macs use EFI or UEFI firmware rather than an ordinary PC BIOS.
+
+::: {.notes}
+Official Apple sources: https://support.apple.com/102603 and https://support.apple.com/102550
+:::
+
+## Live Session and Triage
+
+Test display, input, USB, Ethernet, Wi-Fi, sound, and storage visibility.
+
+| Class | Meaning |
+|:--|:--|
+| green | safe, stable, required tests pass |
+| yellow | one defined repair or closer review is needed |
+| red | stop student work and isolate for teacher review |
+
+USB live-session boot time is not a fair computer benchmark.
 
 # CS01 Computer Cutaway
 
@@ -223,7 +291,7 @@ Test before installation:
 
 A live session is temporary. It does not prove the installation is complete.
 
-## Linux Mint Xfce Commissioning
+## Xubuntu 26.04 LTS Commissioning
 
 After the approved installation, verify:
 
@@ -236,7 +304,21 @@ After the approved installation, verify:
 - restart and login
 
 ::: {.notes}
-Official sources: https://linuxmint.com/download.php/ and https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html
+Official sources: https://xubuntu.org/release/26.04/ and https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/
+:::
+
+## Classroom Deployment Policy
+
+| Use | Operating system |
+|:--|:--|
+| standard student desktop | Xubuntu 26.04 LTS |
+| exceptionally weak hardware | Lubuntu 26.04 LTS fallback |
+| later SSH and systems machine | Ubuntu Server |
+
+Ubuntu Server is not the desktop choice for the strongest classroom computers.
+
+::: {.notes}
+Official sources: https://xubuntu.org/release/26.04/ https://lubuntu.me/2026/ https://ubuntu.com/server/docs/
 :::
 
 # CS07 RAM Compatibility
@@ -296,6 +378,8 @@ Use the same conditions before and after the approved change.
 
 A faster score does not prove a better machine for every user.
 
+USB live-session boot time belongs to deployment checks, not formal benchmarking.
+
 ## Benchmark Evidence
 
 | Test | Baseline | Final | Units |
@@ -305,7 +389,9 @@ A faster score does not prove a better machine for every user.
 | memory task | | | |
 | storage task | | | |
 | stated-load temperature | | | $^\circ$C |
-| user-task measure | | | |
+| load Tinkercad or open Inkscape | | | |
+
+An approved storage improvement may be included when equipment is available. An SSD installation is not required. SQ03 remains the deeper storage Side Quest.
 
 ## Recommendation
 
@@ -394,6 +480,18 @@ Compare safety, workload, cost, data/privacy, energy, expected life, repairabili
 - Post one assignment for each Side Quest currently offered.
 - Include the quest ID in the assignment title.
 
+## Computer Recovery Crew Pilot Posting {.smaller}
+
+**Title:** Computer Recovery Crew Pilot
+
+**Topic:** Side Quests
+
+- Power Circuits Questions 1-6 must be complete first.
+- Places are limited and each pair uses only its assigned machine.
+- Submit the completed job sheet and approved photos.
+- Teacher approval is required before power, hardware changes, or installation.
+- Safe evidence determines success, even when the machine does not work.
+
 ## Tracking and Privacy
 
 - Students submit evidence in Classroom.
@@ -405,6 +503,8 @@ The Leaderboard remains teacher-only.
 
 - [Basic Computer Systems notes](https://andrewandrade.ca/commons/tej3-4/computer-systems/)
 - [Student activity packages](https://mrandrewandrade.github.io/assets/TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf)
+- [Recovery Crew Pilot Job Sheet](https://mrandrewandrade.github.io/assets/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf)
+- [Pilot Teacher Launch Guide](https://mrandrewandrade.github.io/assets/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf)
 - [Electronics Quick Reference](https://mrandrewandrade.github.io/assets/TEJ-Electronics-Quick-Reference.pdf)
 
 # Exit Check
