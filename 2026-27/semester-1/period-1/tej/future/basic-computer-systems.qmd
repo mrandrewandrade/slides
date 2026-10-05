@@ -1,8 +1,8 @@
 ---
 title: "Basic Computer Systems"
-subtitle: "Current missions and the after-Thanksgiving CS01-CS08 project"
+subtitle: "Calculation bridge, current missions, and the CS01-CS08 project"
 course: "TEJ"
-module: "CS01-CS08"
+module: "CSB01 and CS01-CS08"
 status: "Future"
 format:
   revealjs:
@@ -19,7 +19,7 @@ execute: {enabled: false}
 
 # Basic Computer Systems {.course-day-slide}
 
-Three current missions, then a commissioned, upgraded, benchmarked classroom workstation
+A calculation bridge and recovery pilot prepare students and equipment for a commissioned, upgraded, benchmarked classroom workstation.
 
 # Main Quest Route
 
@@ -46,10 +46,10 @@ Never open or probe inside a power supply.
 # Current Classroom Order
 
 1. Every student completes Power Circuits Questions 1-6.
-2. The Computer Power and Parts lab remains a teacher-planning shell until the actual classroom computer and safe measurement method are documented.
-3. Early finishers may choose Make It Print.
-4. One limited pair completes the Computer Recovery and OS Comparison.
-5. After Thanksgiving, the whole class begins CS01-CS08 with the selected OS.
+2. Every student completes the published Computer Power and Parallel Loads worksheet as a calculation bridge.
+3. In parallel, a small teacher-approved team begins the Computer Recovery and OS Comparison.
+4. The class continues through safe opening, parts identification, POST, OS testing, upgrades, and benchmarking.
+5. The separate Computer Power and Parts physical lab remains a teacher-planning shell until the actual classroom computer and safe measurement method are documented.
 
 Pilot work does not complete the formal sequence early.
 
@@ -135,7 +135,7 @@ The current Xubuntu choice is provisional until this comparison is complete.
 
 **Future lab shell**
 
-The teacher will add photographs of the actual classroom computer and exterior PSU label, an approved measurement method, and cited values before this becomes a student assignment.
+This is the future physical lab, not the published Computer Power and Parallel Loads calculation worksheet. The teacher will add photographs of the actual classroom computer and exterior PSU label, an approved measurement method, and cited values before this becomes a student assignment.
 
 Never open the PSU or probe energized internal circuits.
 
@@ -541,6 +541,7 @@ The Leaderboard remains teacher-only.
 
 # Downloads
 
+- [Computer Power and Parallel Loads worksheet](https://docs.google.com/document/d/1hNVY7AojMABGcfcUCIRSbB4IevMV5e6AKuueP5Q45i0/edit)
 - [Basic Computer Systems notes](https://andrewandrade.ca/commons/tej3-4/computer-systems/)
 - [Make It Print](https://andrewandrade.ca/commons/tej3-4/computer-systems/make-it-print.html)
 - [Computer Power and Parts](https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-power-parts.html)
