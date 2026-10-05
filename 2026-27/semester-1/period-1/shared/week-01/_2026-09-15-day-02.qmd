@@ -1,10 +1,9 @@
-# Teachings come from everywhere... {.quote-hero-slide background-color="#171717"}
+# Practising this simple awareness allows me {#day-02 .quote-hero-slide background-color="#171717"}
 
-# Teachings come from everywhere... {.quote-detail-slide background-color="#171717"}
+# Practising this simple awareness allows me... {.quote-detail-slide background-color="#171717"}
 
 ::: {.quote-continuation}
-when you open yourself to them.  
-That's the trick of it really, to open yourself to everything and everything opens itself to you.
+to be present in all moments, to fully inhabit my life.
 :::
 
 ::: {.quote-attribution}
@@ -13,48 +12,25 @@ That's the trick of it really, to open yourself to everything and everything ope
 <span class="quote-work">Embers: One Ojibway's Meditations</span>
 :::
 
+# Mindfulness
+
+::: {.big-prompt}
+Mindfulness is a non-judgmental awareness of feelings, thoughts, and behaviors in the current moment.
+:::
+
+# Video {.video-only-slide}
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/JDSIfNLlFds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+# Mindfulness Is Not Necessarily Religion or Meditation
+
+- Meditation can be a form of mindfulness.
+- So can pausing before you speak.
+- So can being fully present while playing a sport or doing an activity.
+
 # {{< meta course >}} · Day 2 {.course-day-slide}
 
 Tuesday, September 15, 2026
-
-# Observe
-
-::: {.big-prompt}
-Notice what is here without trying to change it.
-:::
-
-- Notice your breathing.
-- Notice a few sounds around you.
-- Notice one physical sensation.
-- Let each observation come and go without judging it.
-
-# Why do this?
-
-::: {.big-prompt}
-Why might observing without immediately judging be useful today?
-:::
-
-Pause and take a few answers.
-
-# Why?
-
-- It helps us actually notice.
-- It slows down snap judgments.
-- It makes us better listeners.
-
-::: {.big-prompt}
-Listen to people as though you are learning about them for the first time.
-:::
-
-# Why We Start This Way
-
-- Shift attention into the room.
-- Notice before reacting.
-- Practise focusing on what is happening now.
-
-::: {.big-prompt}
-These are useful skills when you are learning, designing, troubleshooting, working with tools, or listening to someone else.
-:::
 
 # Announcements {.announcements-slide}
 
@@ -65,7 +41,7 @@ These are useful skills when you are learning, designing, troubleshooting, worki
 # Today's Route
 
 ::: {.big-prompt}
-Meet Mr. A -> Grade Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM
+Meet Mr. A -> Review rubrics -> Grade Mr. A -> Build Yours -> Submit by 7 PM
 :::
 
 # About Me
@@ -73,26 +49,20 @@ Meet Mr. A -> Grade Mr. A -> About Me brief -> Build yours -> Submit by 7:00 PM
 **Mr. Andrade / Mr. A**
 
 ::: {.big-prompt}
-Open the separate Mr. A About Me deck.
+[Open Who am I presentation](https://docs.google.com/presentation/d/1BJ2CMKQtRJhwNiH1oh8kGugj_EhIaTkd33z2L61ciw4/edit?usp=drivesdk){target="_blank"}
+:::
+
+# Review the Rubric
+
+::: {.big-prompt}
+[Open the About Me rubric](https://andrewandrade.ca/assets/0.1-past-present-becoming.pdf){target="_blank"}
 :::
 
 # Grade Mr. A
 
-Use Mentimeter to assess the example:
-
-- Knowledge & Understanding
-- Thinking
-- Communication
-- Application
-- Overall percentage
-
-# Evidence beats vibes.
-
 ::: {.big-prompt}
-What evidence supports the grade?
+[Open Mentimeter](https://www.mentimeter.com/app/presentation/alx3d3exqgdsixdb7ps2r1atw6oaqrdo/edit){target="_blank"}
 :::
-
-Keep the discussion brief and connect evidence back to the rubric.
 
 # About Me - Purpose
 

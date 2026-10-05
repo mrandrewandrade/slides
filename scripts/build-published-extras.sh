@@ -64,16 +64,16 @@ cat > "$site_root/wip/index.html" <<'EOF'
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Future Slide Decks</title>
-<style>body{font-family:system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#2f3439}a{color:#234a73}.muted{color:#777}</style>
+<title>Work in Progress Slides</title>
+<style>body{font-family:system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#2f3439}a{color:#234a73}.muted{color:#777}li{margin:.55rem 0}</style>
 </head>
 <body>
-<h1>Future Slide Decks</h1>
-<p class="muted">Staged slide material after each course's current classroom day.</p>
+<h1>Work in Progress</h1>
+<p class="muted">Future slides under development, plus preserved backup copies of the current staged lesson.</p>
 <ul>
-<li><a href="tej/index.html">TEJ future slide deck</a></li>
-<li><a href="tts/index.html">TTS future slide deck</a></li>
-<li><a href="tas/index.html">TAS future slide deck</a></li>
+<li><a href="tej/index.html">TEJ future slide deck</a> · <a href="tej/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="tts/index.html">TTS future slide deck</a> · <a href="tts/day-03-backup.html">Day 3 backup</a></li>
+<li><a href="tas/index.html">TAS future slide deck</a> · <a href="tas/day-03-backup.html">Day 3 backup</a></li>
 </ul>
 <p><a href="../index.html">Back to Slides Home</a></p>
 </body>
@@ -101,4 +101,4 @@ for course in tej tts tas; do
   rm -f "$error_log" "$generated"
 done
 
-echo "Archive and future slide deck pages ready."
+echo "Archive, future, and WIP backup pages ready."
