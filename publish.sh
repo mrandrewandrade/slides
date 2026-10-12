@@ -5,13 +5,13 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 branch="$(git branch --show-current)"
-if [[ "$branch" != "master" ]]; then
-  echo "Publish from master only. Current branch: $branch" >&2
-  echo "Run: git switch master" >&2
+if [[ "$branch" != "main" ]]; then
+  echo "Publish from main only. Current branch: $branch" >&2
+  echo "Run: git switch main" >&2
   exit 1
 fi
 
-# Keep master current without losing a small last-minute edit.
+# Keep main current without losing a small last-minute edit.
 git pull --rebase --autostash
 
 echo "Building the complete slide site locally..."
@@ -26,9 +26,9 @@ if ! git diff --cached --quiet; then
   git commit -m "Update slides $(date '+%Y-%m-%d %H:%M')"
 fi
 
-# Pushing master triggers the publishing workflow. The workflow mirrors the exact
+# Pushing main triggers the publishing workflow. The workflow mirrors the exact
 # generated site to gh-pages and deploys the same build through GitHub Pages.
-git push origin master
+git push origin main
 
 echo
-echo "Pushed master. The workflow will update gh-pages and deploy GitHub Pages."
+echo "Pushed main. The workflow will update gh-pages and deploy GitHub Pages."

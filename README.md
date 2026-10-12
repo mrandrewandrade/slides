@@ -60,17 +60,15 @@ This is the intended lifecycle for TEJ, TTS, and TAS.
 
 ## Standard operating procedure
 
-### 1. Work from `master`
+### 1. Work from `main`
 
 ```bash
 cd ~/Documents/slides
-git switch master
+git switch main
 git pull --ff-only
 ```
 
-`master` is the source branch for classroom publishing.
-
-Do not prepare or publish classroom changes from `main`. The `main` branch is legacy and should be removed once GitHub's default branch is set to `master`.
+`main` is the default source branch for classroom publishing. The historical `master` branch is retained only as a compatibility mirror and is not a second release line.
 
 ### 2. Check the current state
 
@@ -155,7 +153,7 @@ Check the homepage and all three Current decks before publishing.
 
 ### 6. Publish
 
-From `master`:
+From `main`:
 
 ```bash
 bash publish.sh
@@ -163,20 +161,20 @@ bash publish.sh
 
 `publish.sh`:
 
-1. rebases onto the latest `master`
+1. rebases onto the latest `main`
 2. builds the complete site locally
 3. commits regenerated tracked files when needed
-4. pushes `master`
+4. pushes `main`
 5. triggers `.github/workflows/render.yml`
 
 The workflow then:
 
-1. rebuilds the complete site from `master`
+1. rebuilds the complete site from `main`
 2. mirrors the exact generated `_site` output to `gh-pages`
 3. uploads the same `_site` output as the GitHub Pages artifact
 4. deploys that artifact to the public site
 
-This means `master` is the source of truth and `gh-pages` is a generated mirror of the published site.
+This means `main` is the source of truth and `gh-pages` is a generated mirror of the published site.
 
 Public site:
 
@@ -208,13 +206,13 @@ If the source and public site disagree, check the workflow run and the generated
 
 ## Deployment rules
 
-- `master` is the only source branch used for classroom publishing.
+- `main` is the only source branch used for classroom publishing.
 - `gh-pages` is generated output and should not be edited by hand.
-- `main` is legacy and should not be used for classroom publishing.
+- `master` is a compatibility mirror and should not receive direct classroom changes.
 - `_site/` is generated output and is not the source of truth.
 - The workflow mirrors `_site` to `gh-pages` and deploys the same build through GitHub Pages.
 - A successful build and a successful deployment are separate checks.
-- When debugging, compare `master`, `gh-pages`, the workflow result, and the public URL.
+- When debugging, compare `main`, `gh-pages`, the workflow result, and the public URL.
 
 ## Source layout
 
