@@ -3,7 +3,7 @@
 # Teachings come from everywhere... {.quote-detail-slide background-color="#171717"}
 
 ::: {.quote-continuation}
-when you open yourself to them.  
+when you open yourself to them.
 That's the trick of it really, to open yourself to everything and everything opens itself to you.
 :::
 
@@ -70,7 +70,7 @@ Listen -> Present -> Connect -> Photograph -> Submit
 - If it is incomplete, **present what you have**.
 
 ::: {.big-prompt}
-You do not need to impress us.  
+You do not need to impress us.
 Help us know you. Help us connect with you.
 :::
 
